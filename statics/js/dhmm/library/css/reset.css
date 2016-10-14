@@ -1,0 +1,60 @@
+/* base */
+body {font-family:Dotum,"돋움", sans-serif; font-size:0.75em; color:#555}
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td, img{
+margin: 0;
+padding: 0;
+border: 0;
+/*outline: 0;*/
+vertical-align: top;
+}
+ul, ol, li {list-style:none}
+fieldset, img {border:none}
+legend {display:none}
+caption {display:none}
+
+/* a-style 
+a {color:#333;text-decoration:none; font-size:1em}
+a {outline:none}
+a:hover, a:active {color:#333;text-decoration:none}
+*/
+
+/* document 
+html, body {height:100%}
+body {min-width:980px;background:url("/images/common/bg_body.jpg") top center repeat-x #faf4df;}*/
+body {background:url("../../images/common/bg_repeat.gif"/*tpa=http://www.angelinus.com/images/common/bg_repeat.gif*/) top center repeat-y;}
+
+/* input */
+select {height:22px;border:1px solid #bfb9aa;}
+input {font-family:Dotum,"돋움",sans-serif;font-size:0.9em;color:#565656}
+input, select, textarea {font-family:Dotum,"돋움",sans-serif;font-size:1em;color:#565656}
+textarea {border:1px solid #bfb9aa; padding:5px;line-height:1.5em;resize: none;}
+input.text, input.file {border:1px solid #bfb9aa;height:18px;line-height:19px;padding:1px 5px;display:inline-block;}
+input.readonly {color:#7b6f65}
+input.radio, input.checkbox {width:13px;height:13px;display:inline-block}
+div.find_file {.margin:-1px 0 0 0 !important;.padding-bottom:2px !important} /* 파일스타일 라이브러리 ie6 픽스 */
+.wrap_file {display:inline-block;padding-right:58px;.margin:-1px 0 0 0 !important;} /* 파일스타일 우측 값 보정 */
+
+/* input 
+select {padding:1px;}
+input {font-family:Dotum,"돋움", sans-serif; font-size:0.9em; color:#565656}
+input, select, textarea {font-family:Dotum,"돋움", sans-serif; font-size:1em; color:#565656}
+textarea {border:1px solid #bfb9aa; padding:5px; line-height:1.5em; resize: none;}
+input.text, input.file {border:1px solid #bfb9aa; height:18px; line-height:19px; padding:0 5px; display:inline-block}
+input.readonly {color:#7b6f65}
+input.radio, input.checkbox {width:13px; height:13px; display:inline-block}
+div.find_file {.margin:-1px 0 0 0 !important; .padding-bottom:2px !important} /* 파일스타일 라이브러리 ie6 픽스 
+.wrap_file {display:inline-block; padding-right:58px; .margin:-1px 0 0 0 !important;} /* 파일스타일 우측 값 보정 
+*/
+
+/* label */
+label.basic {position:relative;padding:2px 10px 0 5px;display:inline-block;font-family:Nanum Gothic;font-size:11px;font-weight:600;}
+label.basic .radio, label.basic .checkbox {position:absolute; left:0; top:1px; _top:1px;}
+
+/* table */
+table {table-layout:fixed;border-collapse:collapse}
+table *{vertical-align:middle}
+th, td {vertical-align:middle; color:#555}
+/* td *{display:inline-block;} */
+td input, th input {font-size:1em}
+
+.scroll-pane {overflow: auto; width:100%}
