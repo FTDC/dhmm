@@ -11,7 +11,7 @@
 	<td height="250" align="center" valign="bottom"><img src="/err/Images/Error.gif"></td>
   </tr>
   <tr>
-	<td height="50" align="center" valign="bottom"><a href="/index.asp"><img src="/err/Images/btn_Main.gif" border="0"></a></td>
+	<td height="50" align="center" valign="bottom"><a href="/"><img src="/err/Images/btn_Main.gif" border="0"></a></td>
   </tr>
 </table>
 </center>

@@ -16,8 +16,6 @@
  */
 
 $angelinus
-
-
     .hn("1", "关于我们")
     .sn("1", "品牌介绍", "/Menu/HotProduct_List.asp", {
         title: ""

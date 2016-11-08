@@ -39,8 +39,15 @@
     <script src="{JS_PATH}dhmm/library/js/jquery.func.js"></script>
     <script src="{JS_PATH}dhmm/library/js/richscript/richscript.js" charset="utf-8"></script>
     <script src="{JS_PATH}dhmm/library/js/richscript/richscript.angelinus.js" charset="utf-8"></script>
-    <script src="{JS_PATH}dhmm/library/js/richscript/richscript.angelinus.menu.js" charset="utf-8"></script>
     <script src="{JS_PATH}dhmm/library/js/richscript/richscript.angelinus.home.js"></script>
+    <script type="text/javascript">
+
+                {loop $nav_cate $key $r}
+                    $angelinus.hn("{$key}", "{$r[catname]}")
+
+                {/loop}
+
+    </script>
 
     <script language='JavaScript' src='https://member.lpoint.com/door/sso/ANGELINUS/checkLogin.jsp'></script>
     <script>
@@ -101,13 +108,12 @@
             <div class="logoAc"><h1><a href="/index.asp">豆花妈妈</a></h1></div>
             <div class="gnbTop">
 				<span>
-                    <a href="http://www.angelinus.com/Member/Login.asp">111</a> ㅣ
-                    <a href="https://member.lpoint.com/door/user/login_common.jsp?sid=ANGELINUS">2222</a> ㅣ
-
-					<a href="/Voc/Voc_Write.asp">3333</a> ㅣ
-					<a href="http://www.lotteria.com/Campaign/Management/Ethics_report.asp?sitecode=002" target="_blank" title="새창열림">4444</a> ㅣ
-					<a href="/About/SpecialityAngelinus.asp" class="bf">555</a>ㅣ
-					<a href="http://shop.angelinus.com/" title="새창열림" target="_blank" class="bf">6666</a>
+                    <a target="_blank" href="http://www.angelinus.com/Member/Login.asp">官方微博</a> ㅣ
+                    <a href="https://member.lpoint.com/door/user/login_common.jsp?sid=ANGELINUS">联系我们</a>
+                    <!--<a href="/Voc/Voc_Write.asp">3333</a> ㅣ-->
+                    <!--<a href="http://www.lotteria.com/Campaign/Management/Ethics_report.asp?sitecode=002" target="_blank" title="새창열림">4444</a> ㅣ-->
+                    <!--<a href="/About/SpecialityAngelinus.asp" class="bf">555</a>ㅣ-->
+                    <!--<a href="http://shop.angelinus.com/" title="새창열림" target="_blank" class="bf">6666</a>-->
 				</span>
 
                 <!-- 언어선택 -->

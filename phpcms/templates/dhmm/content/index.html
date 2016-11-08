@@ -15,10 +15,10 @@
 
         <div class="visCon">
 
-            {pc:content  action="position" posid="1"  order="listorder DESC" thumb="1" num="5"}
+            {pc:content action="position" posid="1" order="listorder DESC" thumb="1" num="5"}
             {loop $data $r}
             <p class="titleAc">
-                <a href="{$r['url']}" ><img  src="{thumb($r['thumb'],310,260)}" alt="{str_cut($r['title'],30)}"  /></a>
+                <a href="{$r['url']}"><img src="{thumb($r['thumb'],310,260)}" alt="{str_cut($r['title'],30)}"/></a>
             </p>
             {/loop}
 
@@ -52,9 +52,9 @@
         </div>
     </div>
     <!-- content and aside -->
-    <div id="containerAc">
+    <div id="containerAc" >
         <!-- content area -->
-        <div class="conShare"><!-- class 추가 facebook - fb, twitter - twi, kakao - ka, Instagram - insta -->
+        <div class="conShare" style=" display: none;"><!-- class 추가 facebook - fb, twitter - twi, kakao - ka, Instagram - insta -->
             <div class="calendar">
                 <em class="day">14</em>
                 <em class="year">2016 .</em><em class="month">&nbsp;October</em>
@@ -96,7 +96,7 @@
             </div>
 
             <div class="newProduct fbContentsEmpty twiContentsEmpty o-sns-contents-empty">
-                <a href="http://www.angelinus.com/About/specialty.asp" class="banner"><img src="/Data/MainMid/81/BannerImage.jpg" alt="엔제리너스, 한국 커피 프랜차이즈 최초로 &amp;#039;국제 스페셜티 커피 폅회&amp;#039; 가입" /></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=427&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/75/BannerImage.jpg" alt="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&amp;amp;EventType=Event&amp;amp;Idx=427&amp;amp;SearchEventGubun=0" /></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=434&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/78/BannerImage.jpg" alt="엔제리너스 카드 2만원 이상 충전하면 영수증 음료 쿠폰을 드립니다." /></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=433&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/80/BannerImage.jpg" alt="열두가지 맛있는 행복" /></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=435&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/79/BannerImage.jpg" alt="엔제리너스 카드 2만원 이상 충전하면 영수증 음료 쿠폰을 드립니다." /></a>
+                <a href="http://www.angelinus.com/About/specialty.asp" class="banner"><img src="/Data/MainMid/81/BannerImage.jpg" alt="엔제리너스, 한국 커피 프랜차이즈 최초로 &amp;#039;국제 스페셜티 커피 폅회&amp;#039; 가입"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=427&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/75/BannerImage.jpg" alt="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&amp;amp;EventType=Event&amp;amp;Idx=427&amp;amp;SearchEventGubun=0"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=434&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/78/BannerImage.jpg" alt="엔제리너스 카드 2만원 이상 충전하면 영수증 음료 쿠폰을 드립니다."/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=433&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/80/BannerImage.jpg" alt="열두가지 맛있는 행복"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=435&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/79/BannerImage.jpg" alt="엔제리너스 카드 2만원 이상 충전하면 영수증 음료 쿠폰을 드립니다."/></a>
                 <div class="cirBtn o-banner-paging"></div>
             </div>
             <!-- facebook -->
@@ -112,8 +112,6 @@
                 <p>당신을 미소 짓게 하는 천사의 커피</p>
             </div>
             <div class="takeContent">
-
-
                 <div class="takeStore" style="background-image:url('/Data/MainLink/1/BannerImage.jpg')">
                     <a href="http://www.angelinus.com/Board/Board.asp?h_title=전체&Timestamp=2015111020151110&BoardIdx=1&Mode=VIEW&Page=1&PageSize=10&BlockSize=10&Idx=297&SearchCategory=0&SearchType=&SearchText=">
                             <span class="desc">
@@ -154,7 +152,7 @@
                     <a href="/WholeBean/perfection.asp">
                             <span class="desc">
                                 <i>WITH ANGELS</i>
-                                <strong>커피의 맛과 향이 살아있는 엔제리너스<br /> 커피의 비밀</strong>
+                                <strong>커피의 맛과 향이 살아있는 엔제리너스<br/> 커피의 비밀</strong>
                             </span>
                     </a>
                 </div>
@@ -174,40 +172,96 @@
                         <thead>
                         <tr>
                             <th class="fir"><strong>NEWS &amp; NOTICE</strong></th>
-                            <th><a href="/Board/Board.asp?BoardIdx=1">+ MORE</a></th>
+                            <th><a target="_blank" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=45">+ MORE</a></th>
                         </tr>
                         </thead>
                         <tbody>
 
+                        {pc:content action="lists" catid="45" num="4" order="id DESC" return="info"}
+
+                        {loop $info $v}
+                        <!--<li>·<a href="{$v['url']}" target="_blank" title="{$v['title']}" {title_style($v[style])}>{str_cut($v['title'],40)}</a>  </li>-->
                         <tr>
-                            <td class="fir"><a href="http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=015&aid=0003667264" target="_blank" title="새창 열기">・ [2016 산업별 고객만족도(KCSI)] 엔제리너스커피, 7년째 정상 &#039;수성&#039;</a></td>
+                            <td class="fir">
+                                <a href="{$v['url']}" target="_blank" title="{$v['title']}">・ {str_cut($v['title'],70)}</a>
+                            </td>
                             <td>2016.10.11</td>
                         </tr>
 
-                        <tr>
-                            <td class="fir"><a href="/Board/Board.asp?BoardIdx=1&Idx=337&Mode=VIEW">・ 엔제리너스 현대카드 M포인트 제휴 서비스 종료 안내</a></td>
-                            <td>2016.10.10</td>
-                        </tr>
-
-                        <tr>
-                            <td class="fir"><a href="http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=014&aid=0003715677" target="_blank" title="새창 열기">・ 엔제리너스커피, 가을 맞아 ‘SNS 경품 이벤트’ 진행</a></td>
-                            <td>2016.10.05</td>
-                        </tr>
-
-                        <tr>
-                            <td class="fir"><a href="http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=101&oid=016&aid=0001123089" target="_blank" title="새창 열기">・ 엔제리너스커피, 100여명 고객과 함께한 ‘조인성 팬 사인회’ 성료</a></td>
-                            <td>2016.09.2322</td>
-                        </tr>
+                        {/loop}
+                        {/pc}
 
                         </tbody>
                     </table>
                 </div>
 
                 <script type="text/javascript" language="javascript">
-                    (function(factory){if(typeof define==='function'&&define.amd){define(['jquery'],factory)}else{factory(jQuery)}}(function($){var pluses=/\+/g;function raw(s){return s}function decoded(s){return decodeURIComponent(s.replace(pluses,' '))}function converted(s){if(s.indexOf('"')===0){s=s.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,'\\')}try{return config.json?JSON.parse(s):s}catch(er){}}var config=$.cookie=function(key,value,options){if(value!==undefined){options=$.extend({},config.defaults,options);if(typeof options.expires==='number'){var days=options.expires,t=options.expires=new Date();t.setDate(t.getDate()+days)}value=config.json?JSON.stringify(value):String(value);return(document.cookie=[config.raw?key:encodeURIComponent(key),'=',config.raw?value:encodeURIComponent(value),options.expires?'; expires='+options.expires.toUTCString():'',options.path?'; path='+options.path:'',options.domain?'; domain='+options.domain:'',options.secure?'; secure':''].join(''))}var decode=config.raw?raw:decoded;var cookies=document.cookie.split('; ');var result=key?undefined:{};for(var i=0,l=cookies.length;i<l;i++){var parts=cookies[i].split('=');var name=decode(parts.shift());var cookie=decode(parts.join('='));if(key&&key===name){result=converted(cookie);break}if(!key){result[name]=converted(cookie)}}return result};config.defaults={};$.removeCookie=function(key,options){if($.cookie(key)!==undefined){$.cookie(key,'',$.extend({},options,{expires:-1}));return true}return false}}));
+                    (function (factory) {
+                        if (typeof define === 'function' && define.amd) {
+                            define(['jquery'], factory)
+                        } else {
+                            factory(jQuery)
+                        }
+                    }(function ($) {
+                        var pluses = /\+/g;
+
+                        function raw(s) {
+                            return s
+                        }
+
+                        function decoded(s) {
+                            return decodeURIComponent(s.replace(pluses, ' '))
+                        }
+
+                        function converted(s) {
+                            if (s.indexOf('"') === 0) {
+                                s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\')
+                            }
+                            try {
+                                return config.json ? JSON.parse(s) : s
+                            } catch (er) {
+                            }
+                        }
+
+                        var config = $.cookie = function (key, value, options) {
+                            if (value !== undefined) {
+                                options = $.extend({}, config.defaults, options);
+                                if (typeof options.expires === 'number') {
+                                    var days = options.expires, t = options.expires = new Date();
+                                    t.setDate(t.getDate() + days)
+                                }
+                                value = config.json ? JSON.stringify(value) : String(value);
+                                return (document.cookie = [config.raw ? key : encodeURIComponent(key), '=', config.raw ? value : encodeURIComponent(value), options.expires ? '; expires=' + options.expires.toUTCString() : '', options.path ? '; path=' + options.path : '', options.domain ? '; domain=' + options.domain : '', options.secure ? '; secure' : ''].join(''))
+                            }
+                            var decode = config.raw ? raw : decoded;
+                            var cookies = document.cookie.split('; ');
+                            var result = key ? undefined : {};
+                            for (var i = 0, l = cookies.length; i < l; i++) {
+                                var parts = cookies[i].split('=');
+                                var name = decode(parts.shift());
+                                var cookie = decode(parts.join('='));
+                                if (key && key === name) {
+                                    result = converted(cookie);
+                                    break
+                                }
+                                if (!key) {
+                                    result[name] = converted(cookie)
+                                }
+                            }
+                            return result
+                        };
+                        config.defaults = {};
+                        $.removeCookie = function (key, options) {
+                            if ($.cookie(key) !== undefined) {
+                                $.cookie(key, '', $.extend({}, options, {expires: -1}));
+                                return true
+                            }
+                            return false
+                        }
+                    }));
 
                     $.fn.popupzoneSlide = function () {
-                        return this.each(function() {
+                        return this.each(function () {
                             var dur = 3000,
                                     isAuto = true,
                                     timer,
@@ -227,6 +281,7 @@
                                  }, dur);
                                  }*/
                             }
+
                             /*function slide(dir) {
                              if(dir =="left") {
                              var i = index - 1;
@@ -241,7 +296,7 @@
                              }
                              showBanner(i);
                              }*/
-                            $btns.click(function() {
+                            $btns.click(function () {
                                 clearTimeout(timer);
                                 var t = $btns.index($(this)[0]);
                                 showBanner(t);
@@ -278,40 +333,43 @@
                         });
                     };
 
-                    $.fn.popupzone = function() {
-                        return this.each(function() {
+                    $.fn.popupzone = function () {
+                        return this.each(function () {
                             var $popup = $(this),
                                     $closeBtn = $popup.find("div.ckeck > a"),
                                     $check = $popup.find("input#close"),
                                     $banner = $popup.find("> div > div");
+
                             function open() {
                                 $popup.animate({
-                                    "height" : "214px"
-                                },{
-                                    queue:false,
-                                    duration:300
+                                    "height": "214px"
+                                }, {
+                                    queue: false,
+                                    duration: 300
                                 });
                             }
+
                             function close() {
-                                if($check.is(":checked")) {
-                                    $.cookie("popupzone", "disabled", { expires: 1, path: "/" });
+                                if ($check.is(":checked")) {
+                                    $.cookie("popupzone", "disabled", {expires: 1, path: "/"});
                                 }
                                 $popup.animate({
-                                    "height" : "0px"
-                                },{
-                                    queue:false,
-                                    duration:300,
-                                    complete:function() {
+                                    "height": "0px"
+                                }, {
+                                    queue: false,
+                                    duration: 300,
+                                    complete: function () {
                                         $popup.remove();
                                     }
                                 });
                             }
-                            $closeBtn.bind("click", function() {
+
+                            $closeBtn.bind("click", function () {
                                 close();
                                 return false;
                             });
                             var pzCoockie = $.cookie("popupzone");
-                            if(pzCoockie == "disabled") {
+                            if (pzCoockie == "disabled") {
                             } else {
                                 open();
                                 $banner.popupzoneSlide();
@@ -330,5 +388,4 @@
         </div><!-- //content and aside -->
     </div>
 </div><!-- //containerWrap -->
-ddd
 {template "content","footer"}

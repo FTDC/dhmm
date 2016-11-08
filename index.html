@@ -1,201 +1,655 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>PHPCMS演示站</title>
-<meta name="keywords" content="PHPCMS演示站">
-<meta name="description" content="PHPCMS演示站">
-<link href="http://localhost/dhmm/statics/css/reset.css" rel="stylesheet" type="text/css" />
-<link href="http://localhost/dhmm/statics/css/default_blue.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://localhost/dhmm/statics/js/jquery.min.js"></script>
-<script type="text/javascript" src="http://localhost/dhmm/statics/js/jquery.sgallery.js"></script>
-<script type="text/javascript" src="http://localhost/dhmm/statics/js/search_common.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=7"/>
+    <title>豆花妈妈</title>
+    <meta name="keywords" content="豆花, 豆花妈妈">
+    <meta name="description" content="创新复合型豆花、饮品、甜品一体化为定位；以台式甜品原文化为依托；融入台式饮品与甜品之精髓。带给大家全新的味觉享受！引领国内饮品与甜品新潮流。">
+    <!--<link href="http://localhost/dhmm/statics/css/reset.css" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="http://localhost/dhmm/statics/css/default_blue.css" rel="stylesheet" type="text/css"/>-->
+    <link href="http://localhost/dhmm/statics/css/dhmm/base_1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="http://localhost/dhmm/statics/css/dhmm/jquery.ui.theme_1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="http://localhost/dhmm/statics/css/dhmm/jquery.ui.datepicker_1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="http://localhost/dhmm/statics/css/dhmm/reset_ac.css" rel="stylesheet" type="text/css" media="all">
+
+    <!--
+    <link href="http://localhost/dhmm/statics/js/dhmm/library/css/base.css?rnd=B8BDC3" rel="stylesheet" type="text/css" media="all">
+    <link href="http://localhost/dhmm/statics/js/dhmm/library/css/jquery.ui.theme.css?rnd=B8BDC3" rel="stylesheet" type="text/css" media="all">
+    <link href="http://localhost/dhmm/statics/js/dhmm/library/css/jquery.ui.datepicker.css?rnd=B8BDC3" rel="stylesheet" type="text/css" media="all">
+    -->
+
+    <script>var $G_SERVER_URL = "http://www.angelinus.com";</script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery-1.5.1.min.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery.easing.min.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/jquery.ui.core.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/jquery.ui.datepicker.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/jquery.ui.datepicker-ko-user.js" charset="utf-8"></script>
+    <!--<script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/selectbox/jquery.selectbox.js" charset="utf-8"></script>-->
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/jquery.validate.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery.mousewheel.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery.jscrollpane.min.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/editor/SE/js/HuskyEZCreator.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/function.js" charset="utf-8"></script>
+    <!--<script src="http://localhost/dhmm/statics/js/dhmm/library/js/select.js"></script>-->
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/file.style.js"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/iePngFix.js"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/swfobject.js"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/ui.js"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery.func.js"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.angelinus.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.angelinus.menu.js" charset="utf-8"></script>
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.angelinus.home.js"></script>
+
+    <script language='JavaScript' src='https://member.lpoint.com/door/sso/ANGELINUS/checkLogin.jsp'></script>
+    <script>
+        /*	이벤트 내용보기	*/
+        var goView_EVENT = function (intIdx, strEventType) {
+            $("#frmEVENT input[name='Idx']").val(intIdx);
+            $("#frmEVENT input[name='EventType']").val(strEventType);
+            $("#frmEVENT input[name='Mode']").val("VIEW");
+            $("#frmEVENT").attr({"method": "get", "target": "", "action": "Event/Event_View.asp"}).submit();
+        }
+        /*  공지사항 내용보기 */
+        var goView_NEWS = function (intIdx) {
+            $("#frmNEWS input[name='Idx']").val(intIdx);
+            $("#frmNEWS input[name='Mode']").val("VIEW");
+            $("#frmNEWS").attr({"method": "get", "target": "", "action": "Board/Board.asp"}).submit();
+        }
+
+    </script>
+
 </head>
-<body>
-<div class="body-top">
-    <div class="content">
-        		<div id="announ">
-                 <ul>
-                                  </ul>
-            </div>
-     	 <script type="text/javascript">
-$(function(){
-	startmarquee('announ',22,1,500,3000);
-})
-</script>
-            <div class="login lh24 blue"><a href="http://localhost/dhmm/index.php?m=content&c=rss&siteid=1" class="rss ib">rss</a><span class="rt"><script type="text/javascript">document.write('<iframe src="http://localhost/dhmm/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="500" height="24" frameborder="0" scrolling="no"></iframe>')</script></span></div>
-    </div>
+<body class="main">
+
+<!-- 상단배너
+<div class="popup" id="main_pop1" >
+<div class="pop">
+    <div id="bannerZone"> -->
+<!-- <span class="popBtn"><a href="#">자동재생정지</a></span>
+<span class="baPrev"><a href="#"><img src="/images/main/baPrev.gif" alt="이전 팝업보기"></a></span>-->
+<!-- <ul>
+    <li class="on">
+        <a href="/card/card.asp" class="bn"><img src="/images/main/banner/popup160912.jpg" alt="추석 연휴 택배사 마감으로 인해 마지막 배송날짜는 9월 9일이오며, 택배사 사정으로 인해 배송이 지연 될 수 있습니다. 또한 추석 연휴 기간 중 택배사 휴무 일정에 따라 9월 10일 ~ 9월 18일은 발송이 이루어지지 않으니, 고객님들의 양해 부탁드리겠습니다. 해당 기간 중 접수된 건은 택배사 정상 근무 일자인 9월 19일부터 순차적으로 발송됩니다. "></a>
+    </li>
+</ul>-->
+<!-- <span class="baNext"><a href="#"><img src="/images/main/baNext.gif" alt="다음 팝업보기"></a></span>
+<div class="ckeck">
+    <input type="checkbox" id="close" value="" name="pclose" >
+    <label for="close"><img src="/images/main/oneDay.gif" alt="1일 동안 열지 않기"></label>
+    <a href="#"><img src="/images/main/popClose.gif" alt="팝업창닫기"></a>
 </div>
-<div class="header">
-	<div class="logo"><a href="http://localhost/dhmm/"><img src="http://localhost/dhmm/statics/images/v9/logo.jpg" /></a></div>
+</div>
+</div>
+</div>-->
+<!-- //상단배너 -->
 
-    <div class="search">
-    	<div class="tab" id="search">
-																<a href="javascript:;" onclick="setmodel(1, $(this));" style="outline:medium none;" hidefocus="true"  class="on" >新闻</a><span> | </span>										<a href="javascript:;" onclick="setmodel(3, $(this));" style="outline:medium none;" hidefocus="true" >图片</a><span> | </span>										<a href="javascript:;" onclick="setmodel(2, $(this));" style="outline:medium none;" hidefocus="true" >下载</a><span> | </span>										<a href="javascript:;" onclick="setmodel(52, $(this));" style="outline:medium none;" hidefocus="true" >专题</a>								</div>
 
-        <div class="bd">
-            <form action="http://localhost/dhmm/index.php" method="get" target="_blank">
-				<input type="hidden" name="m" value="search"/>
-				<input type="hidden" name="c" value="index"/>
-				<input type="hidden" name="a" value="init"/>
-				<input type="hidden" name="typeid" value="1" id="typeid"/>
-				<input type="hidden" name="siteid" value="1" id="siteid"/>
-                <input type="text" class="text" name="q" id="q"/><input type="submit" value="搜 索" class="button" />
-            </form>
-        </div>
-    </div>
+<!-- header -->
+<!--
 
-    <div class="banner"><script language="javascript" src="http://localhost/dhmm/index.php?m=poster&c=index&a=show_poster&id=1"></script></div>
-    <div class="bk3"></div>
-    <div class="nav-bar">
-    	<map>
-    	        	<ul class="nav-site">
-			<li><a href="http://localhost/dhmm"><span>首页</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost/dhmm"><span>国内</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost/dhmm"><span>下载</span></a></li>
-						<li class="line">|</li>
-			<li><a href="http://localhost/dhmm"><span>图片</span></a></li>
-			            </ul>
-        		        </map>
-    </div> 
-	
-	</div>
-</div><!--main-->
-<div class="main">
-	<div class="col-left">
-    	<div class="news-hot">
-        	<div class="content">
-        	        	   
-                
-            </div>
-        </div>
-        <div class="slide">
-            <div class="FocusPic">
-                        	<div class="content" id="main-slide">
-                    <div class="changeDiv">  
-                                        </div>
-                </div>
-                        </div>
-            <div class="bk10"></div>
-        	<div class="box extend">
-            	<div class="col-left">争议</div>
-                <div class="col-auto">
-								</div>
-                <script language="javascript" src="http://localhost/dhmm/caches/poster_js/10.js"></script>
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        		<h5>图片新闻</h5>
-                      <ul class="content news-photo picbig">
-                         </ul>
+-->
+<div id="skipnavi">
+    <a href="#content">22222</a>
+</div>
+
+<!-- header -->
+<div id="headerAc">
+    <div class="gnb o-navi-fixed">
+        <div class="gnbWrap">
+            <div class="logoAc"><h1><a href="/index.asp">豆花妈妈</a></h1></div>
+            <div class="gnbTop">
+				<span>
+                    <a target="_blank" href="http://www.angelinus.com/Member/Login.asp">官方微博</a> ㅣ
+                    <a href="https://member.lpoint.com/door/user/login_common.jsp?sid=ANGELINUS">联系我们</a>
+					<!--<a href="/Voc/Voc_Write.asp">3333</a> ㅣ-->
+					<!--<a href="http://www.lotteria.com/Campaign/Management/Ethics_report.asp?sitecode=002" target="_blank" title="새창열림">4444</a> ㅣ-->
+					<!--<a href="/About/SpecialityAngelinus.asp" class="bf">555</a>ㅣ-->
+					<!--<a href="http://shop.angelinus.com/" title="새창열림" target="_blank" class="bf">6666</a>-->
+				</span>
+
+                <!-- 언어선택 -->
+                <div class="langWrap" style="display:none;">
+                    <a href="#" class="langOpen">Language</a>
+                    <div class="langList">
+                        <ul>
+                            <li><a href="/index.asp">한국어</a></li>
+                            <li><a href="/eng/index.asp">English</a></li>
+                            <!-- <li><a href="/cn/index.asp">中國語</a></li>-->
+                        </ul>
                     </div>
-        <div class="bk10"></div>
-                        <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">国内<a href="http://localhost/dhmm" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		                <div class="box cat-area" >
-        		<h5 class="title-1">下载<a href="http://localhost/dhmm" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>		                <div class="box cat-area" style=" margin-right:10px">
-        		<h5 class="title-1">图片<a href="http://localhost/dhmm" class="more">更多>></a></h5>
-             <div class="content">
-                                                        
-                <div class="bk15 hr"></div>
-                
-                <ul class="list lh24 f14">
-                                </ul>
-                            </div>
-        </div>
-        		    </div>
-    <div class="col-auto">
-    	<div class="box">
-        	 <h5 class="title-2">公告<a href="" class="more">&nbsp;</a></h5>
-             <div class="content">
-                                <ul class="list lh24 f14">
-                                   </ul>
-                            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        	<h5 class="title-2">专题<a href="http://localhost/dhmm/index.php?m=special&c=index&a=special&siteid=1" class="more">更多>></a></h5>
-            <div class="content special">
-                                                </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2"><span class="rt fn f12 tab SwapTab"><span class="fb">热点</span> | <span >评论</span> | <span>关注</span></span>排行</h5>
-            <div class="tab-content">
-            <ul class="content digg">
-										            </ul>
-            <ul class="content digg hidden">
-										            </ul>
-            <ul class="content digg hidden">
-										            </ul>
+                </div>
+                <!-- //언어선택 -->
+                <!-- 회원 등급안내 레이어팝업 -->
+                <!-- 2016-03-31 추가 및 수정 -->
+                <div class="popup_grade" style="display:none;">
+                    <div>
+                        <h2><img src="/Images/main/img_tit_popup_level.jpg" alt="L.POINT 회원 등급 안내"></h2>
+                        <ul class="grade_info">
+                            <li><p>33333</p></li>
+                            <li><p>L.POINT 취소, 환불 및 사용한 건은 반영되지 않습니다.</p></li>
+                            <li><p>회원 등급은 1년간 유지 됩니다.</p></li>
+                            <li><p>등급 산정은 매년 3월 1일부터 적용 됩니다.</p>
+                                <p class="bgnone">ex) 15년 실적 기준 → 16년 3월 1일 ~ 17년 2월 28일 등급 적용</p></li>
+                            <li><p>등급별 혜택</p>
+                                <table summary="L.POINT 등급별 혜택을 안내합니다." class="grade_benefit">
+                                    <caption>L.POINT 등급별 혜택</caption>
+                                    <colgroup>
+                                        <col width="50%">
+                                        <col width="*">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scrop="col">헤택</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>우수회원</td>
+                                        <td>결제금액의 0.5% 적립</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일반회원</td>
+                                        <td>결제금액의 0.3% 적립</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="close_popup_grade"><img src="/Images/main/btn_close_popup.gif"></a>
+                </div>
+                <!-- // 2016-03-31 추가 및 수정 -->
+                <!-- // 회원 등급안내 레이어팝업 -->
             </div>
-        </div><div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">调查问卷<a href="http://localhost/dhmm/index.php?m=vote&c=index&siteid=1" class="more">更多>></a></h5>
- 
-<script language="javascript" src="http://localhost/dhmm/index.php?m=vote&c=index&a=show&action=js&subjectid=1&type=3"></script>
+            <div class="depthWrap">
+                <ul class="depth1 o-navi-html"></ul>
+            </div>
         </div>
     </div>
-    <div class="bk10"></div>
-	
-	<div class="box blogroll ylink">
-    	<h5><a href="http://localhost/dhmm/index.php?m=link&siteid=1" hidefocus="true" class="rt">更多>></a>友情链接<a href="http://localhost/dhmm/index.php?m=link&c=index&a=register&siteid=1" class="red">申请链接</a></h5>
-        <div class="bk10"></div>
-	<ul class="colli imgul">
-                        <li><a href="http://www.phpcms.cn" title="PHPCMS" target="_blank"><img src="http://www.phpcms.cn/images/logo_88_31.gif" width="88" height="31" /></a></li>
-                <li><a href="http://www.sdo.com" title="盛大在线" target="_blank"><img src="http://www.snda.com/cn/logo/comp_logo_sdo.gif" width="88" height="31" /></a></li>
-                    </ul>
-          <div class="bk10"></div>
-	<div class="linka">
-		 	</div>
-	</div>
 </div>
-<script type="text/javascript"> 
-$(function(){
-	new slide("#main-slide","cur",310,260,1);//焦点图
-	new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
-})
-</script>
-<div class="footer">
-<p class="info">
-<a href="http://localhost/dhmm/html/about/aboutus/" target="_blank">关于我们</a> |  
-<a href="http://localhost/dhmm/html/about/contactus/" target="_blank">联系方式</a> |  
-<a href="http://test.phpcms.cn/index.php?m=content&c=index&a=lists&catid=4" target="_blank">版权声明</a> |  
-<a href="http://localhost/dhmm/html/about/hr/" target="_blank">招聘信息</a> |  
-<a href="http://localhost/dhmm/index.php?m=link" target="_blank">友情链接</a>
-<br />
-Powered by <strong><a href="http://www.phpcms.cn" target="_blank">PHPCMS</a></strong> <em>V9.6.0</em> &copy; 2015 <img src="http://localhost/dhmm/statics/images/copyright.gif"/></p>
+<!-- //header --><!--main-->
+<!-- //containerWrap -->
+<div id="containerWrapAc">
+    <div class="visWrap">
+
+        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/69/BannerImage.jpg);">ONE BITE MORE HAPPINESS</p>
+
+        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/68/BannerImage.jpg);">Let&#039;s Autumn with angels</p>
+
+        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/60/BannerImage.jpg);">아메리치노</p>
+
+        <p class="visBg" data-theme="dark" style="background-image:url(/Data/MainTop/66/BannerImage.jpg);">L.POINT / L.pay 간편함 그이상의 결제 엘페이</p>
+
+
+        <div class="visCon">
+
+                        
+
+            <div class="cirBtnWrap">
+                <div class="cirBtn o-visual-paging"></div>
+            </div>
+            <!--div class='layer_banner' style='z-index:2; position:absolute; top:130px; left:0;'>
+                <img src='/Popup/images/20150709_bnr.jpg' alt='엔제리너스 15주년 이벤트' useMap="#Map"/>
+                <map name="Map" id="Map">
+
+                    <area shape="rect" coords="17,156,367,478" href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=316&SearchEventGubun=0" target="_blank" alt="스탬프 쿠폰 아메리치노 5잔 구매시 1잔 증정 이벤트" />
+                    <area shape="rect" coords="383,156,733,478" href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=319&SearchEventGubun=0" target="_blank" alt="한정판 기프트백을 만나보세요" />
+                    <area shape="rect" coords="749,156,1099,478" href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=317&SearchEventGubun=0" target="_blank" alt="10,000원 이상 구매시 에코머그 증정 이벤트" />
+
+                    <area shape="rect" coords="559,501,821,550" href="https://www.facebook.com/angelinustime/photos/a.285822351493240.67154.282560198486122/911276102281192/?type=1" target="_blank" alt="페이스북 이벤트 참여하기" />
+                    <area shape="rect" coords="837,501,1099,550" href="http://www.ticketmonster.co.kr/fromadmin/199165181" target="_blank" alt="브랜드런칭 15주년 카드 이벤트 참여하기" />
+
+                    <area shape="rect" coords="1084,10,1106,31" href="#" target="_blank" onClick='javascript:bannerClose();return false;' alt="이벤트 배너 닫기 버튼" />
+                </map>
+                <script>
+                    function bannerClose()
+                    {
+                        $( ".layer_banner" ).click(function() {
+                          $( this ).css({display: 'none'});
+
+                        });
+                    }
+                </script>
+            </div-->
+        </div>
+    </div>
+    <!-- content and aside -->
+    <div id="containerAc" >
+        <!-- content area -->
+        <div class="conShare" style=" display: none;"><!-- class 추가 facebook - fb, twitter - twi, kakao - ka, Instagram - insta -->
+            <div class="calendar">
+                <em class="day">14</em>
+                <em class="year">2016 .</em><em class="month">&nbsp;October</em>
+                <i>ANGELINUS SHARE</i>
+            </div>
+            <!-- facebook -->
+            <div class="fbLike">
+                <a class="bg richscript-preload o-sns-counter-facebook" href="https://www.facebook.com/angelinustime" target="_blank" title="새창 열기">
+                    <strong class="ready">Angel-in-us Coffee</strong>
+                    <span>페이스북 바로가기</span>
+                </a>
+                <a class="close" href="#">close</a>
+            </div>
+            <!-- facebook end-->
+            <!-- twitter -->
+            <div class="twiLike">
+                <a class="bg richscript-preload o-sns-counter-twitter" href="https://twitter.com/Angelinustime" target="_blank" title="새창 열기">
+                    <strong class="ready">Angel-in-us Coffee</strong>
+                    <span>트위터 바로가기</span>
+                </a>
+                <a class="close" href="#">close</a>
+            </div>
+            <!-- twitter end-->
+            <!-- kakao -->
+            <div class="kaLike richscript-preload">
+                <a class="close" href="#">close</a>
+            </div>
+            <!-- kakao end-->
+            <!-- Instagram -->
+            <div class="instaLike richscript-preload">
+                <a class="close" href="#">close</a>
+            </div>
+            <!-- Instagram end-->
+            <div class="snsAc">
+                <a class="facebook" href="https://www.facebook.com/angelinustime">Facebook</a>
+                <a class="twitter" href="https://twitter.com/Angelinustime">Twitter</a>
+                <a class="kakao" href="#">Kakao talk</a>
+                <a class="Instagram" href="#">Instagram</a>
+            </div>
+
+            <div class="newProduct fbContentsEmpty twiContentsEmpty o-sns-contents-empty">
+                <a href="http://www.angelinus.com/About/specialty.asp" class="banner"><img src="/Data/MainMid/81/BannerImage.jpg" alt="엔제리너스, 한국 커피 프랜차이즈 최초로 &amp;#039;국제 스페셜티 커피 폅회&amp;#039; 가입"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=427&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/75/BannerImage.jpg" alt="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&amp;amp;EventType=Event&amp;amp;Idx=427&amp;amp;SearchEventGubun=0"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=434&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/78/BannerImage.jpg" alt="엔제리너스 카드 2만원 이상 충전하면 영수증 음료 쿠폰을 드립니다."/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=433&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/80/BannerImage.jpg" alt="열두가지 맛있는 행복"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=435&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/79/BannerImage.jpg" alt="엔제리너스 카드 2만원 이상 충전하면 영수증 음료 쿠폰을 드립니다."/></a>
+                <div class="cirBtn o-banner-paging"></div>
+            </div>
+            <!-- facebook -->
+            <div class="fbCon fbContentsLoading o-sns-contents-facebook"></div>
+            <!-- facebook end-->
+            <!-- twitter -->
+            <div class="twiCon twiContentsLoading o-sns-contents-twitter"></div>
+            <!-- twitter end-->
+        </div>
+        <div class="conTake">
+            <div class="takeText">
+                <strong>Take Your Time Angel-in-us</strong>
+                <p>당신을 미소 짓게 하는 천사의 커피</p>
+            </div>
+            <div class="takeContent">
+                <div class="takeStore" style="background-image:url('/Data/MainLink/1/BannerImage.jpg')">
+                    <a href="http://www.angelinus.com/Board/Board.asp?h_title=전체&Timestamp=2015111020151110&BoardIdx=1&Mode=VIEW&Page=1&PageSize=10&BlockSize=10&Idx=297&SearchCategory=0&SearchType=&SearchText=">
+                            <span class="desc">
+                                <span>가맹점모집</span>
+                                <strong>성공을 위한 수호천사가 되겠습니다.</strong>
+                            </span>
+                    </a>
+                </div>
+
+                <div class="takeProduct" style="background-image:url('/Data/MainLink/2/BannerImage.jpg')">
+                    <a href="/Menu/HotProduct_List.asp">
+                            <span class="desc">
+                                <i>NEW MENU</i>
+                                <strong>엔제리너스의 새로운 소식</strong>
+                            </span>
+                    </a>
+                </div>
+
+                <div class="takeTv" style="background-image:url('/Data/MainLink/3/BannerImage.jpg')">
+                    <a href="/About/VideoAdvertise_List.asp">
+                            <span class="desc">
+                                <i>TV/CF</i>
+                                <strong>광고 속에서 엔제리너스 커피를 만나보세요.</strong>
+                            </span>
+                    </a>
+                </div>
+
+                <div class="takeMall" style="background-image:url('/Data/MainLink/4/BannerImage.jpg')">
+                    <a href="http://shop.angelinus.com" target="_blank" title="새창 열기">
+                            <span class="desc">
+                                <i>ANGEL’S MALL</i>
+                                <strong> </strong>
+                            </span>
+                    </a>
+                </div>
+
+                <div class="takeWithAc" style="background-image:url('/Data/MainLink/5/BannerImage.jpg')">
+                    <a href="/WholeBean/perfection.asp">
+                            <span class="desc">
+                                <i>WITH ANGELS</i>
+                                <strong>커피의 맛과 향이 살아있는 엔제리너스<br/> 커피의 비밀</strong>
+                            </span>
+                    </a>
+                </div>
+
+                <div class="takeAcademy" style="background-image:url('/Data/MainLink/6/BannerImage.jpg')">
+                    <a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=361&SearchEventGubun=0">
+                            <span class="desc">
+                                <i>Q-Grader Coffee Class</i>
+                                <strong>큐그레이더와 함께하는 커피클래스!</strong>
+                            </span>
+                    </a>
+                </div>
+
+
+                <div class="takeNews">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="fir"><strong>NEWS &amp; NOTICE</strong></th>
+                            <th><a href="/Board/Board.asp?BoardIdx=1">+ MORE</a></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        
+                                                <!--<li>·<a href="http://localhost/dhmm/index.php?m=content&c=index&a=show&catid=45&id=9" target="_blank" title="豆花妈妈被《大武汉》评为武汉台式甜品代表" >豆花妈妈被《大武汉》评...</a>  </li>-->
+                        <tr>
+                            <td class="fir">
+                                <a href="http://localhost/dhmm/index.php?m=content&c=index&a=show&catid=45&id=9" target="_blank" title="豆花妈妈被《大武汉》评为武汉台式甜品代表">・ 豆花妈妈被《大武汉》评为武汉台式甜品代表</a>
+                            </td>
+                            <td>2016.10.11</td>
+                        </tr>
+
+                                                <!--<li>·<a href="http://localhost/dhmm/index.php?m=content&c=index&a=show&catid=45&id=8" target="_blank" title="未来5年我国将制订完善1000项食品标准" >未来5年我国将制订完善10...</a>  </li>-->
+                        <tr>
+                            <td class="fir">
+                                <a href="http://localhost/dhmm/index.php?m=content&c=index&a=show&catid=45&id=8" target="_blank" title="未来5年我国将制订完善1000项食品标准">・ 未来5年我国将制订完善1000项食品标准</a>
+                            </td>
+                            <td>2016.10.11</td>
+                        </tr>
+
+                                                <!--<li>·<a href="http://localhost/dhmm/index.php?m=content&c=index&a=show&catid=45&id=7" target="_blank" title="这样的手打豆花真的是很有味" >这样的手打豆花真的是很有味</a>  </li>-->
+                        <tr>
+                            <td class="fir">
+                                <a href="http://localhost/dhmm/index.php?m=content&c=index&a=show&catid=45&id=7" target="_blank" title="这样的手打豆花真的是很有味">・ 这样的手打豆花真的是很有味</a>
+                            </td>
+                            <td>2016.10.11</td>
+                        </tr>
+
+                                                <!--<li>·<a href="http://localhost/dhmm/index.php?m=content&c=index&a=show&catid=45&id=6" target="_blank" title="热烈祝贺武汉豆花妈妈食品有限公司网站正式开通！" >热烈祝贺武汉豆花妈妈食...</a>  </li>-->
+                        <tr>
+                            <td class="fir">
+                                <a href="http://localhost/dhmm/index.php?m=content&c=index&a=show&catid=45&id=6" target="_blank" title="热烈祝贺武汉豆花妈妈食品有限公司网站正式开通！">・ 热烈祝贺武汉豆花妈妈食品有限公司网站正式开通！</a>
+                            </td>
+                            <td>2016.10.11</td>
+                        </tr>
+
+                                                
+                        </tbody>
+                    </table>
+                </div>
+
+                <script type="text/javascript" language="javascript">
+                    (function (factory) {
+                        if (typeof define === 'function' && define.amd) {
+                            define(['jquery'], factory)
+                        } else {
+                            factory(jQuery)
+                        }
+                    }(function ($) {
+                        var pluses = /\+/g;
+
+                        function raw(s) {
+                            return s
+                        }
+
+                        function decoded(s) {
+                            return decodeURIComponent(s.replace(pluses, ' '))
+                        }
+
+                        function converted(s) {
+                            if (s.indexOf('"') === 0) {
+                                s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\')
+                            }
+                            try {
+                                return config.json ? JSON.parse(s) : s
+                            } catch (er) {
+                            }
+                        }
+
+                        var config = $.cookie = function (key, value, options) {
+                            if (value !== undefined) {
+                                options = $.extend({}, config.defaults, options);
+                                if (typeof options.expires === 'number') {
+                                    var days = options.expires, t = options.expires = new Date();
+                                    t.setDate(t.getDate() + days)
+                                }
+                                value = config.json ? JSON.stringify(value) : String(value);
+                                return (document.cookie = [config.raw ? key : encodeURIComponent(key), '=', config.raw ? value : encodeURIComponent(value), options.expires ? '; expires=' + options.expires.toUTCString() : '', options.path ? '; path=' + options.path : '', options.domain ? '; domain=' + options.domain : '', options.secure ? '; secure' : ''].join(''))
+                            }
+                            var decode = config.raw ? raw : decoded;
+                            var cookies = document.cookie.split('; ');
+                            var result = key ? undefined : {};
+                            for (var i = 0, l = cookies.length; i < l; i++) {
+                                var parts = cookies[i].split('=');
+                                var name = decode(parts.shift());
+                                var cookie = decode(parts.join('='));
+                                if (key && key === name) {
+                                    result = converted(cookie);
+                                    break
+                                }
+                                if (!key) {
+                                    result[name] = converted(cookie)
+                                }
+                            }
+                            return result
+                        };
+                        config.defaults = {};
+                        $.removeCookie = function (key, options) {
+                            if ($.cookie(key) !== undefined) {
+                                $.cookie(key, '', $.extend({}, options, {expires: -1}));
+                                return true
+                            }
+                            return false
+                        }
+                    }));
+
+                    $.fn.popupzoneSlide = function () {
+                        return this.each(function () {
+                            var dur = 3000,
+                                    isAuto = true,
+                                    timer,
+                                    index = 0,
+                                    $container = $(this).find("ul"),
+                                    $item = $container.find("> li"),
+                                    $btns = $item.find("> span > a"),
+                                    max = $item.length;
+
+                            function showBanner(number) {
+                                $item.removeClass("on");
+                                $item.eq(number).addClass("on");
+                                index = number;
+                                /*if(isAuto == true) {
+                                 timer = setTimeout(function() {
+                                 slide("right");
+                                 }, dur);
+                                 }*/
+                            }
+
+                            /*function slide(dir) {
+                             if(dir =="left") {
+                             var i = index - 1;
+                             if(i < 0) {
+                             i = max - 1;
+                             }
+                             } else if(dir =="right") {
+                             var i = index + 1;
+                             if(i == max) {
+                             i = 0;
+                             }
+                             }
+                             showBanner(i);
+                             }*/
+                            $btns.click(function () {
+                                clearTimeout(timer);
+                                var t = $btns.index($(this)[0]);
+                                showBanner(t);
+                                return false;
+                            });
+                            /*	$("span.baPrev a", this).click(function () {
+                             clearTimeout(timer);
+                             slide("left");
+                             return false;
+                             });
+
+                             $("span.baNext a", this).click(function () {
+                             clearTimeout(timer);
+                             slide("right");
+                             return false;
+                             });
+                             $("span.popBtn a", this).click(function() {
+                             if(isAuto == true) {
+                             $(this).text("자동재생시작").addClass("on");
+                             clearTimeout(timer);
+                             isAuto = false;
+                             return false;
+                             } else {
+                             $(this).text("자동재생정지").removeClass("on");
+                             timer = setTimeout(function() {
+                             slide("right");
+                             }, dur);
+                             isAuto = true;
+                             return false;
+                             }
+
+                             });*/
+                            showBanner(0);
+                        });
+                    };
+
+                    $.fn.popupzone = function () {
+                        return this.each(function () {
+                            var $popup = $(this),
+                                    $closeBtn = $popup.find("div.ckeck > a"),
+                                    $check = $popup.find("input#close"),
+                                    $banner = $popup.find("> div > div");
+
+                            function open() {
+                                $popup.animate({
+                                    "height": "214px"
+                                }, {
+                                    queue: false,
+                                    duration: 300
+                                });
+                            }
+
+                            function close() {
+                                if ($check.is(":checked")) {
+                                    $.cookie("popupzone", "disabled", {expires: 1, path: "/"});
+                                }
+                                $popup.animate({
+                                    "height": "0px"
+                                }, {
+                                    queue: false,
+                                    duration: 300,
+                                    complete: function () {
+                                        $popup.remove();
+                                    }
+                                });
+                            }
+
+                            $closeBtn.bind("click", function () {
+                                close();
+                                return false;
+                            });
+                            var pzCoockie = $.cookie("popupzone");
+                            if (pzCoockie == "disabled") {
+                            } else {
+                                open();
+                                $banner.popupzoneSlide();
+                            }
+                        });
+                    };
+
+                    $(".popup").popupzone();
+                </script>
+
+
+                <div id="debug" style="width:0;height:0;">
+                    <iframe id="ifrmProc" name="ifrmProc" width="0" height="0" title="빈프레임"></iframe>
+                </div>
+            </div><!-- //content -->
+        </div><!-- //content and aside -->
+    </div>
+</div><!-- //containerWrap -->
+<!-- footer -->
+<div id="footerAc">
+    <div class="footerTop">
+        <div class="footerTopInner o-footer-navi-wrap">
+            <img class="footerLogo" src="/ImagesNew/common/footerLogo.gif" alt="Angel-in-us Coffee"/>
+        </div>
+    </div>
+    <div class="footerInnerWrap">
+        <div class="footerInner">
+            <div class="topAc">
+                <a href="javascript:void(0);">武汉豆花</a>ㅣ
+                <a href="javascript:void(0);">武汉仙草</a>ㅣ
+                <a href="javascript:void(0);" class="em">武汉豆花妈妈食品有限公司</a>ㅣ
+                <a href="javascript:void(0);">武汉芋圆</a>ㅣ
+                <a href="javascript:void(0);">武汉饮品</a>
+            </div>
+            <div class="midAc"><br/>
+                版权所有：武汉豆花妈妈食品有限公司 地址：湖北大学西门学院路喻家湖148附24号
+            </div>
+            <div class="bottomAc"><br/>
+                <span>联系电话：027-86715369   全国加盟热线：400-888-0279  18627978633  13554310263  QQ：176777128</span><br/>
+                <span>技术支持：易城中国 后台服务</span>
+            </div>
+            <div class="footAward">
+                &nbsp;
+            </div>
+
+        </div>
+    </div>
 </div>
-<script type="text/javascript">
-$(function(){
-	$(".picbig").each(function(i){
-		var cur = $(this).find('.img-wrap').eq(0);
-		var w = cur.width();
-		var h = cur.height();
-	   $(this).find('.img-wrap img').LoadImage(true, w, h,'http://localhost/dhmm/statics/images/msg_img/loading.gif');
-	});
-})
+
+<!-- LogInside(E-Biz) Version 6.0i START -->
+<script>
+    var NL_ag = 0;
+    var NL_id = '';    // 로그인사용자 아이디
+    var NL_mr = '';        // 로그인사용자 결혼여부 ('single' , 'married')
+    var NL_gd = '';           // 로그인사용자 성별 ('man' , 'woman')
+    var NL_skey = '';             // 내부검색어
+    var NL_jn = '';               // 가입탈퇴 여부 ( 'join','withdraw' )
+    var NL_jid = '';				// 회원가입시 입력한 ID
+    var NL_ud1 = '';				// 사용자정의변수 1 ( 1~ 7 정수값)
+    var NL_ud2 = '';				// 사용자정의변수 2 ( 1~ 7 정수값)
+    var NL_ud3 = '';				// 사용자정의변수 3 ( 1~ 7 정수값)
 </script>
+<!-- LogInside(E-Biz) Version 6.0i END -->
+
+<!-- LogInside(E-Biz) Version 6.5 START -->
+<!-- This script is for LogInside E-Biz members only. -->
+<!-- Do not modify this script code for any purpose. -->
+<!-- Copyright (C) 2001-2009 AmazingSoft.com All Rights Reserved. -->
+<script>
+    if (typeof NU_rl == 'undefined') {
+        var NU_rl = 'http://' + 'ldcc.loginside.co.kr:80';
+        var PCHKIMG = new Image();
+        var NL_bn = navigator.appName;
+        if (document.URL.substring(0, 8) == 'https://') {
+            NU_rl = 'https://ldcc.loginside.co.kr/sslb1';
+        } else {
+            if (NL_bn.indexOf("Netscape") > -1 || NL_bn == "Mozilla") {
+                setTimeout("PCHKIMG.src = NU_rl+'/?cookie';", 1);
+            } else {
+                PCHKIMG.src = NU_rl + '/?cookie';
+            }
+            ;
+        }
+        document.writeln("<scr" + "ipt src='/loginside/loginside_mainscript.js'></scr" + "ipt>");
+    }
+</script>
+<!-- LogInside(E-Biz) Version 6.5 END -->
+<!-- //footer -->
+<script>
+    //setPage({hn:"0",sn:"",cn:"",tn:""});
+    try {
+        $angelinus.ready({hn: "0", sn: "", cn: "", tn: ""});
+    } catch (e) {
+    }
+</script>
+
 </body>
 </html>
