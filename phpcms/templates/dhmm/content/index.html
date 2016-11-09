@@ -3,22 +3,23 @@
 <!-- //containerWrap -->
 <div id="containerWrapAc">
     <div class="visWrap">
+        {pc:get sql="SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC" num="4"}
+        <script type="text/javascript">
+            eval("\$narry =$r['setting'];");
+            console.log($narry);
+        </script>
 
-        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/69/BannerImage.jpg);">ONE BITE MORE HAPPINESS</p>
+        {loop $data $r}
 
-        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/68/BannerImage.jpg);">Let&#039;s Autumn with angels</p>
-
-        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/60/BannerImage.jpg);">아메리치노</p>
-
-        <p class="visBg" data-theme="dark" style="background-image:url(/Data/MainTop/66/BannerImage.jpg);">L.POINT / L.pay 간편함 그이상의 결제 엘페이</p>
+        <p class="visBg" data-theme="bright" style="background-image:url({$narry['imageurl']});">{str_cut($r['title'],30)}</p>
+        {/loop}
 
 
         <div class="visCon">
 
-            {pc:content action="position" posid="1" order="listorder DESC" thumb="1" num="5"}
             {loop $data $r}
             <p class="titleAc">
-                <a href="{$r['url']}"><img src="{thumb($r['thumb'],310,260)}" alt="{str_cut($r['title'],30)}"/></a>
+                <a href="{$r['url']}"><img src="{$r['thumb']}" alt="{str_cut($r['title'],30)}"/></a>
             </p>
             {/loop}
 
@@ -52,7 +53,7 @@
         </div>
     </div>
     <!-- content and aside -->
-    <div id="containerAc" >
+    <div id="containerAc">
         <!-- content area -->
         <div class="conShare" style=" display: none;"><!-- class 추가 facebook - fb, twitter - twi, kakao - ka, Instagram - insta -->
             <div class="calendar">
@@ -108,47 +109,47 @@
         </div>
         <div class="conTake">
             <div class="takeText">
-                <strong>Take Your Time Angel-in-us</strong>
-                <p>당신을 미소 짓게 하는 천사의 커피</p>
+                <strong>Take Your Time Tofu Pudding Mom-in-us </strong>
+                <p>健康美味食材.全新味觉享受</p>
             </div>
             <div class="takeContent">
-                <div class="takeStore" style="background-image:url('/Data/MainLink/1/BannerImage.jpg')">
+                <div class="takeStore" style="background-image:url('{IMG_PATH}banner/index_5.jpg')">
                     <a href="http://www.angelinus.com/Board/Board.asp?h_title=전체&Timestamp=2015111020151110&BoardIdx=1&Mode=VIEW&Page=1&PageSize=10&BlockSize=10&Idx=297&SearchCategory=0&SearchType=&SearchText=">
                             <span class="desc">
-                                <span>가맹점모집</span>
-                                <strong>성공을 위한 수호천사가 되겠습니다.</strong>
+                                <span></span>
+                                <strong></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeProduct" style="background-image:url('/Data/MainLink/2/BannerImage.jpg')">
+                <div class="takeProduct" style="background-image:url('{IMG_PATH}banner/index_1.jpg')">
                     <a href="/Menu/HotProduct_List.asp">
                             <span class="desc">
                                 <i>NEW MENU</i>
-                                <strong>엔제리너스의 새로운 소식</strong>
+                                <strong>엔제리너스</strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeTv" style="background-image:url('/Data/MainLink/3/BannerImage.jpg')">
+                <div class="takeTv" style="background-image:url('{IMG_PATH}banner/index_2.jpg')">
                     <a href="/About/VideoAdvertise_List.asp">
                             <span class="desc">
-                                <i>TV/CF</i>
-                                <strong>광고 속에서 엔제리너스 커피를 만나보세요.</strong>
+                                <i></i>
+                                <strong></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeMall" style="background-image:url('/Data/MainLink/4/BannerImage.jpg')">
+                <div class="takeMall" style="background-image:url('{IMG_PATH}banner/index_6.jpg')">
                     <a href="http://shop.angelinus.com" target="_blank" title="새창 열기">
                             <span class="desc">
-                                <i>ANGEL’S MALL</i>
+                                <i></i>
                                 <strong> </strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeWithAc" style="background-image:url('/Data/MainLink/5/BannerImage.jpg')">
+                <div class="takeWithAc" style="background-image:url('{IMG_PATH}banner/index_3.jpg')">
                     <a href="/WholeBean/perfection.asp">
                             <span class="desc">
                                 <i>WITH ANGELS</i>
@@ -157,11 +158,11 @@
                     </a>
                 </div>
 
-                <div class="takeAcademy" style="background-image:url('/Data/MainLink/6/BannerImage.jpg')">
+                <div class="takeAcademy" style="background-image:url('{IMG_PATH}banner/index_4.jpg')">
                     <a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=361&SearchEventGubun=0">
                             <span class="desc">
-                                <i>Q-Grader Coffee Class</i>
-                                <strong>큐그레이더와 함께하는 커피클래스!</strong>
+                                <i></i>
+                                <strong></strong>
                             </span>
                     </a>
                 </div>
@@ -172,7 +173,9 @@
                         <thead>
                         <tr>
                             <th class="fir"><strong>NEWS &amp; NOTICE</strong></th>
-                            <th><a target="_blank" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=45">+ MORE</a></th>
+                            <th>
+                                <a target="_blank" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=45">+ MORE</a>
+                            </th>
                         </tr>
                         </thead>
                         <tbody>

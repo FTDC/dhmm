@@ -22,8 +22,8 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <div class="col-auto channel-slide">
     {pc:content  action="lists" catid="$catid" order="listorder ASC" thumb="1" num="5"}
   		<ul class="thumb">
@@ -46,7 +46,7 @@
          {/pc}
     </div>
  <!--下面这部分代码是广告代码，可通过删除注释的方法显示出来-->
- <!-- 
+ <!--
     <div class="ads">
     	<div class="col-left"><script language="javascript" src="{APP_PATH}caches/poster_js/4.js"></script></div>
         <div class="col-auto">
@@ -63,7 +63,7 @@
         <div class="box cat-area" {if $j%2==1}style="margin-right:10px"{/if}>
         		<h5 class="title-1">{$v[catname]}<a href="{$v[url]}" class="more">更多>></a></h5>
              <div class="content">
-             	
+
 				{pc:content action="lists" catid="$v[catid]" thumb="1" num="1" order="id DESC"}
 				<p>
 					{loop $data $v}
@@ -72,7 +72,7 @@
 					{/loop}
 					</p>
 				{/pc}
-                
+
                 <div class="bk15 hr"></div>
                 <ul class="list  lh24 f14">
                 {pc:content action="lists" catid="$v[catid]" num="5" order="id DESC"}

@@ -19,14 +19,10 @@
     <link href="<?php echo JS_PATH;?>dhmm/library/css/jquery.ui.datepicker.css?rnd=B8BDC3" rel="stylesheet" type="text/css" media="all">
     -->
 
-    <script>var $G_SERVER_URL = "http://www.angelinus.com";</script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery-1.5.1.min.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.easing.min.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/jquery.ui.core.js" charset="utf-8"></script>
-    <script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/jquery.ui.datepicker.js" charset="utf-8"></script>
-    <script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/jquery.ui.datepicker-ko-user.js" charset="utf-8"></script>
     <!--<script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/selectbox/jquery.selectbox.js" charset="utf-8"></script>-->
-    <script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/jquery.validate.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.mousewheel.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.jscrollpane.min.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/editor/SE/js/HuskyEZCreator.js" charset="utf-8"></script>
@@ -39,33 +35,9 @@
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.func.js"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.js" charset="utf-8"></script>
+
+    <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.menu.js"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.home.js"></script>
-    <script type="text/javascript">
-
-                <?php $n=1; if(is_array($nav_cate)) foreach($nav_cate AS $key => $r) { ?>
-                    $angelinus.hn("<?php echo $key;?>", "<?php echo $r['catname'];?>")
-
-                <?php $n++;}unset($n); ?>
-
-    </script>
-
-    <script language='JavaScript' src='https://member.lpoint.com/door/sso/ANGELINUS/checkLogin.jsp'></script>
-    <script>
-        /*	이벤트 내용보기	*/
-        var goView_EVENT = function (intIdx, strEventType) {
-            $("#frmEVENT input[name='Idx']").val(intIdx);
-            $("#frmEVENT input[name='EventType']").val(strEventType);
-            $("#frmEVENT input[name='Mode']").val("VIEW");
-            $("#frmEVENT").attr({"method": "get", "target": "", "action": "Event/Event_View.asp"}).submit();
-        }
-        /*  공지사항 내용보기 */
-        var goView_NEWS = function (intIdx) {
-            $("#frmNEWS input[name='Idx']").val(intIdx);
-            $("#frmNEWS input[name='Mode']").val("VIEW");
-            $("#frmNEWS").attr({"method": "get", "target": "", "action": "Board/Board.asp"}).submit();
-        }
-
-    </script>
 
 </head>
 <body class="main">
@@ -115,61 +87,6 @@
                     <!--<a href="/About/SpecialityAngelinus.asp" class="bf">555</a>ㅣ-->
                     <!--<a href="http://shop.angelinus.com/" title="새창열림" target="_blank" class="bf">6666</a>-->
 				</span>
-
-                <!-- 언어선택 -->
-                <div class="langWrap" style="display:none;">
-                    <a href="#" class="langOpen">Language</a>
-                    <div class="langList">
-                        <ul>
-                            <li><a href="/index.asp">한국어</a></li>
-                            <li><a href="/eng/index.asp">English</a></li>
-                            <!-- <li><a href="/cn/index.asp">中國語</a></li>-->
-                        </ul>
-                    </div>
-                </div>
-                <!-- //언어선택 -->
-                <!-- 회원 등급안내 레이어팝업 -->
-                <!-- 2016-03-31 추가 및 수정 -->
-                <div class="popup_grade" style="display:none;">
-                    <div>
-                        <h2><img src="/Images/main/img_tit_popup_level.jpg" alt="L.POINT 회원 등급 안내"></h2>
-                        <ul class="grade_info">
-                            <li><p>33333</p></li>
-                            <li><p>L.POINT 취소, 환불 및 사용한 건은 반영되지 않습니다.</p></li>
-                            <li><p>회원 등급은 1년간 유지 됩니다.</p></li>
-                            <li><p>등급 산정은 매년 3월 1일부터 적용 됩니다.</p>
-                                <p class="bgnone">ex) 15년 실적 기준 → 16년 3월 1일 ~ 17년 2월 28일 등급 적용</p></li>
-                            <li><p>등급별 혜택</p>
-                                <table summary="L.POINT 등급별 혜택을 안내합니다." class="grade_benefit">
-                                    <caption>L.POINT 등급별 혜택</caption>
-                                    <colgroup>
-                                        <col width="50%">
-                                        <col width="*">
-                                    </colgroup>
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">구분</th>
-                                        <th scrop="col">헤택</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>우수회원</td>
-                                        <td>결제금액의 0.5% 적립</td>
-                                    </tr>
-                                    <tr>
-                                        <td>일반회원</td>
-                                        <td>결제금액의 0.3% 적립</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="#" class="close_popup_grade"><img src="/Images/main/btn_close_popup.gif"></a>
-                </div>
-                <!-- // 2016-03-31 추가 및 수정 -->
-                <!-- // 회원 등급안내 레이어팝업 -->
             </div>
             <div class="depthWrap">
                 <ul class="depth1 o-navi-html"></ul>

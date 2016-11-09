@@ -1,20 +1,35 @@
 {template "content","header_page"}
-<div id="content">
-	<div class="col-left left-nav">
-    	<h1>关于我们222</h1>
-    	<ul class="content">
-        	{loop $arrchild_arr $cid}
-                <li{if $catid==$cid} class="cur"{/if}><a href="{$CATEGORYS[$cid][url]}">{$CATEGORYS[$cid][catname]}</a></li>
-			{/loop}
-        </ul>
-        <div class="bottom"></div>
-    </div>
-  <div class="col-auto">
-    	<img src="{IMG_PATH}v9/about_ad.png" width="659" height="171" />
-    	<h1 class="title">{$title}</h1>
-        <div class="content">dddddddddddddd
-        	    {$content}
+<!-- //containerWrap -->
+<div id="containerWrapAc" class="sub">
+    <div class="visWrap">
+        <div class="visCon">
+            <div class="titleAc">
+                <h3 class="o-navi-visual-menu-name"></h3>
+                <strong class="o-navi-visual-title"></strong>
+                <p class="o-navi-visual-text"></p>
+            </div>
+            <div class="cirBtnWrap">
+                <div class="cirBtn o-navi-visual-paging-area"></div>
+            </div>
+            <div class="btnWrap o-navi-visual-button-area"></div>
         </div>
+        <div class="visBg o-navi-visual" style="background-image: url(/ImagesNew/gnb/visual/visual_hn_2.jpg);"></div>
     </div>
- </div>
+    <div class="lnbWrap">
+        <div class="lnbAc o-navi-tab o-navi-tab-fixed"></div>
+    </div>
+    <!-- content and aside -->
+    <div class="conWrap">
+        <div id="containerAc">
+
+            <!-- content area -->
+            <div id="content">
+                <!-- content area -->
+                {$content}
+                <!-- //content area -->
+
+            </div><!-- //content -->
+        </div><!-- //content and aside -->
+    </div>
+</div><!-- //containerWrap -->
 {template "content","footer"}

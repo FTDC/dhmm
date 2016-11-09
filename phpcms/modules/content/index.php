@@ -37,15 +37,15 @@ class index
 
         $nav_cate = array();
         foreach ($CATEGORYS as $key => $value) {
-            if ($nav_cate['parentid'] == 0) {
-                $nacate[$value['catid']] = $value;
+            if ($value['parentid'] == 0) {
+                $nav_cate[$value['catid']] = $value;
             } else {
                 $nav_cate[$value['parentid']]['child_nav'][] = array('catname' => $value['catname'], 'url' => $value['url']);
             }
         }
 
 
-//        var_dump($nacate);
+//        var_dump($nav_cate);
 //        exit(3333);
 
         include template('content', 'index', $default_style);
