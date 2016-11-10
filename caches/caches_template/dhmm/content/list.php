@@ -19,6 +19,311 @@
     </div>
 </div>
 
+<div id="containerWrapAc" class="sub">
+    <div class="visWrap">
+        <div class="visCon">
+            <div class="titleAc">
+                <h3 class="o-navi-visual-menu-name"><span>새소식</span></h3>
+                <strong class="o-navi-visual-title"><span>엔제리너스의 새로운 소식입니다.</span></strong>
+                <p class="o-navi-visual-text"><span>엔제리너스와 관련된 새로운 소식을 빠르고 정확하게 알려드립니다.</span></p>
+            </div>
+            <div class="cirBtnWrap">
+                <div class="cirBtn o-navi-visual-paging-area">
+                    <a href="/About/EnterpriseIntroduce.asp" target="_self"><span>엔제리너스 소개</span></a><a href="/About/BI.asp" target="_self"><span>엔제리너스 BI</span></a><a href="/About/store.asp" target="_self"><span>엔제리너스 매장</span></a><a href="/About/specialty.asp" target="_self"><span>Specialty Coffee</span></a><a href="/About/SocietyContribute_2014.asp" target="_self"><span>사회공헌</span></a><a href="/About/VideoAdvertise_List.asp" target="_self"><span>광고 자료</span></a><a class="selected" href="/Board/Board.asp?BoardIdx=1" target="_self"><span>새소식</span></a><a href="/About/globalization.asp" target="_self"><span>Globalization</span></a>
+                </div>
+            </div>
+            <div class="btnWrap o-navi-visual-button-area">
+                <a class="prevAc" href="/About/VideoAdvertise_List.asp" target="_self"> <strong>ABOUT US</strong>
+                    <span>광고 자료</span></a><a class="nextAc" href="/About/globalization.asp" target="_self">
+                <strong>ABOUT US</strong> Globalization</a></div>
+        </div>
+        <div class="visBg o-navi-visual" style="background-image: url(/ImagesNew/gnb/visual/visual_hn_5.jpg);"></div>
+    </div>
+    <div class="lnbWrap">
+        <div class="lnbAc o-navi-tab o-navi-tab-fixed"></div>
+    </div>
+    <!-- content and aside -->
+    <div class="conWrap">
+        <div id="containerAc">
+
+            <!-- content area -->
+            <div id="content">
+                <div id="hn" class="hn5 sn6">
+                    <div class="title">
+                        <h3><img src="/images/title/hn5_sn6_title.png" alt="새소식"></h3>
+                        <p><img src="/images/title/hn5_sn6_sub_title1.png" alt="엔제리너스의 새로운 소식입니다."></p>
+                        <p><img src="/images/title/hn5_sn6_sub_title2.png" alt="엔제리너스와 관련된 새로운 소식을 빠르고 정확하게 알려드립니다.">
+                        </p>
+                    </div>
+                    <div class="section event_list">
+                        <div class="tab_basic mb20">
+                            <ul id="wrapTab">
+                                <li><h4>
+                                    <a href="#" onclick="tabChange2(0, false, true); return false;"><img src="/Images/about/tab_new0_on.gif" alt="전체"></a>
+                                </h4></li>
+                                <li><h4>
+                                    <a href="#" onclick="tabChange2(1, false, true); return false;"><img src="/Images/about/tab_new1_off.gif" alt="공지사항"></a>
+                                </h4></li>
+                                <li><h4>
+                                    <a href="#" onclick="tabChange2(2, false, true); return false;"><img src="/Images/about/tab_new5_off.gif" alt="당첨자발표"></a>
+                                </h4></li>
+                                <li><h4>
+                                    <a href="#" onclick="tabChange2(3, false, true); return false;"><img src="/Images/about/tab_new2_off.gif" alt="보도자료"></a>
+                                </h4></li>
+
+                            </ul>
+                        </div>
+                        <!-- <div class="tab_basic"><span id="wrapTab"><img src="/images/about/tab_news1.gif" alt="" border="0" usemap="#mapNews"></span>
+                            <map name="mapNews">
+                                <area shape="rect" coords="2,2,75,27" href="#" onClick="tabChange(0, false, true); return false;" alt="전체">
+                                <area shape="rect" coords="79,2,153,27" href="#" onClick="tabChange(1, false, true); return false;" alt="공지사항">
+                                <area shape="rect" coords="157,2,232,27" href="#" onClick="tabChange(2, false, true); return false;" alt="보도자료">
+                                //<area shape="rect" coords="235,2,310,27" href="#" onClick="tabChange(3, false, true); return false;" alt="당첨자발표">
+                            </map>
+                        </div> -->
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                            });
+                        </script>
+                        <form id="frmNavi" name="frmNavi" method="post">
+                            <input type="hidden" name="h_title" value="전체">
+                            <input type="hidden" name="Timestamp" value="2016111020161110">
+                            <input type="hidden" name="BoardIdx" value="1">
+                            <input type="hidden" name="Mode" value="">
+                            <input type="hidden" name="Page" value="1">
+                            <input type="hidden" name="PageSize" value="10">
+                            <input type="hidden" name="BlockSize" value="10">
+                            <input type="hidden" name="Idx" value="0">
+                            <div class="search_top">
+                                <div class="right">
+
+                                    <!-- <select id="cboSearchCategory" name="SearchCategory" style="display: none;"  title="검색구분">
+                                        <option value="" selected="selected">분류선택</option>
+                                        <option value='12' >공지사항</option><option value='13' >당첨자발표</option><option value='14' >보도자료</option>
+                                    </select> -->
+                                    <input type="hidden" id="cboSearchCategory" name="SearchCategory" value="0">
+
+                                    <select name="SearchType" title="검색구분">
+                                        <option value="" selected="selected">전체</option>
+                                        <option value="Subject">제목</option>
+                                        <option value="Contents">내용</option>
+                                    </select>
+                                    <input type="text" class="text" name="SearchText" value="" maxlength="50" style="width:135px" title="검색어 입력">
+                                    <a id="btnSearch" href="#"><img src="/images/common/btn_search.gif" alt="검색"></a>
+                                </div>
+                            </div>
+                        </form>
+                        <form id="frmDefault" name="frmDefault" method="post">
+                            <input type="hidden" name="Mode" value="">
+                            <table class="list">
+                                <!-- 2013-09-06-m4one 수정 -->
+                                <!--caption>분류, 제목, 등록일로 구성된 새소식 목록</caption-->
+
+                                <caption>번호, 분류, 제목, 등록일로 구성된 새소식(전체) 목록</caption>
+
+                                <!-- // 2013-09-06-m4one 수정 -->
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                <tr class="thead last">
+                                    <th scope="col" class="w70"><img src="/images/thead/thead_list_num.gif" alt="번호">
+                                    </th>
+                                    <th scope="col" class="w90"><img src="/images/thead/thead_list_sort.gif" alt="분류">
+                                    </th>
+                                    <th scope="col" class="wStar"><img src="/images/thead/thead_list_subj.gif" alt="제목">
+                                    </th>
+                                    <th scope="col" class="w90"><img src="/images/thead/thead_list_date.gif" alt="등록일">
+                                    </th>
+                                </tr>
+                                </thead>
+                                <!-- 상단고정 -->
+                                <tbody>
+
+                                <tr class="top">
+                                    <td class="str"><img src="/images/common/ico_star_board.gif" alt="공지"></td>
+                                    <td class="type">공지사항</td>
+                                    <td class="subj">
+                                        <a href="#" onclick="goView('337');return false;">엔제리너스 현대카드 M포인트 제휴 서비스 종료 안내</a>
+                                    </td>
+
+                                    <td>2016.10.10</td>
+                                </tr>
+
+                                <tr class="top">
+                                    <td class="str"><img src="/images/common/ico_star_board.gif" alt="공지"></td>
+                                    <td class="type">공지사항</td>
+                                    <td class="subj">
+                                        <a href="#" onclick="goView('330');return false;">시스템 점검 공지안내</a>
+                                    </td>
+
+                                    <td>2016.09.05</td>
+                                </tr>
+
+                                <tr class="top">
+                                    <td class="str"><img src="/images/common/ico_star_board.gif" alt="공지"></td>
+                                    <td class="type">공지사항</td>
+                                    <td class="subj">
+                                        <a href="#" onclick="goView('322');return false;">Angel-in-us Card가 더 특별해 졌습니다.</a>
+                                    </td>
+
+                                    <td>2016.05.27</td>
+                                </tr>
+
+                                <tr class="top">
+                                    <td class="str"><img src="/images/common/ico_star_board.gif" alt="공지"></td>
+                                    <td class="type">공지사항</td>
+                                    <td class="subj">
+                                        <a href="#" onclick="goView('321');return false;">개인정보취급방침변경안내</a>
+                                    </td>
+
+                                    <td>2016.05.05</td>
+                                </tr>
+
+                                <tr class="top">
+                                    <td class="str"><img src="/images/common/ico_star_board.gif" alt="공지"></td>
+                                    <td class="type">공지사항</td>
+                                    <td class="subj">
+                                        <a href="#" onclick="goView('314');return false;">L.POINT 제휴 서비스 변경 안내</a>
+                                    </td>
+
+                                    <td>2016.02.15</td>
+                                </tr>
+
+                                <!-- //상단고정 -->
+
+                                <tr>
+                                    <td class="str">186</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=101&amp;oid=421&amp;aid=0002367005" target="_blank" title="새창 열기">엔제리너스, 보리로 만든 ''오르조'' 2종 출시<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.11.01</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="str">185</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://www.futurekorea.co.kr/news/articleView.html?idxno=32936" target="_blank" title="새창 열기">엔제리너스커피, 싱글 오리진 원두 활용한 에스프레소 선...<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.10.31</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="str">184</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=103&amp;oid=011&amp;aid=0002906104" target="_blank" title="새창 열기">[불황이 기회다, 진화하는 ''식탁지도''] 엔제리너스...<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.10.26</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="str">183</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://www.viva100.com/main/view.php?key=20161020010005715" target="_blank" title="새창 열기">용기하나 바꿨을 뿐인데… 매출증가 불러온 외식업계 ''...<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.10.21</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="str">182</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://www.hidomin.com/news/articleView.html?idxno=310727" target="_blank" title="새창 열기">롯데百 대구점, 북카페 ‘엔제리너스 스페셜티’ 오픈<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.10.20</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="str">181</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=101&amp;oid=015&amp;aid=0003667264" target="_blank" title="새창 열기">[2016 산업별 고객만족도(KCSI)] 엔제리너스커피...<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.10.11</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="str">180</td>
+                                    <td class="type">공지사항</td>
+                                    <td class="subj">
+                                        <a href="#" onclick="goView('337');return false;">엔제리너스 현대카드 M포인트 제휴 서비스 종료 안내</a>
+                                    </td>
+                                    <td>2016.10.10</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="str">179</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=101&amp;oid=014&amp;aid=0003715677" target="_blank" title="새창 열기">엔제리너스커피, 가을 맞아 ‘SNS 경품 이벤트’ 진행<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.10.05</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="str">178</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=101&amp;oid=016&amp;aid=0001123089" target="_blank" title="새창 열기">엔제리너스커피, 100여명 고객과 함께한 ‘조인성 팬 ...<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.09.23</td>
+                                </tr>
+
+                                <tr class="last">
+                                    <td class="str">177</td>
+                                    <td class="type">보도자료</td>
+                                    <td class="subj">
+                                        <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=sec&amp;sid1=101&amp;oid=417&amp;aid=0000200365" target="_blank" title="새창 열기">엔제리너스커피, ‘엔젤 스타트업 아이디어 팩토리’ 오픈<img class="new" src="/images/common/ico_board_link.gif" alt="link"></a>
+                                    </td>
+                                    <td>2016.09.18</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            <!-- paging -->
+                            <div class="paging">
+                                <div class="left"></div>
+		<span class="wrap">
+<a href="#" onclick="goPage(1);return false;" class="go prev"><img src="/images/common/btn_page_prev.gif" alt="이전"></a>
+
+
+<strong>1</strong>
+<a href="#" onclick="goPage(2);return false;">2</a>
+<a href="#" onclick="goPage(3);return false;">3</a>
+<a href="#" onclick="goPage(4);return false;">4</a>
+<a href="#" onclick="goPage(5);return false;">5</a>
+<a href="#" onclick="goPage(6);return false;">6</a>
+<a href="#" onclick="goPage(7);return false;">7</a>
+<a href="#" onclick="goPage(8);return false;">8</a>
+<a href="#" onclick="goPage(9);return false;">9</a>
+<a href="#" onclick="goPage(10);return false;">10</a>
+
+
+<a href="#" onclick="goPage(11);return false;" class="go next"><img src="/images/common/btn_page_next.gif" alt="다음"></a>
+
+</span>
+                                <div class="right"></div>
+                            </div>
+                            <!-- //paging -->
+                        </form>
+
+                    </div>
+                </div><!-- 임시 2013-07-11 -->
+
+                <div id="debug" style="width:0;height:0;">
+                    <iframe id="ifrmProc" name="ifrmProc" width="0" height="0" title="빈프레임"></iframe>
+                </div>
+            </div><!-- //content -->
+        </div><!-- //content and aside -->
+    </div>
+</div>
 
 
 <?php include template("content","footer"); ?>

@@ -19,14 +19,10 @@
     <link href="http://localhost/dhmm/statics/js/dhmm/library/css/jquery.ui.datepicker.css?rnd=B8BDC3" rel="stylesheet" type="text/css" media="all">
     -->
 
-    <script>var $G_SERVER_URL = "http://www.angelinus.com";</script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery-1.5.1.min.js" charset="utf-8"></script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery.easing.min.js" charset="utf-8"></script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/jquery.ui.core.js" charset="utf-8"></script>
-    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/jquery.ui.datepicker.js" charset="utf-8"></script>
-    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/jquery.ui.datepicker-ko-user.js" charset="utf-8"></script>
     <!--<script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/selectbox/jquery.selectbox.js" charset="utf-8"></script>-->
-    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/plugin/jquery.validate.js" charset="utf-8"></script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery.mousewheel.js" charset="utf-8"></script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery.jscrollpane.min.js" charset="utf-8"></script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/editor/SE/js/HuskyEZCreator.js" charset="utf-8"></script>
@@ -39,26 +35,9 @@
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/jquery.func.js"></script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.js" charset="utf-8"></script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.angelinus.js" charset="utf-8"></script>
-    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.angelinus.menu.js" charset="utf-8"></script>
+
+    <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.angelinus.menu.js"></script>
     <script src="http://localhost/dhmm/statics/js/dhmm/library/js/richscript/richscript.angelinus.home.js"></script>
-
-    <script language='JavaScript' src='https://member.lpoint.com/door/sso/ANGELINUS/checkLogin.jsp'></script>
-    <script>
-        /*	이벤트 내용보기	*/
-        var goView_EVENT = function (intIdx, strEventType) {
-            $("#frmEVENT input[name='Idx']").val(intIdx);
-            $("#frmEVENT input[name='EventType']").val(strEventType);
-            $("#frmEVENT input[name='Mode']").val("VIEW");
-            $("#frmEVENT").attr({"method": "get", "target": "", "action": "Event/Event_View.asp"}).submit();
-        }
-        /*  공지사항 내용보기 */
-        var goView_NEWS = function (intIdx) {
-            $("#frmNEWS input[name='Idx']").val(intIdx);
-            $("#frmNEWS input[name='Mode']").val("VIEW");
-            $("#frmNEWS").attr({"method": "get", "target": "", "action": "Board/Board.asp"}).submit();
-        }
-
-    </script>
 
 </head>
 <body class="main">
@@ -103,66 +82,11 @@
 				<span>
                     <a target="_blank" href="http://www.angelinus.com/Member/Login.asp">官方微博</a> ㅣ
                     <a href="https://member.lpoint.com/door/user/login_common.jsp?sid=ANGELINUS">联系我们</a>
-					<!--<a href="/Voc/Voc_Write.asp">3333</a> ㅣ-->
-					<!--<a href="http://www.lotteria.com/Campaign/Management/Ethics_report.asp?sitecode=002" target="_blank" title="새창열림">4444</a> ㅣ-->
-					<!--<a href="/About/SpecialityAngelinus.asp" class="bf">555</a>ㅣ-->
-					<!--<a href="http://shop.angelinus.com/" title="새창열림" target="_blank" class="bf">6666</a>-->
+                    <!--<a href="/Voc/Voc_Write.asp">3333</a> ㅣ-->
+                    <!--<a href="http://www.lotteria.com/Campaign/Management/Ethics_report.asp?sitecode=002" target="_blank" title="새창열림">4444</a> ㅣ-->
+                    <!--<a href="/About/SpecialityAngelinus.asp" class="bf">555</a>ㅣ-->
+                    <!--<a href="http://shop.angelinus.com/" title="새창열림" target="_blank" class="bf">6666</a>-->
 				</span>
-
-                <!-- 언어선택 -->
-                <div class="langWrap" style="display:none;">
-                    <a href="#" class="langOpen">Language</a>
-                    <div class="langList">
-                        <ul>
-                            <li><a href="/index.asp">한국어</a></li>
-                            <li><a href="/eng/index.asp">English</a></li>
-                            <!-- <li><a href="/cn/index.asp">中國語</a></li>-->
-                        </ul>
-                    </div>
-                </div>
-                <!-- //언어선택 -->
-                <!-- 회원 등급안내 레이어팝업 -->
-                <!-- 2016-03-31 추가 및 수정 -->
-                <div class="popup_grade" style="display:none;">
-                    <div>
-                        <h2><img src="/Images/main/img_tit_popup_level.jpg" alt="L.POINT 회원 등급 안내"></h2>
-                        <ul class="grade_info">
-                            <li><p>33333</p></li>
-                            <li><p>L.POINT 취소, 환불 및 사용한 건은 반영되지 않습니다.</p></li>
-                            <li><p>회원 등급은 1년간 유지 됩니다.</p></li>
-                            <li><p>등급 산정은 매년 3월 1일부터 적용 됩니다.</p>
-                                <p class="bgnone">ex) 15년 실적 기준 → 16년 3월 1일 ~ 17년 2월 28일 등급 적용</p></li>
-                            <li><p>등급별 혜택</p>
-                                <table summary="L.POINT 등급별 혜택을 안내합니다." class="grade_benefit">
-                                    <caption>L.POINT 등급별 혜택</caption>
-                                    <colgroup>
-                                        <col width="50%">
-                                        <col width="*">
-                                    </colgroup>
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">구분</th>
-                                        <th scrop="col">헤택</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>우수회원</td>
-                                        <td>결제금액의 0.5% 적립</td>
-                                    </tr>
-                                    <tr>
-                                        <td>일반회원</td>
-                                        <td>결제금액의 0.3% 적립</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="#" class="close_popup_grade"><img src="/Images/main/btn_close_popup.gif"></a>
-                </div>
-                <!-- // 2016-03-31 추가 및 수정 -->
-                <!-- // 회원 등급안내 레이어팝업 -->
             </div>
             <div class="depthWrap">
                 <ul class="depth1 o-navi-html"></ul>
@@ -174,19 +98,26 @@
 <!-- //containerWrap -->
 <div id="containerWrapAc">
     <div class="visWrap">
+                <script type="text/javascript">
+            eval("\$narry =$r['setting'];");
+            console.log($narry);
+        </script>
 
-        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/69/BannerImage.jpg);">ONE BITE MORE HAPPINESS</p>
-
-        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/68/BannerImage.jpg);">Let&#039;s Autumn with angels</p>
-
-        <p class="visBg" data-theme="bright" style="background-image:url(/Data/MainTop/60/BannerImage.jpg);">아메리치노</p>
-
-        <p class="visBg" data-theme="dark" style="background-image:url(/Data/MainTop/66/BannerImage.jpg);">L.POINT / L.pay 간편함 그이상의 결제 엘페이</p>
-
+        
+        <p class="visBg" data-theme="bright" style="background-image:url(http://localhost/dhmm/statics/images/banner/bannerimage.jpg);">666</p>
+        
+        <p class="visBg" data-theme="bright" style="background-image:url(http://localhost/dhmm/statics/images/banner/bannerimage.jpg);">666</p>
+        
 
         <div class="visCon">
 
-                        
+                        <p class="titleAc">
+                <a href=""><img src="" alt=""/></a>
+            </p>
+                        <p class="titleAc">
+                <a href=""><img src="" alt=""/></a>
+            </p>
+            
 
             <div class="cirBtnWrap">
                 <div class="cirBtn o-visual-paging"></div>
@@ -217,7 +148,7 @@
         </div>
     </div>
     <!-- content and aside -->
-    <div id="containerAc" >
+    <div id="containerAc">
         <!-- content area -->
         <div class="conShare" style=" display: none;"><!-- class 추가 facebook - fb, twitter - twi, kakao - ka, Instagram - insta -->
             <div class="calendar">
@@ -273,47 +204,47 @@
         </div>
         <div class="conTake">
             <div class="takeText">
-                <strong>Take Your Time Angel-in-us</strong>
-                <p>당신을 미소 짓게 하는 천사의 커피</p>
+                <strong>Take Your Time Tofu Pudding Mom-in-us </strong>
+                <p>健康美味食材.全新味觉享受</p>
             </div>
             <div class="takeContent">
-                <div class="takeStore" style="background-image:url('/Data/MainLink/1/BannerImage.jpg')">
+                <div class="takeStore" style="background-image:url('http://localhost/dhmm/statics/images/banner/index_5.jpg')">
                     <a href="http://www.angelinus.com/Board/Board.asp?h_title=전체&Timestamp=2015111020151110&BoardIdx=1&Mode=VIEW&Page=1&PageSize=10&BlockSize=10&Idx=297&SearchCategory=0&SearchType=&SearchText=">
                             <span class="desc">
-                                <span>가맹점모집</span>
-                                <strong>성공을 위한 수호천사가 되겠습니다.</strong>
+                                <span></span>
+                                <strong></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeProduct" style="background-image:url('/Data/MainLink/2/BannerImage.jpg')">
+                <div class="takeProduct" style="background-image:url('http://localhost/dhmm/statics/images/banner/index_1.jpg')">
                     <a href="/Menu/HotProduct_List.asp">
                             <span class="desc">
                                 <i>NEW MENU</i>
-                                <strong>엔제리너스의 새로운 소식</strong>
+                                <strong>엔제리너스</strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeTv" style="background-image:url('/Data/MainLink/3/BannerImage.jpg')">
+                <div class="takeTv" style="background-image:url('http://localhost/dhmm/statics/images/banner/index_2.jpg')">
                     <a href="/About/VideoAdvertise_List.asp">
                             <span class="desc">
-                                <i>TV/CF</i>
-                                <strong>광고 속에서 엔제리너스 커피를 만나보세요.</strong>
+                                <i></i>
+                                <strong></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeMall" style="background-image:url('/Data/MainLink/4/BannerImage.jpg')">
+                <div class="takeMall" style="background-image:url('http://localhost/dhmm/statics/images/banner/index_6.jpg')">
                     <a href="http://shop.angelinus.com" target="_blank" title="새창 열기">
                             <span class="desc">
-                                <i>ANGEL’S MALL</i>
+                                <i></i>
                                 <strong> </strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeWithAc" style="background-image:url('/Data/MainLink/5/BannerImage.jpg')">
+                <div class="takeWithAc" style="background-image:url('http://localhost/dhmm/statics/images/banner/index_3.jpg')">
                     <a href="/WholeBean/perfection.asp">
                             <span class="desc">
                                 <i>WITH ANGELS</i>
@@ -322,11 +253,11 @@
                     </a>
                 </div>
 
-                <div class="takeAcademy" style="background-image:url('/Data/MainLink/6/BannerImage.jpg')">
+                <div class="takeAcademy" style="background-image:url('http://localhost/dhmm/statics/images/banner/index_4.jpg')">
                     <a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=361&SearchEventGubun=0">
                             <span class="desc">
-                                <i>Q-Grader Coffee Class</i>
-                                <strong>큐그레이더와 함께하는 커피클래스!</strong>
+                                <i></i>
+                                <strong></strong>
                             </span>
                     </a>
                 </div>
@@ -337,7 +268,9 @@
                         <thead>
                         <tr>
                             <th class="fir"><strong>NEWS &amp; NOTICE</strong></th>
-                            <th><a href="/Board/Board.asp?BoardIdx=1">+ MORE</a></th>
+                            <th>
+                                <a target="_blank" href="http://localhost/dhmm/index.php?m=content&c=index&a=lists&catid=45">+ MORE</a>
+                            </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -572,12 +505,13 @@
             </div><!-- //content -->
         </div><!-- //content and aside -->
     </div>
-</div><!-- //containerWrap -->
+</div>
+<!-- //containerWrap -->
 <!-- footer -->
 <div id="footerAc">
     <div class="footerTop">
         <div class="footerTopInner o-footer-navi-wrap">
-            <img class="footerLogo" src="/ImagesNew/common/footerLogo.gif" alt="Angel-in-us Coffee"/>
+            <img class="footerLogo" src="http://localhost/dhmm/statics/images/footlogo.png" alt="Angel-in-us Coffee"/>
         </div>
     </div>
     <div class="footerInnerWrap">
@@ -594,7 +528,6 @@
             </div>
             <div class="bottomAc"><br/>
                 <span>联系电话：027-86715369   全国加盟热线：400-888-0279  18627978633  13554310263  QQ：176777128</span><br/>
-                <span>技术支持：易城中国 后台服务</span>
             </div>
             <div class="footAward">
                 &nbsp;

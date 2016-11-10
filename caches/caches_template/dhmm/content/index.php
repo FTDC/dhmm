@@ -11,10 +11,8 @@
 
         <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
 
-        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo $narry['imageurl'];?>);"><?php echo str_cut($r['title'],30);?></p>
+        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo IMG_PATH;?>banner/bannerimage.jpg);">666</p>
         <?php $n++;}unset($n); ?>
-
-
         <div class="visCon">
 
             <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
@@ -22,7 +20,6 @@
                 <a href="<?php echo $r['url'];?>"><img src="<?php echo $r['thumb'];?>" alt="<?php echo str_cut($r['title'],30);?>"/></a>
             </p>
             <?php $n++;}unset($n); ?>
-
 
             <div class="cirBtnWrap">
                 <div class="cirBtn o-visual-paging"></div>
@@ -109,7 +106,7 @@
         </div>
         <div class="conTake">
             <div class="takeText">
-                <strong>Take Your Time Tofu Pudding Mom-in-us </strong>
+                <strong><img src="<?php echo IMG_PATH;?>text.png" /> </strong>
                 <p>健康美味食材.全新味觉享受</p>
             </div>
             <div class="takeContent">
@@ -390,5 +387,6 @@
             </div><!-- //content -->
         </div><!-- //content and aside -->
     </div>
-</div><!-- //containerWrap -->
+</div>
+<!-- //containerWrap -->
 <?php include template("content","footer"); ?>

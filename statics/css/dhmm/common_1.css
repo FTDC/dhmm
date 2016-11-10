@@ -353,7 +353,7 @@ td .unit {height:20px;font-family:Nanum Gothic;font-size:11px;font-weight:600;li
 table.list {width:100%;background:url("../images/line_boardlist_bottom.gif") no-repeat left bottom;}
 table.list thead {background:url("../images/bg_boardlist_head.gif") no-repeat;}
 table.list thead tr th {height:32px;text-align:center;}
-table.list thead tr .wStar {width:*;}
+table.list thead tr .wStar {width:570px;}
 table.list thead tr .w40 {width:40px;}
 table.list thead tr .w65 {width:65px;}
 table.list thead tr .w70 {width:70px;}

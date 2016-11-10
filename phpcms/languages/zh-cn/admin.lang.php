@@ -66,7 +66,7 @@ $LANG['main_product_bbs'] = '官方论坛：';
 $LANG['main_product_qq'] = '官方QQ讨论群：';
 $LANG['main_product_sales'] = '销售咨询QQ：';
 $LANG['main_license'] = '授权信息';
-$LANG['main_support'] = '技术支持与服务';
+$LANG['main_support'] = '';
 $LANG['main_license_type'] = '授权类型：';
 $LANG['main_serial_number'] = '序列号：';
 
