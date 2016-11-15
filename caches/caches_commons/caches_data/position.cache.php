@@ -24,30 +24,6 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
-  16 => 
-  array (
-    'posid' => '16',
-    'modelid' => '0',
-    'catid' => '0',
-    'name' => '视频首页每日热点',
-    'maxnum' => '20',
-    'extention' => '',
-    'listorder' => '0',
-    'siteid' => '1',
-    'thumb' => '',
-  ),
-  15 => 
-  array (
-    'posid' => '15',
-    'modelid' => '0',
-    'catid' => '0',
-    'name' => '视频首页头条推荐',
-    'maxnum' => '20',
-    'extention' => '',
-    'listorder' => '0',
-    'siteid' => '1',
-    'thumb' => '',
-  ),
   14 => 
   array (
     'posid' => '14',
@@ -84,6 +60,54 @@ return array (
     'siteid' => '1',
     'thumb' => '',
   ),
+  17 => 
+  array (
+    'posid' => '17',
+    'modelid' => '0',
+    'catid' => '0',
+    'name' => '视频栏目精彩推荐',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '0',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  13 => 
+  array (
+    'posid' => '13',
+    'modelid' => '82',
+    'catid' => '0',
+    'name' => '栏目页焦点图',
+    'maxnum' => '20',
+    'extention' => NULL,
+    'listorder' => '0',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  16 => 
+  array (
+    'posid' => '16',
+    'modelid' => '0',
+    'catid' => '0',
+    'name' => '视频首页每日热点',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '0',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  15 => 
+  array (
+    'posid' => '15',
+    'modelid' => '0',
+    'catid' => '0',
+    'name' => '视频首页头条推荐',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '0',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
   9 => 
   array (
     'posid' => '9',
@@ -116,30 +140,6 @@ return array (
     'name' => '推荐下载',
     'maxnum' => '20',
     'extention' => NULL,
-    'listorder' => '0',
-    'siteid' => '1',
-    'thumb' => '',
-  ),
-  13 => 
-  array (
-    'posid' => '13',
-    'modelid' => '82',
-    'catid' => '0',
-    'name' => '栏目页焦点图',
-    'maxnum' => '20',
-    'extention' => NULL,
-    'listorder' => '0',
-    'siteid' => '1',
-    'thumb' => '',
-  ),
-  17 => 
-  array (
-    'posid' => '17',
-    'modelid' => '0',
-    'catid' => '0',
-    'name' => '视频栏目精彩推荐',
-    'maxnum' => '20',
-    'extention' => '',
     'listorder' => '0',
     'siteid' => '1',
     'thumb' => '',

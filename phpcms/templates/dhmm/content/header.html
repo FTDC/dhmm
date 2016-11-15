@@ -40,8 +40,8 @@
         {loop $nav_cate $k $v}
         {php $j++}
         .hn({$j}, "{$v['catname']}")
-        {loop $v['child_nav'] $b $a}
-        .sn("{$n}", "{$a['catname']}", "{$a['url']}", {title: "{$a['catname']}", text:""})
+        {loop $v['child_nav'] $child}
+        .sn("{$n}", "{$child['catname']}", "{$child['url']}", {title: "{$child['catname']}", text:""})
         {/loop}
         {/loop}
         ;
@@ -62,7 +62,7 @@
 <div id="headerAc">
     <div class="gnb o-navi-fixed">
         <div class="gnbWrap">
-            <div class="logoAc"><h1><a href="/index.asp">豆花妈妈</a></h1></div>
+            <div class="logoAc"><h1><a href="/">豆花妈妈</a></h1></div>
             <div class="gnbTop">
 				<span>
                     <a target="_blank" href="http://www.angelinus.com/Member/Login.asp">官方微博</a> ㅣ

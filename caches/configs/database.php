@@ -2,11 +2,11 @@
 
 return array (
 	'default' => array (
-		'hostname' => 'localhost',
+		'hostname' => '115.28.44.194',
 		'port' => 3306,
 		'database' => 'dhmm',
 		'username' => 'root',
-		'password' => 'password',
+		'password' => 'xjin@1116',
 		'tablepre' => 'dh_',
 		'charset' => 'utf8',
 		'type' => 'mysqli',

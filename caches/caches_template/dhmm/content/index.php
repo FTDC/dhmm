@@ -3,48 +3,23 @@
 <!-- //containerWrap -->
 <div id="containerWrapAc">
     <div class="visWrap">
-        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=8b58c57f6fd1f252ef478583ca7c4d21&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
-        <script type="text/javascript">
-        </script>
-
-        <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-
-        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo IMG_PATH;?>banner/bannerimage.jpg);">666</p>
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=e06c5ff28a54b5dc5e0d118719babcfb&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=4&return=ad_list\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$ad_list = $a;unset($a);?>
+        <?php $n=1;if(is_array($ad_list)) foreach($ad_list AS $r) { ?>
+        <?php $narray = json_decode($r['setting'],1);?>
+        <?php var_dump($narray);?>
+        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo $narray['1']['imageurl'];?>);">666</p>
         <?php $n++;}unset($n); ?>
         <div class="visCon">
 
             <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
             <p class="titleAc">
-                <a href="<?php echo $r['url'];?>"><img src="<?php echo $r['thumb'];?>" alt="<?php echo str_cut($r['title'],30);?>"/></a>
+                <a href="<?php echo $r['url'];?>"><img src="<?php echo $r['thumb'];?>" alt="<?php echo str_cut($r['title'],30);?>"/>333</a>
             </p>
             <?php $n++;}unset($n); ?>
 
             <div class="cirBtnWrap">
                 <div class="cirBtn o-visual-paging"></div>
             </div>
-            <!--div class='layer_banner' style='z-index:2; position:absolute; top:130px; left:0;'>
-                <img src='/Popup/images/20150709_bnr.jpg' alt='엔제리너스 15주년 이벤트' useMap="#Map"/>
-                <map name="Map" id="Map">
-
-                    <area shape="rect" coords="17,156,367,478" href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=316&SearchEventGubun=0" target="_blank" alt="스탬프 쿠폰 아메리치노 5잔 구매시 1잔 증정 이벤트" />
-                    <area shape="rect" coords="383,156,733,478" href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=319&SearchEventGubun=0" target="_blank" alt="한정판 기프트백을 만나보세요" />
-                    <area shape="rect" coords="749,156,1099,478" href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=317&SearchEventGubun=0" target="_blank" alt="10,000원 이상 구매시 에코머그 증정 이벤트" />
-
-                    <area shape="rect" coords="559,501,821,550" href="https://www.facebook.com/angelinustime/photos/a.285822351493240.67154.282560198486122/911276102281192/?type=1" target="_blank" alt="페이스북 이벤트 참여하기" />
-                    <area shape="rect" coords="837,501,1099,550" href="http://www.ticketmonster.co.kr/fromadmin/199165181" target="_blank" alt="브랜드런칭 15주년 카드 이벤트 참여하기" />
-
-                    <area shape="rect" coords="1084,10,1106,31" href="#" target="_blank" onClick='javascript:bannerClose();return false;' alt="이벤트 배너 닫기 버튼" />
-                </map>
-                <script>
-                    function bannerClose()
-                    {
-                        $( ".layer_banner" ).click(function() {
-                          $( this ).css({display: 'none'});
-
-                        });
-                    }
-                </script>
-            </div-->
         </div>
     </div>
     <!-- content and aside -->

@@ -40,8 +40,8 @@
         <?php $n=1; if(is_array($nav_cate)) foreach($nav_cate AS $k => $v) { ?>
         <?php $j++?>
         .hn(<?php echo $j;?>, "<?php echo $v['catname'];?>")
-        <?php $n=1; if(is_array($v['child_nav'])) foreach($v['child_nav'] AS $b => $a) { ?>
-        .sn("<?php echo $n;?>", "<?php echo $a['catname'];?>", "<?php echo $a['url'];?>", {title: "<?php echo $a['catname'];?>", text:""})
+        <?php $n=1;if(is_array($v['child_nav'])) foreach($v['child_nav'] AS $child) { ?>
+        .sn("<?php echo $n;?>", "<?php echo $child['catname'];?>", "<?php echo $child['url'];?>", {title: "<?php echo $child['catname'];?>", text:""})
         <?php $n++;}unset($n); ?>
         <?php $n++;}unset($n); ?>
         ;
@@ -62,7 +62,7 @@
 <div id="headerAc">
     <div class="gnb o-navi-fixed">
         <div class="gnbWrap">
-            <div class="logoAc"><h1><a href="/index.asp">豆花妈妈</a></h1></div>
+            <div class="logoAc"><h1><a href="/">豆花妈妈</a></h1></div>
             <div class="gnbTop">
 				<span>
                     <a target="_blank" href="http://www.angelinus.com/Member/Login.asp">官方微博</a> ㅣ
