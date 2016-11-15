@@ -41,31 +41,6 @@
     var NL_ud2 = '';				// 사용자정의변수 2 ( 1~ 7 정수값)
     var NL_ud3 = '';				// 사용자정의변수 3 ( 1~ 7 정수값)
 </script>
-<!-- LogInside(E-Biz) Version 6.0i END -->
-
-<!-- LogInside(E-Biz) Version 6.5 START -->
-<!-- This script is for LogInside E-Biz members only. -->
-<!-- Do not modify this script code for any purpose. -->
-<!-- Copyright (C) 2001-2009 AmazingSoft.com All Rights Reserved. -->
-<script>
-    if (typeof NU_rl == 'undefined') {
-        var NU_rl = 'http://' + 'ldcc.loginside.co.kr:80';
-        var PCHKIMG = new Image();
-        var NL_bn = navigator.appName;
-        if (document.URL.substring(0, 8) == 'https://') {
-            NU_rl = 'https://ldcc.loginside.co.kr/sslb1';
-        } else {
-            if (NL_bn.indexOf("Netscape") > -1 || NL_bn == "Mozilla") {
-                setTimeout("PCHKIMG.src = NU_rl+'/?cookie';", 1);
-            } else {
-                PCHKIMG.src = NU_rl + '/?cookie';
-            }
-            ;
-        }
-        document.writeln("<scr" + "ipt src='/loginside/loginside_mainscript.js'></scr" + "ipt>");
-    }
-</script>
-<!-- LogInside(E-Biz) Version 6.5 END -->
 <!-- //footer -->
 <script>
     //setPage({hn:"0",sn:"",cn:"",tn:""});

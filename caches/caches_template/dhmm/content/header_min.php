@@ -1,5 +1,4 @@
-<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=7"/>
@@ -35,7 +34,18 @@
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.func.js"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.js" charset="utf-8"></script>
-    <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.menu.js"></script>
+    <script type="text/javascript">
+        <?php $j = 0?>
+        $angelinus
+        <?php $n=1; if(is_array($nav_cate)) foreach($nav_cate AS $k => $v) { ?>
+        <?php $j++?>
+        .hn(<?php echo $j;?>, "<?php echo $v['catname'];?>")
+            <?php $n=1; if(is_array($v['child_nav'])) foreach($v['child_nav'] AS $b => $a) { ?>
+            .sn("<?php echo $n;?>", "<?php echo $a['catname'];?>", "<?php echo $a['url'];?>", {title: "<?php echo $a['catname'];?>", text:""})
+            <?php $n++;}unset($n); ?>
+        <?php $n++;}unset($n); ?>
+        ;
+    </script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.home.js"></script>
 
 </head>

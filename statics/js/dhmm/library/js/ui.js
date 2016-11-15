@@ -209,56 +209,6 @@ function setPage(arg) { //navigation hn:1depth, sn:2depth 를 받음
 		});
 		return false;
 	});
-	//m4one 끝
-
-	$.ajax({
-		type: 'get',
-		url : '/library/xml/menutree.xml',
-		datatype: 'xml',
-		cache:false,
-		success: function(xml){
-			var $x_tree = $(xml).find("root").find("navi"),
-				$x_d1 = $x_tree.find("Depth1").eq(arg.hn),
-				Depth1Name = $x_d1.attr("name"),
-				titleText = "";
-			if(arg.sn != -1) {
-				var $x_d2 = $x_d1.find("Depth2").eq(arg.sn -1),
-					Depth2Name = $x_d2.attr("name");
-				if(arg.cn != -1) {
-					var $x_d3 = $x_d2.find("Depth3").eq(arg.cn -1),
-					Depth3Name = $x_d3.attr("name");
-					if(arg.tn != -1) {
-						var $x_d4 = $x_d3.find("Depth4").eq(arg.tn -1),
-						Depth4Name = $x_d4.attr("name");
-					} else {
-						var Depth4Name = "xxx";
-					}
-				} else {
-					var Depth3Name = "xxx", Depth4Name = "xxx";
-				}
-			} else {
-				var Depth2Name = "xxx", Depth3Name = "xxx", Depth4Name = "xxx";
-			}
-
-
-			titleText = Depth1Name;
-			if(Depth2Name != "xxx") {
-				titleText = Depth2Name;
-			}
-			if(Depth3Name != "xxx") {
-				titleText = Depth3Name;
-			}
-			if(Depth4Name != "xxx") {
-				titleText = Depth4Name;
-			}
-			if($('input[name=h_title]').length) {
-				titleText += "(" + $('input[name=h_title]').val() + ")";
-			}
-			document.title = titleText + " | 엔제리너스";
-		},
-		complete:function(a,b) {
-7		}
-	});
 
 }
 

@@ -68,6 +68,15 @@ class index
         $siteid = $siteids[$catid];
         $CATEGORYS = getcache('category_content_' . $siteid, 'commons');
 
+        $nav_cate = array();
+        foreach ($CATEGORYS as $key => $value) {
+            if ($value['parentid'] == 0) {
+                $nav_cate[$value['catid']] = $value;
+            } else {
+                $nav_cate[$value['parentid']]['child_nav'][] = array('catname' => $value['catname'], 'url' => $value['url']);
+            }
+        }
+
         if (!isset($CATEGORYS[$catid]) || $CATEGORYS[$catid]['type'] != 0) showmessage(L('information_does_not_exist'), 'blank');
         $this->category = $CAT = $CATEGORYS[$catid];
         $this->category_setting = $CAT['setting'] = string2array($this->category['setting']);
@@ -228,6 +237,7 @@ class index
     //列表页
     public function lists()
     {
+
         $catid = $_GET['catid'] = intval($_GET['catid']);
         $_priv_data = $this->_category_priv($catid);
         if ($_priv_data == '-1') {
@@ -245,6 +255,16 @@ class index
         $siteid = $siteids[$catid];
         $CATEGORYS = getcache('category_content_' . $siteid, 'commons');
         if (!isset($CATEGORYS[$catid])) showmessage(L('category_not_exists'), 'blank');
+
+        $nav_cate = array();
+        foreach ($CATEGORYS as $key => $value) {
+            if ($value['parentid'] == 0) {
+                $nav_cate[$value['catid']] = $value;
+            } else {
+                $nav_cate[$value['parentid']]['child_nav'][] = array('catname' => $value['catname'], 'url' => $value['url']);
+            }
+        }
+
         $CAT = $CATEGORYS[$catid];
         $siteid = $GLOBALS['siteid'] = $CAT['siteid'];
         extract($CAT);

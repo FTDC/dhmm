@@ -2,31 +2,6 @@
 span { font-family: "Microsoft Yahei";font-weight:normal; }
 i { font-family:'Microsoft Yahei';font-weight:normal;font-style:normal; }
 a:hover { text-decoration:none; }
-@font-face{
-	font-family:'Microsoft Yahei';
-	src: url('/library/fonts/NotoSansKR-Bold.eot');
-	src: local('☺'),
-	url('/library/fonts/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
-	url('/library/fonts/NotoSansKR-Bold.woff') format('woff'),
-	url('/library/fonts/NotoSansKR-Bold.ttf') format('truetype');
-}
-@font-face{
-	font-family:'Microsoft Yahei';
-	src: url('/library/fonts/NotoSansKR-Regular.eot');
-	src: local('☺'),
-	url('/library/fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
-	url('/library/fonts/NotoSansKR-Regular.woff') format('woff'),
-	url('/library/fonts/NotoSansKR-Regular.ttf') format('truetype');
-}
-/* 영문폰트 */
-@font-face{
-	font-family:'Microsoft Yahei';
-	src: url('/library/fonts/SanchezSlab.eot');
-	src: local('☺'),
-	url('/library/fonts/SanchezSlab.eot?#iefix') format('embedded-opentype'),
-	url('/library/fonts/SanchezSlab.woff') format('woff'),
-	url('/library/fonts/SanchezSlab.ttf') format('truetype');
-}
 /*.last, .first { border:0 !important; }*/
 .hidden { position:absolute;z-index:-1;left:0;top:0;display:block;width:1px;height:1px;overflow:hidden;white-space:nowrap;text-indent:-9999px; }
 
@@ -205,9 +180,10 @@ html.M #containerWrapAc .visBg {position:absolute;}
 #footerAc .footerTop .depth1 li.hn4 { margin-right:60px; }
 #footerAc .footerTop .depth1 li.hn5 { margin-right:60px; }
 #footerAc .footerTop .depth1 li h2 { margin-bottom:8px; }
-#footerAc .footerTop .depth1 a { display:block;font-size:14px;color:#000; }
-#footerAc .footerTop .depth2 a { display:block;height:17px;font-size:10px;color:#707070;line-height:17px;text-transform:uppercase; }
+#footerAc .footerTop .depth1 a { display:block;font-size:16px;color:#000; }
+#footerAc .footerTop .depth2 a { display:block;height:17px;font-size:14px;color:#707070;line-height:17px;text-transform:uppercase; }
 #footerAc .footerTop .depth2 a span { line-height:1em; }
+#footerAc .footerTop .depth2 li { margin-top:5px; }
 
 #footerAc .footerInnerWrap { position:relative;width:100%; }
 #footerAc .footerInner { position:relative;width:1120px;height:100px;margin:0 auto; }

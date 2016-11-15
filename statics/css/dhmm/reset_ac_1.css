@@ -2,31 +2,6 @@
 span { font-family:'NOTOSANSR';font-weight:normal; }
 i { font-family:'SANCHEZR';font-weight:normal;font-style:normal; }
 a:hover { text-decoration:none; }
-@font-face{
-	font-family:'NOTOSANSB';
-	src: url('/library/fonts/NotoSansKR-Bold.eot');
-	src: local('☺'),
-	url('/library/fonts/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
-	url('/library/fonts/NotoSansKR-Bold.woff') format('woff'),
-	url('/library/fonts/NotoSansKR-Bold.ttf') format('truetype');
-}
-@font-face{
-	font-family:'NOTOSANSR';
-	src: url('/library/fonts/NotoSansKR-Regular.eot');
-	src: local('☺'),
-	url('/library/fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
-	url('/library/fonts/NotoSansKR-Regular.woff') format('woff'),
-	url('/library/fonts/NotoSansKR-Regular.ttf') format('truetype');
-}
-/* 영문폰트 */
-@font-face{
-	font-family:'SANCHEZR';
-	src: url('/library/fonts/SanchezSlab.eot');
-	src: local('☺'),
-	url('/library/fonts/SanchezSlab.eot?#iefix') format('embedded-opentype'),
-	url('/library/fonts/SanchezSlab.woff') format('woff'),
-	url('/library/fonts/SanchezSlab.ttf') format('truetype');
-}
 /*.last, .first { border:0 !important; }*/
 .hidden { position:absolute;z-index:-1;left:0;top:0;display:block;width:1px;height:1px;overflow:hidden;white-space:nowrap;text-indent:-9999px; }
 

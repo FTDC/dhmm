@@ -209,136 +209,7 @@ window[o] = {
 		$(this.id.bannerPlayButton).css({display:"none"});
 		return false;
 	},
-	
-	loadFacebook: function() {
-		var dummy = (new Date()).getTime();
-		FB.api('/282560198486122/posts?_='+dummy
-				//, {access_token:'CAACEdEose0cBABBEZAVZBycqLYyYwNlnpmh8ZBl48oZACpwDLGiV4B8SRREvHY7ZBbi24oGfHL4lUMt8ICzgSQqMaEs75kVxCMoMfL2phUzNSrRsO92puHAR95dRAoTZACZBgyb5PZB72vuZCcNEf1BltYMhjYiqurBQtdiQ6mOBBnpVc2MKmfEGbtxb8mlj028gdqk9cRECTTZC6GGI6c6cDA', limit:15}
-				, {access_token:'651605184866995|PHPK-MVCJ1GC0G8NqxkAAARacak', limit:15}
-				//, {access_token:'CAATZCYnThEzUBAIdIfWBHwoIxBaa17Wy56huOGOFPHaKr1zidRR8i7BifEYQ5qgD6GPvBPZCs24z9IJXzq2JrEG5C1ZCryRZBlRPijKZAsOlpUM3ZBYFengRMeavSbxgbBBNW68LQGmVwr2mbfT77OtnqDVKnEeHBXyK50FySKVu2JmdgkDZB3fZBx2wrEbTv4E6YKKZAb4dqOccp5bWjqQgs ', limit:6}
-				, function(data){
-			var s = '', idx = 0, hasData = false;
-			try{
-				s += '<ul class="recent">';
-				$.each(eval(data.data), function(i, $ret){
-                    var message = $ret.message || $ret.name;
-					if($.type(message) !== 'undefined'){
-						var fid = $ret.id;
-						var fTid = '';
-						if (fid.indexOf('_') > 0) {
-							fTid = fid.split('_')[1];
-						}
-						if (idx>0&&idx%3==0) {
-							s += '</ul>';
-							s += '<ul class="late">';
-						}
-						s += '<li';
-						if (idx%3==0) {
-							s += ' class="first"';
-						} else if (idx%3==2) {
-							s += ' class="last"';
-						}
-						s += '>';
-						s += '<a';
-						s += ' href="https://www.facebook.com/angelinustime/posts/'+fTid+'" target="_blank" title="새창열기"';
-						s += '>';
-						s += '	<strong>엔제리너스커피</strong>';
-						s += '	<span>'+(""+message).escapeXml()+'</span>';
-						s += '	<i>'+commonFunc.timeAgo($ret.created_time)+'</i>';
-						s += '</a>';
-						s += '</li>';
-						hasData = true;
-						
-						if (++idx == 6) {
-							return false;
-						}
-					}
-				});
-				s += '</ul>';
-				
-				if (hasData) {
-					$(o.id.snsContentsFacebook).html(s).removeClass("fbContentsLoading");
-					$(o.id.snsContentsEmpty).removeClass("fbContentsEmpty");
-				}
-			} catch(e) {
-				
-			}
-		});
-        FB.api('/282560198486122?_='+dummy, function(data) {
-            if (data&&data.likes) {
-            	var s = '';
-            	s += '<strong>'+Math.toMoney(data.likes)+'</strong>';
-            	s += '<span>좋아요</span>';
-            	$(o.id.snsCounterFacebook).html(s);
-            }
-        });
-		return this;
-	},
-	
-	loadTwitter: function() {
-		console.log("angry st--");
-		$.ajax({
-			url: "/library/asp/ASPTwitter.asp",
-			type: "get",
-			dataType: "json",
-			success: function(data){
-				var s = '', hasData = false, followers;
-				try{
-					s += '<ul class="recent">';
-					$.each(data, function(idx, $ret){
-						if (idx>0&&idx%3==0) {
-							s += '</ul>';
-							s += '<ul class="late">';
-						}
-						s += '<li';
-						if (idx%3==0) {
-							s += ' class="first"';
-						} else if (idx%3==2) {
-							s += ' class="last"';
-						}
-						s += '>';
-						s += '<a';
-						s += ' href="https://twitter.com/'+$ret.user.screen_name+'/status/'+$ret.id_str+'" target="_blank" title="새창열기"';
-						s += '>';
-						s += '	<strong>엔제리너스커피</strong>';
-						s += '	<span>'+$ret.text.escapeXml()+'</span>';
-						s += '	<i>'+commonFunc.twitterTime($ret.created_at.replace("+0000 ",""))+'</i>';
-						s += '</a>';
-						s += '</li>';
-						
-						if (followers===undefined
-							&& $ret.user
-							&& $ret.user.id == 176345106
-							&& $ret.user.followers_count) {
-							followers = $ret.user.followers_count;
-						}
-						hasData = true;
-						
-						if (++idx == 6) {
-							return false;
-						}
-					});
-					s += '</ul>';
-					
-					if (hasData) {
-						$(o.id.snsContentsTwitter).html(s).removeClass("twiContentsLoading");
-						$(o.id.snsContentsEmpty).removeClass("twiContentsEmpty");
-					}
-					if (followers!==undefined) {
-						s = '';
-	                	s += '<strong>'+Math.toMoney(followers)+'</strong>';
-	                	s += '<span>팔로워</span>';
-	                	$(o.id.snsCounterTwitter).html(s);
-					}
-					console.log("data : "+s);
-				} catch(e) {
-					console.log("fail");
-				}
-			}
-		});
-		return this;
-	},
-	
+
 	active: function() {
 		
 		$(this.all.visualPagingButtons).each(function(i) {
@@ -523,17 +394,8 @@ window[o] = {
 		window.fbAsyncInit = function() {
 			o.loadFacebook();
 		};
-		(function(d){
-			 var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-			 if (d.getElementById(id)) {return;}
-			 js = d.createElement('script'); js.id = id; js.async = true;
-			 js.src = "//connect.facebook.net/en_US/all.js";
-			 ref.parentNode.insertBefore(js, ref);
-		}(document));
 		
 		//load Twitter Contents
-		this.loadTwitter();
-		
 		return this;
 	}
 };

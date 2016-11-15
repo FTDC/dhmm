@@ -1,7 +1,7 @@
-<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header_page"); ?>
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header_min"); ?>
 <!-- //containerWrap -->
 <div id="containerWrapAc" class="sub">
-    <div class="visWrap">
+    <div class="visWrap" style="display: ;">
         <div class="visCon">
             <div class="titleAc">
                 <h3 class="o-navi-visual-menu-name"></h3>
@@ -13,7 +13,7 @@
             </div>
             <div class="btnWrap o-navi-visual-button-area"></div>
         </div>
-        <div class="visBg o-navi-visual" style="background-image: url(/ImagesNew/gnb/visual/visual_hn_2.jpg);"></div>
+        <div class="visBg o-navi-visual" style="background-image: url(<?php echo IMG_PATH;?>banner/visual_hn_4.jpg);"></div>
     </div>
     <div class="lnbWrap">
         <div class="lnbAc o-navi-tab o-navi-tab-fixed"></div>

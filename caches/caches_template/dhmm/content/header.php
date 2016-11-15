@@ -1,5 +1,4 @@
-<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=7"/>
@@ -35,36 +34,22 @@
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.func.js"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.js" charset="utf-8"></script>
-
-    <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.menu.js"></script>
+    <script type="text/javascript">
+        <?php $j = 0?>
+        $angelinus
+        <?php $n=1; if(is_array($nav_cate)) foreach($nav_cate AS $k => $v) { ?>
+        <?php $j++?>
+        .hn(<?php echo $j;?>, "<?php echo $v['catname'];?>")
+        <?php $n=1; if(is_array($v['child_nav'])) foreach($v['child_nav'] AS $b => $a) { ?>
+        .sn("<?php echo $n;?>", "<?php echo $a['catname'];?>", "<?php echo $a['url'];?>", {title: "<?php echo $a['catname'];?>", text:""})
+        <?php $n++;}unset($n); ?>
+        <?php $n++;}unset($n); ?>
+        ;
+    </script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.home.js"></script>
 
 </head>
 <body class="main">
-
-<!-- 상단배너
-<div class="popup" id="main_pop1" >
-<div class="pop">
-    <div id="bannerZone"> -->
-<!-- <span class="popBtn"><a href="#">자동재생정지</a></span>
-<span class="baPrev"><a href="#"><img src="/images/main/baPrev.gif" alt="이전 팝업보기"></a></span>-->
-<!-- <ul>
-    <li class="on">
-        <a href="/card/card.asp" class="bn"><img src="/images/main/banner/popup160912.jpg" alt="추석 연휴 택배사 마감으로 인해 마지막 배송날짜는 9월 9일이오며, 택배사 사정으로 인해 배송이 지연 될 수 있습니다. 또한 추석 연휴 기간 중 택배사 휴무 일정에 따라 9월 10일 ~ 9월 18일은 발송이 이루어지지 않으니, 고객님들의 양해 부탁드리겠습니다. 해당 기간 중 접수된 건은 택배사 정상 근무 일자인 9월 19일부터 순차적으로 발송됩니다. "></a>
-    </li>
-</ul>-->
-<!-- <span class="baNext"><a href="#"><img src="/images/main/baNext.gif" alt="다음 팝업보기"></a></span>
-<div class="ckeck">
-    <input type="checkbox" id="close" value="" name="pclose" >
-    <label for="close"><img src="/images/main/oneDay.gif" alt="1일 동안 열지 않기"></label>
-    <a href="#"><img src="/images/main/popClose.gif" alt="팝업창닫기"></a>
-</div>
-</div>
-</div>
-</div>-->
-<!-- //상단배너 -->
-
-
 <!-- header -->
 <!--
 

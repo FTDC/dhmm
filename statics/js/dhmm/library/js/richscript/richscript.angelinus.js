@@ -16,7 +16,7 @@ window[o] = {
 	e: new $.EventEmitter(),
 	
 	conf: {
-		  DEFAULT_TITLE: "엔제리너스"
+		  DEFAULT_TITLE: "豆花妈妈"
 		, naviMaxLengthForUI: 6/* 메뉴추가 card 후 메뉴 순서 조정 */
 	},
 	
@@ -290,8 +290,6 @@ window[o] = {
         if (this.currentMenu) {
         	s += this.currentMenu.title + " | ";
         }
-        s += this.conf.DEFAULT_TITLE;
-        document.title = s;
         return this;
     },
 	
@@ -838,7 +836,6 @@ window[o] = {
 				this.currentMenuCode = this.currentMenuCode.split("_")[0];
 				this.currentMenu = this.getMenuFromMenuCode(this.currentMenuCode);
 			}
-			this.printDocumentTitle();
 			this.focusMenu(this.currentMenuCode);
 		}
 		

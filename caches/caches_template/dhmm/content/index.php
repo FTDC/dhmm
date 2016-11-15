@@ -5,8 +5,6 @@
     <div class="visWrap">
         <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=8b58c57f6fd1f252ef478583ca7c4d21&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
         <script type="text/javascript">
-            eval("\$narry =$r['setting'];");
-            console.log($narry);
         </script>
 
         <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
@@ -52,61 +50,9 @@
     <!-- content and aside -->
     <div id="containerAc">
         <!-- content area -->
-        <div class="conShare" style=" display: none;"><!-- class 추가 facebook - fb, twitter - twi, kakao - ka, Instagram - insta -->
-            <div class="calendar">
-                <em class="day">14</em>
-                <em class="year">2016 .</em><em class="month">&nbsp;October</em>
-                <i>ANGELINUS SHARE</i>
-            </div>
-            <!-- facebook -->
-            <div class="fbLike">
-                <a class="bg richscript-preload o-sns-counter-facebook" href="https://www.facebook.com/angelinustime" target="_blank" title="새창 열기">
-                    <strong class="ready">Angel-in-us Coffee</strong>
-                    <span>페이스북 바로가기</span>
-                </a>
-                <a class="close" href="#">close</a>
-            </div>
-            <!-- facebook end-->
-            <!-- twitter -->
-            <div class="twiLike">
-                <a class="bg richscript-preload o-sns-counter-twitter" href="https://twitter.com/Angelinustime" target="_blank" title="새창 열기">
-                    <strong class="ready">Angel-in-us Coffee</strong>
-                    <span>트위터 바로가기</span>
-                </a>
-                <a class="close" href="#">close</a>
-            </div>
-            <!-- twitter end-->
-            <!-- kakao -->
-            <div class="kaLike richscript-preload">
-                <a class="close" href="#">close</a>
-            </div>
-            <!-- kakao end-->
-            <!-- Instagram -->
-            <div class="instaLike richscript-preload">
-                <a class="close" href="#">close</a>
-            </div>
-            <!-- Instagram end-->
-            <div class="snsAc">
-                <a class="facebook" href="https://www.facebook.com/angelinustime">Facebook</a>
-                <a class="twitter" href="https://twitter.com/Angelinustime">Twitter</a>
-                <a class="kakao" href="#">Kakao talk</a>
-                <a class="Instagram" href="#">Instagram</a>
-            </div>
-
-            <div class="newProduct fbContentsEmpty twiContentsEmpty o-sns-contents-empty">
-                <a href="http://www.angelinus.com/About/specialty.asp" class="banner"><img src="/Data/MainMid/81/BannerImage.jpg" alt="엔제리너스, 한국 커피 프랜차이즈 최초로 &amp;#039;국제 스페셜티 커피 폅회&amp;#039; 가입"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=427&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/75/BannerImage.jpg" alt="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&amp;amp;EventType=Event&amp;amp;Idx=427&amp;amp;SearchEventGubun=0"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=434&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/78/BannerImage.jpg" alt="엔제리너스 카드 2만원 이상 충전하면 영수증 음료 쿠폰을 드립니다."/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=433&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/80/BannerImage.jpg" alt="열두가지 맛있는 행복"/></a><a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=435&SearchEventGubun=0" class="banner"><img src="/Data/MainMid/79/BannerImage.jpg" alt="엔제리너스 카드 2만원 이상 충전하면 영수증 음료 쿠폰을 드립니다."/></a>
-                <div class="cirBtn o-banner-paging"></div>
-            </div>
-            <!-- facebook -->
-            <div class="fbCon fbContentsLoading o-sns-contents-facebook"></div>
-            <!-- facebook end-->
-            <!-- twitter -->
-            <div class="twiCon twiContentsLoading o-sns-contents-twitter"></div>
-            <!-- twitter end-->
-        </div>
         <div class="conTake">
             <div class="takeText">
-                <strong><img src="<?php echo IMG_PATH;?>text.png" /> </strong>
+                <strong><img src="<?php echo IMG_PATH;?>text.png"/> </strong>
                 <p>健康美味食材.全新味觉享受</p>
             </div>
             <div class="takeContent">
@@ -122,8 +68,8 @@
                 <div class="takeProduct" style="background-image:url('<?php echo IMG_PATH;?>banner/index_1.jpg')">
                     <a href="/Menu/HotProduct_List.asp">
                             <span class="desc">
-                                <i>NEW MENU</i>
-                                <strong>엔제리너스</strong>
+                                <i> </i>
+                                <strong></strong>
                             </span>
                     </a>
                 </div>
@@ -149,8 +95,8 @@
                 <div class="takeWithAc" style="background-image:url('<?php echo IMG_PATH;?>banner/index_3.jpg')">
                     <a href="/WholeBean/perfection.asp">
                             <span class="desc">
-                                <i>WITH ANGELS</i>
-                                <strong>커피의 맛과 향이 살아있는 엔제리너스<br/> 커피의 비밀</strong>
+                                <i></i>
+                                <strong></strong>
                             </span>
                     </a>
                 </div>
@@ -302,33 +248,7 @@
                                 showBanner(t);
                                 return false;
                             });
-                            /*	$("span.baPrev a", this).click(function () {
-                             clearTimeout(timer);
-                             slide("left");
-                             return false;
-                             });
 
-                             $("span.baNext a", this).click(function () {
-                             clearTimeout(timer);
-                             slide("right");
-                             return false;
-                             });
-                             $("span.popBtn a", this).click(function() {
-                             if(isAuto == true) {
-                             $(this).text("자동재생시작").addClass("on");
-                             clearTimeout(timer);
-                             isAuto = false;
-                             return false;
-                             } else {
-                             $(this).text("자동재생정지").removeClass("on");
-                             timer = setTimeout(function() {
-                             slide("right");
-                             }, dur);
-                             isAuto = true;
-                             return false;
-                             }
-
-                             });*/
                             showBanner(0);
                         });
                     };
@@ -376,14 +296,8 @@
                             }
                         });
                     };
-
                     $(".popup").popupzone();
                 </script>
-
-
-                <div id="debug" style="width:0;height:0;">
-                    <iframe id="ifrmProc" name="ifrmProc" width="0" height="0" title="빈프레임"></iframe>
-                </div>
             </div><!-- //content -->
         </div><!-- //content and aside -->
     </div>
