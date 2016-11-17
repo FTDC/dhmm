@@ -62,7 +62,7 @@
 <div id="headerAc">
     <div class="gnb o-navi-fixed">
         <div class="gnbWrap">
-            <div class="logoAc"><h1><a href="/">豆花妈妈</a></h1></div>
+            <div class="logoAc"><h1><a href="<?php echo APP_PATH;?>">豆花妈妈</a></h1></div>
             <div class="gnbTop">
 				<span>
                     <a target="_blank" href="http://www.angelinus.com/Member/Login.asp">官方微博</a> ㅣ
