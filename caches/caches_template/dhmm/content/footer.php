@@ -43,11 +43,7 @@
 </script>
 <!-- //footer -->
 <script>
-    //setPage({hn:"0",sn:"",cn:"",tn:""});
-    try {
-        $angelinus.ready({hn: "0", sn: "", cn: "", tn: ""});
-    } catch (e) {
-    }
+
 </script>
 
 </body>

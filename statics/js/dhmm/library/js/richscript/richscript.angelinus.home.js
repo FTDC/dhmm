@@ -340,7 +340,7 @@ window[o] = {
 		var $visualPagingArea = $(this.id.visualPagingArea);
 		$(this.all.visuals).each(function(i) {
 			var selected = (o.vars.visualIdx==i) ? true : false;
-			$(this).css({display:selected?"block":"none",top:106});
+			//$(this).css({display:selected?"block":"none",top:106});
 		});
 		$(this.all.visualBgs).each(function(i) {
 			var selected = (o.vars.visualIdx==i) ? true : false;
@@ -400,6 +400,6 @@ window[o] = {
 	}
 };
 $(function() {
-	window[o].initialize();
+	//window[o].initialize();
 });
 })();

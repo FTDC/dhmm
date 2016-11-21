@@ -18,9 +18,18 @@
     <link href="<?php echo JS_PATH;?>dhmm/library/css/jquery.ui.datepicker.css?rnd=B8BDC3" rel="stylesheet" type="text/css" media="all">
     -->
 
+    <!--<script src="/library/js/select.js"></script>-->
+
+
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery-1.5.1.min.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.easing.min.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/jquery.ui.core.js" charset="utf-8"></script>
+
+    <script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/jquery.ui.datepicker.js" charset="utf-8"></script>
+    <script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/jquery.ui.datepicker-ko-user.js" charset="utf-8"></script>
+    <!--<script src="/library/js/plugin/selectbox/jquery.selectbox.js" charset="utf-8"></script>-->
+    <script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/jquery.validate.js" charset="utf-8"></script>
+
     <!--<script src="<?php echo JS_PATH;?>dhmm/library/js/plugin/selectbox/jquery.selectbox.js" charset="utf-8"></script>-->
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.mousewheel.js" charset="utf-8"></script>
     <script src="<?php echo JS_PATH;?>dhmm/library/js/jquery.jscrollpane.min.js" charset="utf-8"></script>
@@ -49,8 +58,11 @@
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.home.js"></script>
 
 </head>
-<body >
+<body>
 <!-- header -->
+<div id="skipnavi">
+    <a href="#content"><?php echo $SEO['title'];?></a>
+</div>
 <div id="headerAc">
     <div class="gnb o-navi-fixed">
         <div class="gnbWrap">
