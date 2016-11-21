@@ -49,7 +49,7 @@
     <script src="<?php echo JS_PATH;?>dhmm/library/js/richscript/richscript.angelinus.home.js"></script>
 
 </head>
-<body class="main">
+<body >
 <!-- header -->
 <div id="headerAc">
     <div class="gnb o-navi-fixed">
