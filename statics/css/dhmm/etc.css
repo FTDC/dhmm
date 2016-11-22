@@ -35,7 +35,7 @@
 .mypages_sub .myinfor .inner .btn {position:absolute; right:83px;}
 
 /* 만족도 설문조사_응대 */
-* {border:0; font-family:'Microsoft Yahei'; font-size:14px; color:#676767;}
+* {border:0; font-family:'Microsoft Yahei'; font-size:14px;}
 .mb6 {margin-bottom:6px;}
 div.all_area {width:600px;}
 div.content_area {border:10px solid #b5a790; border-bottom:none; width:560px;}

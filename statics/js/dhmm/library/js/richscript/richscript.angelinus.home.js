@@ -400,6 +400,6 @@ window[o] = {
 	}
 };
 $(function() {
-	//window[o].initialize();
+	window[o].initialize();
 });
 })();

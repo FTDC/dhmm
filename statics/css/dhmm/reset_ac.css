@@ -162,7 +162,7 @@ html.M #containerWrapAc .visBg {position:absolute;}
 #containerWrapAc .lnbAc .lnbInner a.selected span.first { border:0;padding-left:25px; }
 #containerWrapAc .conWrap { position:relative;width:100%;height:auto;background-color:#fff;/* background:url('../images/bg_repeat.gif') top center repeat-y;*/}
 #containerWrapAc #containerAc { position:relative;width:1120px;height:auto;margin:0 auto;background-color:#fff; }
-#containerWrapAc #containerAc #content { position:relative;float:none;width:690px;margin:0 auto;height:auto;padding:30px 0 70px;min-height:0;overflow:hidden; }
+#containerWrapAc #containerAc #content { position:relative;float:none;width:706px;margin:0 auto;height:auto;padding:30px 0 70px;min-height:0;overflow:hidden; }
 #containerWrapAc #content .title { display:none; }
 
 

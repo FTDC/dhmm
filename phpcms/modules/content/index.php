@@ -278,6 +278,39 @@ class index
         $template = $setting['category_template'] ? $setting['category_template'] : 'category';
         $template_list = $setting['list_template'] ? $setting['list_template'] : 'list';
 
+        $this->db->table_name = 'dh_category';
+
+
+
+        $parentid = $CATEGORYS[$catid]['parentid'];
+
+
+
+        // 同一个项目下的文章列表
+        $page_list = $this->db->select("`parentid` = '$parentid' ", '*', '', 'catid ASC');
+        //上一页
+        $previous_page = array();
+        //下一页
+        $next_page = array();
+
+        foreach ($page_list as $item) {
+            if ($item['catid'] > $catid) {
+                $next_page = $item;
+                break;
+            } elseif ($item['catid'] < $catid) {
+                $previous_page = $item;
+            }
+        }
+
+        if (empty($previous_page)) {
+            $previous_page = array('catname' => '', 'url' => '');
+        }
+
+        if (empty($next_page)) {
+            $next_page = array('catname' => '', 'url' => '');
+        }
+
+
         if ($type == 0) {
             $template = $child ? $template : $template_list;
             $arrparentid = explode(',', $arrparentid);
@@ -311,12 +344,20 @@ class index
             //单网页
             $this->page_db = pc_base::load_model('page_model');
             $r = $this->page_db->get_one(array('catid' => $catid));
+
+
             if ($r) extract($r);
             $template = $setting['page_template'] ? $setting['page_template'] : 'page';
             $arrchild_arr = $CATEGORYS[$parentid]['arrchildid'];
+//            var_dump($arrchild_arr); exit();
+
             if ($arrchild_arr == '') $arrchild_arr = $CATEGORYS[$catid]['arrchildid'];
             $arrchild_arr = explode(',', $arrchild_arr);
             array_shift($arrchild_arr);
+
+            //            var_dump($previous_page);
+//            exit();
+
             $keywords = $keywords ? $keywords : $setting['meta_keywords'];
             $SEO = seo($siteid, 0, $title, $setting['meta_description'], $keywords);
             include template('content', $template);

@@ -1,298 +1,190 @@
-{template "content","header"}
+{template "content","header_min"}
 <!--main-->
-<div class="main photo-channel">
-	<div id="containerWrapAc" class="sub">
-		<div class="visWrap">
-			<div class="visCon">
-				<div class="titleAc">
-					<h3 class="o-navi-visual-menu-name">Coffee</h3>
-					<strong class="o-navi-visual-title"><span>신선한 전통 Espresso커피를 만나세요.</span></strong>
-					<p class="o-navi-visual-text"><span>신선하고 좋은 원두로 <br>입맛에 꼭 맞는 커피를 제공하기 위해 언제나 최선을 다합니다.</span></p>
-				</div>
-				<div class="cirBtnWrap">
-					<div class="cirBtn o-navi-visual-paging-area"><a href="/Menu/HotProduct_List.asp" target="_self"><span>New Menu</span></a><a class="selected" href="/Menu/Menu.asp?MenuIdx=4" target="_self"><span>Coffee</span></a><a href="/Menu/Menu.asp?MenuIdx=2" target="_self"><span>Angel-in-snow</span></a><a href="/Menu/Menu.asp?MenuIdx=3" target="_self"><span>Tea &amp; Beverages</span></a><a href="/Menu/Menu.asp?MenuIdx=5&amp;menuIdx1=8" target="_self"><span>Dessert</span></a><a href="/Menu/Menu.asp?MenuIdx=7" target="_self"><span>MD</span></a><a href="/Giftcard/Giftcard.asp" target="_self"><span>제품교환권</span></a></div>
-				</div>
-				<div class="btnWrap o-navi-visual-button-area"><a class="prevAc" href="/Menu/HotProduct_List.asp" target="_self">	<strong>MENU</strong>	New Menu</a><a class="nextAc" href="/Menu/Menu.asp?MenuIdx=2" target="_self">	<strong>MENU</strong>	Angel-in-snow</a></div>
-			</div>
-			<div class="visBg o-navi-visual" style="background-image: url(/ImagesNew/gnb/visual/visual_hn_1.jpg);"></div>
-		</div>
-		<div class="lnbWrap">
-			<div class="lnbAc o-navi-tab o-navi-tab-fixed"></div>
-		</div>
-		<!-- content and aside -->
-		<div class="conWrap">
-			<div id="containerAc">
+<div id="containerWrapAc" class="sub">
+    <div class="visWrap" style="display: ;">
 
-				<!-- content area -->
-				<div id="content">
-					<!-- content area -->
-					<div id="hn" class="hn1 sn2">
-						<div class="title">
-							<!-- 에스프레소 -->
-							<h3><img src="/images/title/hn2_sn3_title.png" alt="Espresso Drinks"></h3>
-							<p><img src="/images/title/hn2_sn3_sub_title1.png" alt="신선한 전통 Espresso커피를 만나세요."></p>
-							<p><img src="/images/title/hn2_sn3_sub_title2.png" alt="신선하고 좋은 원두로, 입맛에 꼭 맞는 커피를 제공하기 위해 언제나 최선을 다합니다."></p>
-						</div>
-						<!-- 20110630 수정 : 디저트 메뉴 bg 세분화로 인해 분기 추가 -->
-						<div class="section memu_list">
-							<!-- 2015-11-05 커피 탭 추가 -->
-							<div class="tab_basic">
-								<ul class="clfix">
-									<li><h4><a href="/Menu/menu.asp?menuIdx=4&amp;menuIdx1=19"><img src="/images/menu/tab_off_orange.gif" alt="Orange Feel So Good" onclick="javascript:alert('준비중입니다.');return false;"></a></h4></li>
-									<li><h4><a href="/Menu/menu.asp?menuIdx=4&amp;menuIdx1=18"><img src="/images/menu/tab_on_coffee.gif" alt="Coffee"></a></h4></li>
-								</ul>
-							</div>
-							<!-- 2015-11-05 커피 탭 추가 -->
-							<div id="menuList" class="list espresso"><!-- 에스프레소 -->
-								<ul id="ulMenuList">
-									<li>
-<span class="label">
-	<span class="new">new</span>
-</span>
-										<div><a href="#" onclick="goView(351);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/351/ListImage.png" alt="" width="130" height="145"><p>에그녹카페라떼</p></a></div>
+        <div class="visCon">
+            <div class="titleAc">
+                <h3 class="o-navi-visual-menu-name"><span>Taro Dumpling</span></h3>
+                <strong class="o-navi-visual-title"><span>{$CAT['catname']}</span></strong>
+                <p class="o-navi-visual-text"><span> The dessert tastes real good</span></p>
+            </div>
+            <div class="cirBtnWrap">
+                <div class="cirBtn o-navi-visual-paging-area">
+                    {loop $page_list $item}
+                    <a href="{$item[url]}" {if $item['catid']==$catid} class="selected" {/if} target="_self"><span>{$item[catname]}</span></a>
+                    {/loop}
+                </div>
+            </div>
+            <div class="btnWrap o-navi-visual-button-area">
+                {if $previous_page['catname'] != ''}<a class="prevAc" href="{$previous_page['url']}" target="_self">
+                <strong>{$previous_page['catname']}</strong><span>LAST</span></a>{/if}
+                {if $next_page['catname'] != ''}<a class="nextAc" href="{$next_page['url']}" target="_self"><strong>{$next_page['catname']}</strong>
+                <span>NEXT</span></a>{/if}
+            </div>
+        </div>
+        <div class="visBg o-navi-visual" style="background-image: url({IMG_PATH}banner/ph1980.png);"></div>
 
-									</li>
-									<li>
-<span class="label">
-	<span class="new">new</span>
-</span>
-										<div><a href="#" onclick="goView(350);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/350/ListImage.png" alt="" width="130" height="145"><p>아이리쉬</p></a></div>
+    </div>
 
-									</li>
-									<li>
-<span class="label">
-	<span class="new">new</span>
-</span>
-										<div><a href="#" onclick="goView(349);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/349/ListImage.png" alt="" width="130" height="145"><p>오르조 카푸치노 (디카페인)</p></a></div>
+    <div class="lnbWrap">
+        <div class="lnbAc o-navi-tab o-navi-tab-fixed"></div>
+    </div>
+    <!-- content and aside -->
+    <div class="conWrap">
+        <div id="containerAc">
 
-									</li>
-									<li>
-<span class="label">
-	<span class="new">new</span>
-</span>
-										<div><a href="#" onclick="goView(348);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/348/ListImage.png" alt="" width="130" height="145"><p>오르조 라떼 (디카페인)</p></a></div>
+            <!-- content area -->
+            <div id="content">
+                <!-- content area -->
+                <div id="hn" class="hn1 sn2">
 
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(327);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/327/ListImage.png" alt="" width="130" height="145"><p>디클라우드</p></a></div>
+                    <div class="section memu_list">
+                        <div class="tab_basic">
+                            <ul class="clfix">
+                                <li><h4>
+                                    产品列表
+                                </h4></li>
+                            </ul>
+                        </div>
+                        <!-- 2015-11-05 커피 탭 추가 -->
+                        <div id="menuList" class="list espresso"><!-- 에스프레소 -->
+                            {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+                            <ul id="ulMenuList">
+                                {loop $data $r}
+                                <li>
+                                <span class="label">{if $n<3}<span class="new"></span>{/if}</span>
+                                    <div>
+                                        <a href="#" onclick="goView(351);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="{$r[thumb]}" alt="{$r[title]}" width="130" height="145">
+                                            <p>{$r[title]}</p></a>
+                                    </div>
 
-									</li>
-									<li>
-<span class="label">
-	<span class="best">best</span>
-</span>
-										<div><a href="#" onclick="goView(276);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/276/ListImage.png" alt="" width="130" height="145"><p>아메리치노 (Sweet)</p></a></div>
+                                </li>
+                                {/loop}
 
-									</li>
-									<li>
-<span class="label">
-	<span class="best">best</span>
-</span>
-										<div><a href="#" onclick="goView(275);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/275/ListImage.png" alt="" width="130" height="145"><p>아메리치노 (Original)</p></a></div>
+                            </ul>
 
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(51);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/51/ListImage.png" alt="" width="130" height="145"><p>콜드브루 더치라떼</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(50);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/50/ListImage.png" alt="" width="130" height="145"><p>콜드브루 더치커피</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(48);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/48/ListImage.png" alt="" width="130" height="145"><p>아메리카노</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(47);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/47/ListImage.png" alt="" width="130" height="145"><p>카푸치노</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(46);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/46/ListImage.png" alt="" width="130" height="145"><p>카페라떼</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(45);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/45/ListImage.png" alt="" width="130" height="145"><p>바닐라 카페라떼</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(43);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/43/ListImage.png" alt="" width="130" height="145"><p>카라멜마끼아또</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(42);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/42/ListImage.png" alt="" width="130" height="145"><p>카페모카</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(13);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/13/ListImage.png" alt="" width="130" height="145"><p>화이트 초코 카페모카</p></a></div>
-
-									</li>
-									<li>
-<span class="label">
-</span>
-										<div><a href="#" onclick="goView(12);openFocus(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="/Data/Goods/12/ListImage.png" alt="" width="130" height="145"><p>카라멜카페모카</p></a></div>
-
-									</li>
+                        </div>
 
 
-								</ul>
 
-							</div>
+                        <!-- 리스트 하단 텍스트 영역 -->
+                        <div class="comment">
+                            <img src="{IMG_PATH}banner/footbanner.jpg" alt="">
+                        </div>
 
+                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none"><div id="divMenuView">
 
-							<div class="list_line"><img src="/images/menu/line_list_2.gif" alt=""></div>
+                            <div class="inner">
+                                <div class="cont">
+                                    <div class="left">
+                                        <div class="goods">
 
-							<!-- 리스트 하단 텍스트 영역 -->
+                                            <img class="img_big" src="/Data/Goods/348/DetailImage.png" alt="오르조 라떼 (디카페인) 제품 사진" width="175" height="272">
 
-							<div class="comment"><img src="/images/menu/txt_announce_drink.jpg" alt="·표시된 영양성분은 1회 제공량 당 기준입니다. ·표시된 커피 및 드링크류 영양성분은 스몰사이즈 기준입니다. ·표시된 영양 구성성분은 실험방법 등에 따라 다소 차이가 있을 수 있습니다."></div>
+                                        </div>
+                                        <div class="icon">
 
-							<!-- //리스트 하단 텍스트 영역 -->
-							<!-- 상품 상세 레이어 -->
-							<!-- 에스프레소 -->
-							<div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none"><div id="divMenuView">
+                                            <span class="new">NEW</span>
 
-								<div class="inner">
-									<div class="cont">
-										<div class="left">
-											<div class="goods">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <!-- 제품명 및 설명 -->
+                                        <div class="h3">
+                                            <h3>오르조 라떼 (디카페인)</h3>
+                                            <p class="hotniced">
 
-												<img class="img_big" src="/Data/Goods/45/DetailImage.png" alt="바닐라 카페라떼 제품 사진" width="175" height="272">
+                                                <img class="hot" src="/images/menu/label_hot.gif" alt="hot">
 
-											</div>
-											<div class="icon">
+                                                <img class="iced" src="/images/menu/label_iced.gif" alt="iced">
 
-											</div>
-										</div>
-										<div class="right">
-											<!-- 제품명 및 설명 -->
-											<div class="h3">
-												<h3>바닐라 카페라떼</h3>
-												<p class="hotniced">
+                                            </p>
+                                        </div>
+                                        <p class="detail">볶은 보리의 고소함과 달콤한 메이플 향이 어우러져 고소한 맛의 달콤한 100% 디카페인 라떼</p>
+                                        <!-- //제품명 및 설명 -->
 
-													<img class="hot" src="/images/menu/label_hot.gif" alt="hot">
+                                        <!-- 재료 아이콘 영역 -->
 
-													<img class="iced" src="/images/menu/label_iced.gif" alt="iced">
+                                        <!-- //재료 아이콘 영역 -->
 
-												</p>
-											</div>
-											<p class="detail">풍미가 진한 에스프레소와 고소한 우유에 달콤한 바닐라 시럽이 어우러진 커피입니다.</p>
-											<!-- //제품명 및 설명 -->
+                                        <!-- 영양성분 -->
 
-											<!-- 재료 아이콘 영역 -->
+                                        <table class="nutrition">
+                                            <caption>항목별(영양성분, 열량, 단백질, 탄수화물, 지방, 나트륨) 영양성분 안내</caption>
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
 
-											<h4>천사는 무엇을 넣었을까요?</h4>
-											<ul class="insert">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col" class="w13">구분</th>
+                                                <th scope="col" class="w13">중량(g)</th>
+                                                <th scope="col" class="w13">열량 <br>(kcal)</th>
+                                                <th scope="col" class="w20">탄수화물(당류)<br>g(%)</th>
+                                                <th scope="col" class="w13">단백질<br>g(%)</th>
+                                                <th scope="col" class="w13">포화지방<br>g(%)</th>
+                                                <th scope="col" class="w13">나트륨<br>mg(%)</th>
+                                            </tr>
+                                            </thead>
 
-												<li><img src="/Data/GoodsIcon/MaterialIcon14.gif" alt="에스프레소"></li><!-- alt값 넣어주세요 (휘핑크림, 얼음...) -->
+                                            <tbody>
+                                            <tr>
+                                                <td>HOT</td> <!-- hot, ice 추가부분입니다 -->
+                                                <td>266</td>
+                                                <td>201</td>
+                                                <td>28(22)(8)</td>
+                                                <td>6(11)</td>
+                                                <td>3.8(25)</td>
+                                                <td class="end">115(6)</td>
+                                            </tr>
+                                            </tbody>
 
-												<li><img src="/Data/GoodsIcon/MaterialIcon20.gif" alt="밀크거품"></li><!-- alt값 넣어주세요 (휘핑크림, 얼음...) -->
+                                            <tbody>
+                                            <tr>
+                                                <td>ICE</td> <!-- hot, ice 추가부분입니다 -->
+                                                <td>371</td>
+                                                <td>175</td>
+                                                <td>26(20)(8)</td>
+                                                <td>5(9)</td>
+                                                <td>3(20)</td>
+                                                <td class="end">95(5)</td>
+                                            </tr>
+                                            </tbody>
 
-												<li><img src="/Data/GoodsIcon/MaterialIcon23.gif" alt="바닐라시럽"></li><!-- alt값 넣어주세요 (휘핑크림, 얼음...) -->
+                                        </table>
 
-												<li><img src="/Data/GoodsIcon/MaterialIcon28.gif" alt="밀크"></li><!-- alt값 넣어주세요 (휘핑크림, 얼음...) -->
+                                        <!-- //영양성분 -->
 
-											</ul>
+                                        <!-- 천사가 전하는 비밀 -->
 
-											<!-- //재료 아이콘 영역 -->
+                                        <!-- //천사가 전하는 비밀 -->
+                                    </div>
+                                    <a href="#" onclick="goClose();closeFocus();return false;" class="pop_close">팝업닫기</a>
+                                </div>
+                            </div>
 
-											<!-- 영양성분 -->
+                        </div></div>
 
-											<table class="nutrition">
-												<caption>항목별(영양성분, 열량, 단백질, 탄수화물, 지방, 나트륨) 영양성분 안내</caption>
-												<colgroup>
-													<col>
-													<col>
-													<col>
-													<col>
-													<col>
-													<col>
-												</colgroup>
-
-												<thead>
-												<tr>
-													<th scope="col" class="w13">구분</th>
-													<th scope="col" class="w13">중량(g)</th>
-													<th scope="col" class="w13">열량 <br>(kcal)</th>
-													<th scope="col" class="w20">탄수화물(당류)<br>g(%)</th>
-													<th scope="col" class="w13">단백질<br>g(%)</th>
-													<th scope="col" class="w13">포화지방<br>g(%)</th>
-													<th scope="col" class="w13">나트륨<br>mg(%)</th>
-												</tr>
-												</thead>
-
-												<tbody>
-												<tr>
-													<td>HOT</td> <!-- hot, ice 추가부분입니다 -->
-													<td>335</td>
-													<td>228</td>
-													<td>29(9)</td>
-													<td>10(18)</td>
-													<td>8(53)</td>
-													<td class="end">160(8)</td>
-												</tr>
-												</tbody>
-
-											</table>
-
-											<!-- //영양성분 -->
-
-											<!-- 천사가 전하는 비밀 -->
-
-											<div class="with">
-												<!--h4><img src="/images/menu/txt_menu_with.gif" alt="천사가 전하는 또 하나의 비밀. 함께 하면 더 맛있어요!"></h4-->
-												<h4>천사가 전하는 또 하나의 비밀 <img src="/images/menu/txt_menu_with.gif" alt="함께 하면 더 맛있어요!"></h4>
-												<ul>
-
-													<li><img src="/Data/Goods/62/Thumbnail/ListImage.png" alt="초코칩 머핀" width="76" height="50"><span>초코칩 머핀</span></li>
-
-													<!-- 썸네일이 디저트일때와 그 외일때 사이즈를 다르게 잡아야 함... 가로나 세로사이즈만 줘서 잡는거 png 처리때문에 불가 -->
-												</ul>
-											</div>
-
-											<!-- //천사가 전하는 비밀 -->
-										</div>
-										<a href="#" onclick="goClose();closeFocus();return false;" class="pop_close">팝업닫기</a>
-									</div>
-								</div>
-
-							</div></div>
+                        <!-- //리스트 하단 텍스트 영역 -->
+                        <!-- 상품 상세 레이어 -->
+                        <!-- 에스프레소 -->
+                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none">
+                            <div id="divMenuView"></div>
+                        </div>
 
 
-							<!-- //상품 상세 레이어 -->
-						</div>
-					</div>
-					<!-- //content area -->
-					<script type="text/javascript">
-						/*
+                        <!-- //상품 상세 레이어 -->
+                    </div>
+                </div>
 
-						 */
-					</script>
-
-					<div id="debug" style="width:0;height:0;">
-						<iframe id="ifrmProc" name="ifrmProc" title="빈프레임" width="0" height="0"></iframe>
-					</div>
-				</div><!-- //content -->
-			</div><!-- //content and aside -->
-		</div>
-	</div>
+            </div><!-- //content -->
+        </div><!-- //content and aside -->
+    </div>
+</div><!-- //containerWrap -->
 {template "content","footer"}

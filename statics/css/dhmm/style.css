@@ -212,8 +212,8 @@ body.pop .school_apply div.bx_agreement .inner {height:138px;}
 .memu_list .list {position:relative;width:690px;padding:2px 0 0 0;overflow-x:hidden;background:url("../images/line_list_2.gif") left top no-repeat;}
 .memu_list .list ul {margin-left:-10px;background:url("../images/line_list_dot.gif") 10px top repeat-y; *zoom:1}
 .memu_list .list ul:after {content:"";clear:both; display:block;height:0;font-size:0}
-.memu_list .list ul li {float:left;position:relative;width:130px;height:165px;padding-bottom:17px;padding-top:15px;padding-left:10px;background:url("../images/line_list_devide.gif") 4px top no-repeat;}
-.memu_list .list ul li div {position:absolute;left:10px;top:15px;z-index:0;}
+.memu_list .list ul li {float:left;position:relative;width:165px;height:165px;padding-bottom:17px;padding-top:15px;padding-left:10px;background:url("../images/line_list_devide.gif") 4px top no-repeat;}
+.memu_list .list ul li div {position:absolute;left:10px;top:15px;z-index:0; padding-left: 23px;}
 .memu_list .list ul li div a {display:block;width:130px;height:164px;}
 .memu_list .list ul li span {float:left;position:relative;z-index:1;}
 .memu_list .list ul li span.label {padding:0 0 0 5px}
@@ -282,7 +282,7 @@ body.pop .school_apply div.bx_agreement .inner {height:138px;}
 #menu_md .pop_layer_menu .cont {min-height:240px;}
 #menu_md .pop_layer_menu .cont .left {left:-10px;}
 .memu_list .snow ul li div a {background:url("../images/bg_menu_snow.jpg") left top no-repeat}
-.memu_list .espresso ul li div a {background:url("../images/bg_menu_espresso.jpg") left top no-repeat}
+.memu_list .espresso ul li div a {}
 .memu_list .beverages ul li div a {background:url("../images/bg_menu_beverages.jpg") left top no-repeat}
 .memu_list .bean, .memu_list .md {padding:0;background:none;}
 /*.memu_list .bean ul, .memu_list .md ul {background:url("../images/line_list_md.gif") 10px top repeat-y}
