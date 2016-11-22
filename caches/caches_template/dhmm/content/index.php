@@ -2,32 +2,26 @@
 <!--main-->
 <!-- //containerWrap -->
 <div id="containerWrapAc">
-
-
     <div class="visWrap">
         <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=e06c5ff28a54b5dc5e0d118719babcfb&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=4&return=ad_list\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$ad_list = $a;unset($a);?>
         <?php $n=1;if(is_array($ad_list)) foreach($ad_list AS $r) { ?>
         <?php $narray = json_decode($r['setting'],1);?>
-        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo $narray['1']['imageurl'];?>);">666</p>
+        <?php var_dump($narray);?>
+        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo $narray['1']['imageurl'];?>);"><?php echo $narray['1']['alt'];?></p>
         <?php $n++;}unset($n); ?>
-
-
         <div class="visCon">
 
             <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
             <p class="titleAc">
-                <a href="<?php echo $r['url'];?>"><img src="<?php echo $r['thumb'];?>" alt="<?php echo str_cut($r['title'],30);?>"/>333</a>
+                <a href="<?php echo $r['url'];?>"><img src="<?php echo $r['thumb'];?>" alt="<?php echo str_cut($r['title'],30);?>"/><?php echo str_cut($r['title'],30);?></a>
             </p>
             <?php $n++;}unset($n); ?>
 
             <div class="cirBtnWrap">
                 <div class="cirBtn o-visual-paging">
-                    <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
-                    <a href="#" class="o-btn-paging selected"><span><?php echo $n;?></span></a>
-                    <?php $n++;}unset($n); ?>
-                    <div class="autoPlay">
-                        <a class="stop" href="#"><span>정지</span></a><a class="play" href="#"><span>재생</span></a></div>
+
                 </div>
+                <div class="autoPlay"></div>
             </div>
         </div>
     </div>

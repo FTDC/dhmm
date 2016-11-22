@@ -7,18 +7,21 @@
         {loop $ad_list $r}
         {php $narray = json_decode($r['setting'],1);}
         {php var_dump($narray);}
-        <p class="visBg" data-theme="bright" style="background-image:url({$narray[1]['imageurl']});">666</p>
+        <p class="visBg" data-theme="bright" style="background-image:url({$narray[1]['imageurl']});">{$narray[1]['alt']}</p>
         {/loop}
         <div class="visCon">
 
             {loop $data $r}
             <p class="titleAc">
-                <a href="{$r['url']}"><img src="{$r['thumb']}" alt="{str_cut($r['title'],30)}"/>333</a>
+                <a href="{$r['url']}"><img src="{$r['thumb']}" alt="{str_cut($r['title'],30)}"/>{str_cut($r['title'],30)}</a>
             </p>
             {/loop}
 
             <div class="cirBtnWrap">
-                <div class="cirBtn o-visual-paging"></div>
+                <div class="cirBtn o-visual-paging">
+
+                </div>
+                <div class="autoPlay"></div>
             </div>
         </div>
     </div>
