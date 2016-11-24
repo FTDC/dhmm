@@ -16,7 +16,7 @@ a:hover { text-decoration:none; }
 #headerAc .gnb .logoAc h1 { position:relative;width:216px;margin:0 auto; }
 #headerAc .gnb .logoAc a { display:block;position:relative;width:216px;height:59px;margin:0 auto;background-image:url('../images/logobg.png');text-indent:-9999px; }
 #headerAc .gnb .gnbTop { position:relative;width:1116px;height:60px;margin:0 auto; }
-#headerAc .gnb .gnbTop > span { position:relative;float:right;top:35px;color:#9c9086;  padding-right:110px;}
+#headerAc .gnb .gnbTop > span { position:relative;float:right;top:35px;color:#9c9086;  padding-right:30px;}
 #headerAc .gnb .gnbTop > span > a, #headerAc .gnb .gnbTop .mem { font-family:"Microsoft Yahei",Arial,SimSun,"宋体";font-size:13px;color:#fff; }
 #headerAc .gnb .gnbTop > span a.bf{font-size:14px; }
 #headerAc .gnb .gnbTop .mem .grade{font-weight:bold;}
@@ -54,6 +54,79 @@ a:hover { text-decoration:none; }
 #headerAc .gnb .gnbTop .langWrap .langList {display:none;position:absolute;top:42px;right:0;width:100px;background:#dedede;z-index:10}
 #headerAc .gnb .gnbTop .langWrap .langList ul {padding:5px 0;}
 #headerAc .gnb .gnbTop .langWrap .langList ul li a {display:block;line-height:20px;text-align:left !important;text-indent:11px;}
+
+#headerAc .gnb .gnbTop .icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+#headerAc .gnb .gnbTop .icon-wx {
+       width: 18px;  height: 16px; margin-left:10px;
+}
+
+#headerAc .gnb .gnbTop .icon-wb {
+  width: 16px;  height: 16px; margin-left:5px;
+}
+
+#headerAc .gnb .gnbTop .icon-wx,
+#headerAc .gnb .gnbTop .icon-wb {
+  background: url("../images/shear-icon.png") no-repeat;
+  -webkit-transition: background-position 0.2s;
+  -moz-transition: background-position 0.2s;
+  -o-transition: background-position 0.2s;
+  transition: background-position 0.2s;
+}
+
+#headerAc .gnb .gnbTop .icon-wx {
+  background-position: -105px -5px;
+}
+#headerAc .gnb .gnbTop .icon-wb {
+  background-position: -131px -2px;
+}
+#headerAc .gnb .gnbTop .icon-wx.active {
+  background-position: -105px -30px;
+}
+#headerAc .gnb .gnbTop .icon-wb.active {
+  background-position: -131px -27px;
+}
+
+#headerAc .gnb .gnbTop .top-wx {
+    position: absolute;
+    top: 60px;
+    left: 240px;
+    width: 160px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px #b2b2b2;
+    -moz-box-shadow: 0px 0px 5px 0px #b2b2b2;
+    box-shadow: 0px 0px 5px 0px #b2b2b2;
+    padding: 15px 10px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #e4e4e4;
+    z-index: 998;
+}
+
+#headerAc .gnb .gnbTop .top-wx .top-arrow {
+    width: 19px;
+    height: 11px;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: -11px;
+    background: url("../images/ws.png") no-repeat 0px 0px;
+}
+
+#headerAc .gnb .gnbTop .top-wx .wx-qrcode {
+    width: 139px;
+    height: 137px;
+    display: inline-block;
+    background: url("../images/ws.png") no-repeat;
+    background-position: 0 -80px;
+}
 
 #headerAc .gnb .depthWrap { position:relative;width:1116px;height:46px;margin:0 auto;overflow:hidden;background-image:url('../images/depth2bg.png');background-position:0 bottom;background-repeat:no-repeat;text-align:left; }
 #headerAc .gnb .depth1 { width:1116px;height:46px;margin:0 auto; }

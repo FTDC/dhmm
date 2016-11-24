@@ -22,21 +22,18 @@
     <div class="visWrap">
         <div class="visCon">
             <div class="titleAc">
-                <h3 class="o-navi-visual-menu-name"><span>새소식</span></h3>
-                <strong class="o-navi-visual-title"><span>엔제리너스의 새로운 소식입니다.</span></strong>
-                <p class="o-navi-visual-text"><span>엔제리너스와 관련된 새로운 소식을 빠르고 정확하게 알려드립니다.</span></p>
+                <h3 class="o-navi-visual-menu-name"><span>{$title}</span></h3>
+                <strong class="o-navi-visual-title"><span></span></strong>
+                <p class="o-navi-visual-text"><span></span></p>
             </div>
-            <div class="cirBtnWrap">
-                <div class="cirBtn o-navi-visual-paging-area">
-                    <a href="/About/EnterpriseIntroduce.asp" target="_self"><span>엔제리너스 소개</span></a><a href="/About/BI.asp" target="_self"><span>엔제리너스 BI</span></a><a href="/About/store.asp" target="_self"><span>엔제리너스 매장</span></a><a href="/About/specialty.asp" target="_self"><span>Specialty Coffee</span></a><a href="/About/SocietyContribute_2014.asp" target="_self"><span>사회공헌</span></a><a href="/About/VideoAdvertise_List.asp" target="_self"><span>광고 자료</span></a><a class="selected" href="/Board/Board.asp?BoardIdx=1" target="_self"><span>새소식</span></a><a href="/About/globalization.asp" target="_self"><span>Globalization</span></a>
-                </div>
-            </div>
-            <div class="btnWrap o-navi-visual-button-area">
-                <a class="prevAc" href="/About/VideoAdvertise_List.asp" target="_self"> <strong>ABOUT US</strong>
-                    <span>광고 자료</span></a><a class="nextAc" href="/About/globalization.asp" target="_self">
-                <strong>ABOUT US</strong> Globalization</a></div>
+
         </div>
-        <div class="visBg o-navi-visual" style="background-image: url(/ImagesNew/gnb/visual/visual_hn_5.jpg);"></div>
+        {if empty($CAT['image'])}
+        <div class="visBg o-navi-visual" style="background-image: url({IMG_PATH}banner/visual_hn_4.jpg);"></div>
+        {else}
+        <div class="visBg o-navi-visual" style="background-image: url({$CAT['image']});"></div>
+        {/if}
+
     </div>
     <div class="lnbWrap">
         <div class="lnbAc o-navi-tab o-navi-tab-fixed"></div>
@@ -46,31 +43,19 @@
         <div id="containerAc">
 
             <!-- content area -->
-            <div id="content">
+            <div id="content" style="width: 690px;">
                 <div id="hn" class="hn5 sn6">
                     <div class="title">
                         <h3>{catpos($catid)}</h3>
                         </p>
                     </div>
                     <div class="section event_list">
-                        <form id="frmDefault" name="frmDefault" method="post">
-                            <input type="hidden" name="Mode" value="">
                             <table class="list">
-                                <!-- 2013-09-06-m4one 수정 -->
-                                <!--caption>분류, 제목, 등록일로 구성된 새소식 목록</caption-->
-
-                                <caption>4444</caption>
-
-                                <!-- // 2013-09-06-m4one 수정 -->
-                                <colgroup>
-                                    <col>
-                                    <col>
-                                </colgroup>
                                 <thead>
                                 {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
                                 <tr class="thead last">
                                     <th scope="col" class="wStar" style="color: #ffffff; text-align: left; padding-left: 20px;">标题</th>
-                                    <th scope="col" class="w90" style="color: #ffffff;">日期</th>
+                                    <th scope="col" class="w90" style="color: #ffffff; width: 160px;">日期</th>
                                 </tr>
 
                                 </thead>
@@ -79,7 +64,7 @@
                                 {loop $data $r}
                                 <tr>
                                     <td class="subj">
-                                        <a href="{$r[url]}" target="_blank" title="새창 열기">{$r[title]}</a>
+                                        <a href="{$r[url]}" target="_blank" title="{$r[title]}">{$r[title]}</a>
                                     </td>
                                     <td>{date('Y-m-d',$r[inputtime])}</td>
                                 </tr>
@@ -87,6 +72,8 @@
                                 </tbody>
                             </table>
                             <!-- paging -->
+                            <div id="pages" class="text-c">{$pages}</div>
+
                             <div class="paging">
                                 <div class="left"></div>
 		<span class="wrap">
@@ -107,7 +94,6 @@
                                 <div class="right"></div>
                             </div>
                             <!-- //paging -->
-                        </form>
 
                     </div>
                 </div><!-- 임시 2013-07-11 -->

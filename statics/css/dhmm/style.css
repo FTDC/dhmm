@@ -231,14 +231,14 @@ body.pop .school_apply div.bx_agreement .inner {height:138px;}
 /* menu_ common_ popup*/
 .pop_layer_menu {position:absolute;z-index:100;left:-7px;top:0;width:697px;}
 .pop_layer_menu .inner {background:url("../images/bg_menu_bottom.png") no-repeat left bottom;_behavior: url("/library/js/iepngfix.htc");}
-.pop_layer_menu .cont {position:relative;z-index:1;width:617px;min-height:300px;padding:35px 40px 35px 40px;background:url("../images/bg_menu_top.png") no-repeat left top;_behavior: url(/library/js/iepngfix.htc);}
+.pop_layer_menu .cont {position:relative;z-index:1;width:617px;min-height:300px;padding:0px 7px;background:url("../images/bg_menu_top.png") no-repeat left top;_behavior: url(/library/js/iepngfix.htc);}
 .pop_layer_menu .cont .left {position:relative;z-index:1;width:205px;}
 .pop_layer_menu .cont .left .icon {position:absolute;z-index:2;left:16px;top:10px;}
 .pop_layer_menu .cont .left .goods {position:absolute;z-index:1;left:3px;top:0;width:205px;}
 .pop_layer_menu .cont .left .new, .pop_layer_menu .cont .left .best {float:left;position:relative;z-index:2;width:47px;height:49px;text-indent:-100%;*text-indent:0;white-space:nowrap;overflow:hidden;font-size:0;line-height:0;text-shadow:none;color:transparent;}
 .pop_layer_menu .cont .left .new {background:url("../images/label_new_detail.png") left top no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/label_new_detail.png', sizingMethod='crop');}
 .pop_layer_menu .cont .left .best {background:url("../images/label_best_detail.png") left top no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/label_best_detail.png', sizingMethod='crop');}
-.pop_layer_menu .cont .right {position:relative;z-index:1;right:0;top:0;width:412px;padding-left:205px;}
+.pop_layer_menu .cont .right {position:relative;z-index:1;right:0;top:0;width:210px;padding-left:430px; padding-top:10px;}
 .pop_layer_menu .cont .right .h3 {height:28px; margin-bottom:9px; background:url("../images/line_menu_detail.gif") left bottom no-repeat}
 .pop_layer_menu .cont .right .h3 {position:relative;z-index:1;height:35px;background:url("../images/bg_menu_h3.gif") no-repeat left bottom;}
 .pop_layer_menu .cont .right .h3 h3 {font-family:Nanum Gothic;font-size:22px;font-weight:600;color:#190c00;}

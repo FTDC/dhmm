@@ -389,10 +389,10 @@ window[o] = {
 		if (bannerLength>1) {
 			this.runNextBannerTimer();
 		}
-		
+
 		// Load Facebook Contents
 		window.fbAsyncInit = function() {
-			o.loadFacebook();
+			//o.loadFacebook();
 		};
 		
 		//load Twitter Contents

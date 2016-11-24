@@ -3,7 +3,7 @@
 <!-- //containerWrap -->
 <div id="containerWrapAc">
     <div class="visWrap">
-        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=e06c5ff28a54b5dc5e0d118719babcfb&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=4&return=ad_list\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$ad_list = $a;unset($a);?>
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=e06c5ff28a54b5dc5e0d118719babcfb&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=4&return=ad_list\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$ad_list = $a;unset($a);?>
         <?php $n=1;if(is_array($ad_list)) foreach($ad_list AS $r) { ?>
         <?php $narray = json_decode($r['setting'],1);?>
         <?php var_dump($narray);?>
@@ -101,7 +101,7 @@
                         </thead>
                         <tbody>
 
-                        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=8adbf12887b6a04a90618d697e2ba985&action=lists&catid=45&num=4&order=id+DESC&return=info\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$info = $content_tag->lists(array('catid'=>'45','order'=>'id DESC','limit'=>'4',));}?>
+                        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=8adbf12887b6a04a90618d697e2ba985&action=lists&catid=45&num=4&order=id+DESC&return=info\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$info = $content_tag->lists(array('catid'=>'45','order'=>'id DESC','limit'=>'4',));}?>
 
                         <?php $n=1;if(is_array($info)) foreach($info AS $v) { ?>
                         <!--<li>·<a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>" <?php echo title_style($v[style]);?>><?php echo str_cut($v['title'],40);?></a>  </li>-->

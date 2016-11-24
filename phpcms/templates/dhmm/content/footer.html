@@ -13,17 +13,18 @@
                 <a href="javascript:void(0);" class="em">武汉豆花妈妈食品有限公司</a>ㅣ
                 <a href="javascript:void(0);">武汉芋圆</a>ㅣ
                 <a href="javascript:void(0);">武汉饮品</a>
+                <span style="margin-left: 68px;">联系电话：027-86715369     QQ：176777128</span>
+
             </div>
             <div class="midAc"><br/>
-                版权所有：武汉豆花妈妈食品有限公司 地址：湖北大学西门学院路喻家湖148附24号
+                版权所有：武汉豆花妈妈食品有限公司 地址：湖北大学西门学院路喻家湖148附24号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全国加盟热线：400-888-0279  18627978633  13554310263
             </div>
             <div class="bottomAc"><br/>
-                <span>联系电话：027-86715369   全国加盟热线：400-888-0279  18627978633  13554310263  QQ：176777128</span><br/>
+
             </div>
             <div class="footAward">
-                &nbsp;
-            </div>
 
+            </div>
         </div>
     </div>
 </div>
@@ -43,7 +44,27 @@
 </script>
 <!-- //footer -->
 <script>
+    var G_HEAD_TIP_HANDLE = null;
 
+    // 头部的微信JS
+    $(".icon-wx,.icon-wb").on('mouseover', function (e) {
+        clearTimeout(G_HEAD_TIP_HANDLE);
+        $(this).addClass('active');
+        if ($(this).attr("class").toString().split(" ")[1] == "icon-wx") {
+            $('.top-wx').show();
+            $('.icon-wb').removeClass('active');
+        }
+        else {
+            $('.icon-wx').removeClass('active');
+            $('.top-wx').hide();
+        }
+    }).on('mouseout', function (e) {
+        G_HEAD_TIP_HANDLE = setTimeout(function () {
+            $('.icon-wx').removeClass('active');
+            $('.top-wx').hide();
+            $('.icon-wb').removeClass('active');
+        }, 500);
+    });
 </script>
 
 </body>

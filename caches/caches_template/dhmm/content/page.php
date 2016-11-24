@@ -1,7 +1,7 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header_min"); ?>
 <!-- //containerWrap -->
 <div id="containerWrapAc" class="sub">
-    <div class="visWrap" style="display: ;">
+    <div class="visWrap">
 
         <div class="visCon">
             <div class="titleAc">

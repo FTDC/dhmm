@@ -53,76 +53,36 @@
                             <ul id="ulMenuList">
                                 <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
                                 <li>
-                                <span class="label"><?php if($n<3) { ?><span class="new"></span><?php } ?></span>
+                                    <span class="label"><?php if($n<3) { ?><span class="new"></span><?php } ?></span>
                                     <div>
-                                        <a href="javascript:void(0);" onclick="goView(this);return false;" style="cursor:pointer; _cursor:hand;"><img src="<?php echo $r['thumb'];?>" alt="<?php echo $r['title'];?>" width="130" height="145">
-                                            <p><?php echo $r['title'];?></p></a>
+                                        <a href="javascript:void(0);" onclick="goView(this);return false;" style="cursor:pointer; _cursor:hand;">
+                                            <img src="<?php echo $r['thumb'];?>" alt="<?php echo $r['title'];?>" width="130" height="145">
+                                            <p><?php echo $r['title'];?></p>
+                                            <input type="hidden" value="<?php echo $r['image'];?>">
+                                        </a>
                                     </div>
                                 </li>
                                 <?php $n++;}unset($n); ?>
                             </ul>
                         </div>
-                        <div class="paging">
-                            <div class="left">
-                            </div>
-					<span class="wrap">
-<a href="#" onclick="goPage(1);return false;" class="go prev"><img src="/images/common/btn_page_prev.gif" alt="이전"></a>
 
-
-<strong>1</strong>
-<a href="#" onclick="goPage(2);return false;">2</a>
-<a href="#" onclick="goPage(3);return false;">3</a>
-<a href="#" onclick="goPage(4);return false;">4</a>
-<a href="#" onclick="goPage(5);return false;">5</a>
-<a href="#" onclick="goPage(6);return false;">6</a>
-<a href="#" onclick="goPage(7);return false;">7</a>
-<a href="#" onclick="goPage(8);return false;">8</a>
-<a href="#" onclick="goPage(9);return false;">9</a>
-<a href="#" onclick="goPage(10);return false;">10</a>
-
-
-<a href="#" onclick="goPage(11);return false;" class="go next"><img src="/images/common/btn_page_next.gif" alt="다음"></a>
-
-</span>
-                            <div class="right">
-                            </div>
-                        </div>
                         <!-- 리스트 하단 텍스트 영역 -->
                         <div class="comment">
                             <img src="<?php echo IMG_PATH;?>banner/footbanner.jpg" alt="">
                         </div>
 
-                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:"><div id="divMenuView">
+                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none;">
+                            <div id="divMenuView">
 
-                            <div class="inner">
-                                <div class="cont">
-                                    <div class="left">
-                                        <div class="goods">
-                                            <img class="img_big" src="http://www.dhmm.com/uploadfile/2016/1121/20161121032650624.png" alt="오르조 라떼 (디카페인) 제품 사진" width="" height="">
-                                        </div>
-                                        <div class="icon">
-                                            <span class="new">NEW</span>
-                                        </div>
+                                <div class="inner">
+                                    <div class="cont">
+                                        <img class="img_big" src="<?php echo IMG_PATH;?>banner/detail.jpg" alt="产品详情" width="688" height="299">
+                                        <a href="javascript:void(0);" onclick="goClose();return false;" class="pop_close">关闭</a>
                                     </div>
-                                    <div class="right">
-                                        <!-- 제품명 및 설명 -->
-                                        <div class="h3">
-                                            <h3></h3>
-                                            <p class="hotniced">
-                                                <img class="hot" src="<?php echo IMG_PATH;?>icon/label_hot.gif" alt="hot">
-                                            </p>
-                                        </div>
-                                        <p class="detail">볶은 보리의 고소함과 달콤한 메이플 향이 어우러져 고소한 맛의 달콤한 100% 디카페인 라떼</p>
-
-                                    </div>
-                                    <a href="javascript:void(0);" onclick="goClose();return false;" class="pop_close">关闭</a>
                                 </div>
                             </div>
-                        </div></div>
-                        <!-- 에스프레소 -->
-                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none">
-                            <div id="divMenuView"></div>
                         </div>
+                        <!-- 에스프레소 -->
                     </div>
                 </div>
 
@@ -131,14 +91,14 @@
     </div>
 </div><!-- //containerWrap -->
 <script type="text/javascript">
-    function goClose(){
+    function goClose() {
         $("#popMenuVeiw").hide();
     }
 
-    function goView(obj){
+    function goView(obj) {
 
         $("#popMenuVeiw h3").html($(obj).find('p').html());
-        $("#popMenuVeiw .img_big").attr('src',$(obj).find('img').attr('src'));
+        $("#popMenuVeiw .img_big").attr('src', $(obj).find('input').val());
         $("#popMenuVeiw").show();
     }
 </script>
