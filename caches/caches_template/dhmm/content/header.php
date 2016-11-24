@@ -7,9 +7,9 @@
     <meta name="description" content="<?php echo $SEO['description'];?>">
     <!--<link href="<?php echo CSS_PATH;?>reset.css" rel="stylesheet" type="text/css"/>-->
     <!--<link href="<?php echo CSS_PATH;?>default_blue.css" rel="stylesheet" type="text/css"/>-->
-    <link href="<?php echo CSS_PATH;?>dhmm/base_1.css" rel="stylesheet" type="text/css" media="all">
-    <link href="<?php echo CSS_PATH;?>dhmm/jquery.ui.theme_1.css" rel="stylesheet" type="text/css" media="all">
-    <link href="<?php echo CSS_PATH;?>dhmm/jquery.ui.datepicker_1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="<?php echo CSS_PATH;?>dhmm/base.css" rel="stylesheet" type="text/css" media="all">
+    <link href="<?php echo CSS_PATH;?>dhmm/jquery.ui.theme.css" rel="stylesheet" type="text/css" media="all">
+    <link href="<?php echo CSS_PATH;?>dhmm/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" media="all">
     <link href="<?php echo CSS_PATH;?>dhmm/reset_ac.css" rel="stylesheet" type="text/css" media="all">
 
     <!--
@@ -67,11 +67,14 @@
 				<span>
                     <a target="_blank" href="http://www.angelinus.com/Member/Login.asp">官方微博</a> ㅣ
                     <a href="https://member.lpoint.com/door/user/login_common.jsp?sid=ANGELINUS">联系我们</a>
-                    <!--<a href="/Voc/Voc_Write.asp">3333</a> ㅣ-->
-                    <!--<a href="http://www.lotteria.com/Campaign/Management/Ethics_report.asp?sitecode=002" target="_blank" title="새창열림">4444</a> ㅣ-->
-                    <!--<a href="/About/SpecialityAngelinus.asp" class="bf">555</a>ㅣ-->
-                    <!--<a href="http://shop.angelinus.com/" title="새창열림" target="_blank" class="bf">6666</a>-->
+                     <i class="icon icon-wx active"></i>
+                    <a href="http://weibo.com/whdhmm" target="_blank"><i class="icon icon-wb active"></i></a>
 				</span>
+                <div class="top-wx fn-hide" style="left: 960px; display: none;">
+                    <span class="top-arrow"></span>
+                    <span class="wx-qrcode"></span>
+                    <h5 style="font-size: 12px;">扫码关注“豆花妈妈”微信</h5>
+                </div>
             </div>
             <div class="depthWrap">
                 <ul class="depth1 o-navi-html"></ul>

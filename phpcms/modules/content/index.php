@@ -45,9 +45,15 @@ class index
         }
 
 
-//        var_dump($nav_cate);
-//        exit(3333);
-
+        $this->db->table_name = 'dh_poster';
+        $ad_list = $this->db->select("`spaceid` in(17,16,15,14,13,12) ", '`setting`', '6', 'spaceid ASC', 'spaceid');
+        $banner = array();
+        if (is_array($ad_list)) {
+            foreach ($ad_list as $item) {
+                $ad = json_decode($item['setting'], true);
+                $banner[] = $ad[1];
+            }
+        }
         include template('content', 'index', $default_style);
     }
 
@@ -237,7 +243,6 @@ class index
     //列表页
     public function lists()
     {
-
         $catid = $_GET['catid'] = intval($_GET['catid']);
         $_priv_data = $this->_category_priv($catid);
         if ($_priv_data == '-1') {
@@ -279,12 +284,7 @@ class index
         $template_list = $setting['list_template'] ? $setting['list_template'] : 'list';
 
         $this->db->table_name = 'dh_category';
-
-
-
         $parentid = $CATEGORYS[$catid]['parentid'];
-
-
 
         // 同一个项目下的文章列表
         $page_list = $this->db->select("`parentid` = '$parentid' ", '*', '', 'catid ASC');

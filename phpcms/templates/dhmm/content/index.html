@@ -3,14 +3,14 @@
 <!-- //containerWrap -->
 <div id="containerWrapAc">
     <div class="visWrap">
-        {pc:get sql="SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC" num="4" return="ad_list"}
+        {pc:get sql="SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY
+        listorder ASC" num="4" return="ad_list"}
         {loop $ad_list $r}
         {php $narray = json_decode($r['setting'],1);}
-        {php var_dump($narray);}
-        <p class="visBg" data-theme="bright" style="background-image:url({$narray[1]['imageurl']});">{$narray[1]['alt']}</p>
+        <p class="visBg" data-theme="bright" style="background-image:url({$narray[1]['imageurl']});">
+            {$narray[1]['alt']}</p>
         {/loop}
         <div class="visCon">
-
             {loop $data $r}
             <p class="titleAc">
                 <a href="{$r['url']}"><img src="{$r['thumb']}" alt="{str_cut($r['title'],30)}"/>{str_cut($r['title'],30)}</a>
@@ -34,56 +34,56 @@
                 <p>健康美味食材.全新味觉享受</p>
             </div>
             <div class="takeContent">
-                <div class="takeStore" style="background-image:url('{IMG_PATH}banner/index_5.jpg')">
-                    <a href="http://www.angelinus.com/Board/Board.asp?h_title=전체&Timestamp=2015111020151110&BoardIdx=1&Mode=VIEW&Page=1&PageSize=10&BlockSize=10&Idx=297&SearchCategory=0&SearchType=&SearchText=">
+                <div class="takeStore" style="background-image:url('{$banner[0]['imageurl']}')">
+                    <a target="_blank" href="{$banner[0]['linkurl']}" alt="{$banner[0]['alt']}">
                             <span class="desc">
                                 <span></span>
-                                <strong></strong>
+                                <strong>{$banner[0]['alt']}</strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeProduct" style="background-image:url('{IMG_PATH}banner/index_1.jpg')">
-                    <a href="/Menu/HotProduct_List.asp">
+                <div class="takeProduct" style="background-image:url('{$banner[2]['imageurl']}')">
+                    <a target="_blank" href="{$banner[2]['linkurl']}" alt="{$banner[2]['alt']}">
                             <span class="desc">
                                 <i> </i>
-                                <strong></strong>
+                                <strong>{$banner[2]['alt']}</strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeTv" style="background-image:url('{IMG_PATH}banner/index_2.jpg')">
-                    <a href="/About/VideoAdvertise_List.asp">
+                <div class="takeTv" style="background-image:url('{$banner[3]['imageurl']}')">
+                    <a target="_blank" href="{$banner[3]['linkurl']}" alt="{$banner[3]['alt']}">
                             <span class="desc">
                                 <i></i>
-                                <strong></strong>
+                                <strong>{$banner[3]['alt']}</strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeMall" style="background-image:url('{IMG_PATH}banner/index_6.jpg')">
-                    <a href="http://shop.angelinus.com" target="_blank" title="새창 열기">
+                <div class="takeMall" style="background-image:url('{$banner[1]['imageurl']}')">
+                    <a href="{$banner[1]['linkurl']}" target="_blank" title="{$banner[1]['alt']}">
                             <span class="desc">
                                 <i></i>
-                                <strong> </strong>
+                                <strong> {$banner[1]['alt']}</strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeWithAc" style="background-image:url('{IMG_PATH}banner/index_3.jpg')">
-                    <a href="/WholeBean/perfection.asp">
+                <div class="takeWithAc" style="background-image:url('{$banner[4]['imageurl']}')">
+                    <a href="{$banner[4]['linkurl']}" target="_blank" title="{$banner[4]['alt']}">
                             <span class="desc">
                                 <i></i>
-                                <strong></strong>
+                                <strong>{$banner[5]['alt']}</strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeAcademy" style="background-image:url('{IMG_PATH}banner/index_4.jpg')">
-                    <a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=361&SearchEventGubun=0">
+                <div class="takeAcademy" style="background-image:url('{$banner[5]['imageurl']}')">
+                    <a href="{$banner[5]['linkurl']}" target="_blank" title="{$banner[5]['alt']}">
                             <span class="desc">
                                 <i></i>
-                                <strong></strong>
+                                <strong>{$banner[5]['alt']}</strong>
                             </span>
                     </a>
                 </div>
@@ -95,19 +95,19 @@
                         <tr>
                             <th class="fir"><strong>NEWS &amp; NOTICE</strong></th>
                             <th>
-                                <a target="_blank" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=45">+ MORE</a>
+                                <a target="_blank" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=45">+
+                                    MORE</a>
                             </th>
                         </tr>
                         </thead>
                         <tbody>
-
                         {pc:content action="lists" catid="45" num="4" order="id DESC" return="info"}
-
                         {loop $info $v}
                         <!--<li>·<a href="{$v['url']}" target="_blank" title="{$v['title']}" {title_style($v[style])}>{str_cut($v['title'],40)}</a>  </li>-->
                         <tr>
                             <td class="fir">
-                                <a href="{$v['url']}" target="_blank" title="{$v['title']}">・ {str_cut($v['title'],70)}</a>
+                                <a href="{$v['url']}" target="_blank" title="{$v['title']}">・
+                                    {str_cut($v['title'],70)}</a>
                             </td>
                             <td>2016.10.11</td>
                         </tr>

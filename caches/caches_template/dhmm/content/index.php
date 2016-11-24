@@ -3,14 +3,14 @@
 <!-- //containerWrap -->
 <div id="containerWrapAc">
     <div class="visWrap">
-        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=e06c5ff28a54b5dc5e0d118719babcfb&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=4&return=ad_list\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$ad_list = $a;unset($a);?>
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=72549e48ce3a84c82a2652fe70b66318&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY%0D%0A++++++++listorder+ASC&num=4&return=ad_list\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY
+        listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$ad_list = $a;unset($a);?>
         <?php $n=1;if(is_array($ad_list)) foreach($ad_list AS $r) { ?>
         <?php $narray = json_decode($r['setting'],1);?>
-        <?php var_dump($narray);?>
-        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo $narray['1']['imageurl'];?>);"><?php echo $narray['1']['alt'];?></p>
+        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo $narray['1']['imageurl'];?>);">
+            <?php echo $narray['1']['alt'];?></p>
         <?php $n++;}unset($n); ?>
         <div class="visCon">
-
             <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
             <p class="titleAc">
                 <a href="<?php echo $r['url'];?>"><img src="<?php echo $r['thumb'];?>" alt="<?php echo str_cut($r['title'],30);?>"/><?php echo str_cut($r['title'],30);?></a>
@@ -34,56 +34,56 @@
                 <p>健康美味食材.全新味觉享受</p>
             </div>
             <div class="takeContent">
-                <div class="takeStore" style="background-image:url('<?php echo IMG_PATH;?>banner/index_5.jpg')">
-                    <a href="http://www.angelinus.com/Board/Board.asp?h_title=전체&Timestamp=2015111020151110&BoardIdx=1&Mode=VIEW&Page=1&PageSize=10&BlockSize=10&Idx=297&SearchCategory=0&SearchType=&SearchText=">
+                <div class="takeStore" style="background-image:url('<?php echo $banner['0']['imageurl'];?>')">
+                    <a target="_blank" href="<?php echo $banner['0']['linkurl'];?>" alt="<?php echo $banner['0']['alt'];?>">
                             <span class="desc">
                                 <span></span>
-                                <strong></strong>
+                                <strong><?php echo $banner['0']['alt'];?></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeProduct" style="background-image:url('<?php echo IMG_PATH;?>banner/index_1.jpg')">
-                    <a href="/Menu/HotProduct_List.asp">
+                <div class="takeProduct" style="background-image:url('<?php echo $banner['2']['imageurl'];?>')">
+                    <a target="_blank" href="<?php echo $banner['2']['linkurl'];?>" alt="<?php echo $banner['2']['alt'];?>">
                             <span class="desc">
                                 <i> </i>
-                                <strong></strong>
+                                <strong><?php echo $banner['2']['alt'];?></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeTv" style="background-image:url('<?php echo IMG_PATH;?>banner/index_2.jpg')">
-                    <a href="/About/VideoAdvertise_List.asp">
+                <div class="takeTv" style="background-image:url('<?php echo $banner['3']['imageurl'];?>')">
+                    <a target="_blank" href="<?php echo $banner['3']['linkurl'];?>" alt="<?php echo $banner['3']['alt'];?>">
                             <span class="desc">
                                 <i></i>
-                                <strong></strong>
+                                <strong><?php echo $banner['3']['alt'];?></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeMall" style="background-image:url('<?php echo IMG_PATH;?>banner/index_6.jpg')">
-                    <a href="http://shop.angelinus.com" target="_blank" title="새창 열기">
+                <div class="takeMall" style="background-image:url('<?php echo $banner['1']['imageurl'];?>')">
+                    <a href="<?php echo $banner['1']['linkurl'];?>" target="_blank" title="<?php echo $banner['1']['alt'];?>">
                             <span class="desc">
                                 <i></i>
-                                <strong> </strong>
+                                <strong> <?php echo $banner['1']['alt'];?></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeWithAc" style="background-image:url('<?php echo IMG_PATH;?>banner/index_3.jpg')">
-                    <a href="/WholeBean/perfection.asp">
+                <div class="takeWithAc" style="background-image:url('<?php echo $banner['4']['imageurl'];?>')">
+                    <a href="<?php echo $banner['4']['linkurl'];?>" target="_blank" title="<?php echo $banner['4']['alt'];?>">
                             <span class="desc">
                                 <i></i>
-                                <strong></strong>
+                                <strong><?php echo $banner['5']['alt'];?></strong>
                             </span>
                     </a>
                 </div>
 
-                <div class="takeAcademy" style="background-image:url('<?php echo IMG_PATH;?>banner/index_4.jpg')">
-                    <a href="http://www.angelinus.com/Event/Event_View.asp?Mode=VIEW&EventType=Event&Idx=361&SearchEventGubun=0">
+                <div class="takeAcademy" style="background-image:url('<?php echo $banner['5']['imageurl'];?>')">
+                    <a href="<?php echo $banner['5']['linkurl'];?>" target="_blank" title="<?php echo $banner['5']['alt'];?>">
                             <span class="desc">
                                 <i></i>
-                                <strong></strong>
+                                <strong><?php echo $banner['5']['alt'];?></strong>
                             </span>
                     </a>
                 </div>
@@ -95,19 +95,19 @@
                         <tr>
                             <th class="fir"><strong>NEWS &amp; NOTICE</strong></th>
                             <th>
-                                <a target="_blank" href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=45">+ MORE</a>
+                                <a target="_blank" href="<?php echo APP_PATH;?>index.php?m=content&c=index&a=lists&catid=45">+
+                                    MORE</a>
                             </th>
                         </tr>
                         </thead>
                         <tbody>
-
-                        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=8adbf12887b6a04a90618d697e2ba985&action=lists&catid=45&num=4&order=id+DESC&return=info\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$info = $content_tag->lists(array('catid'=>'45','order'=>'id DESC','limit'=>'4',));}?>
-
+                        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=8adbf12887b6a04a90618d697e2ba985&action=lists&catid=45&num=4&order=id+DESC&return=info\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$info = $content_tag->lists(array('catid'=>'45','order'=>'id DESC','limit'=>'4',));}?>
                         <?php $n=1;if(is_array($info)) foreach($info AS $v) { ?>
                         <!--<li>·<a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>" <?php echo title_style($v[style]);?>><?php echo str_cut($v['title'],40);?></a>  </li>-->
                         <tr>
                             <td class="fir">
-                                <a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>">・ <?php echo str_cut($v['title'],70);?></a>
+                                <a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>">・
+                                    <?php echo str_cut($v['title'],70);?></a>
                             </td>
                             <td>2016.10.11</td>
                         </tr>
