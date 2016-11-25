@@ -26,7 +26,6 @@
                 <strong class="o-navi-visual-title"><span></span></strong>
                 <p class="o-navi-visual-text"><span></span></p>
             </div>
-
         </div>
         {if empty($CAT['image'])}
         <div class="visBg o-navi-visual" style="background-image: url({IMG_PATH}banner/visual_hn_4.jpg);"></div>
@@ -52,7 +51,7 @@
                     <div class="section event_list">
                             <table class="list">
                                 <thead>
-                                {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+                                {pc:content action="lists" catid="$catid" num="4" order="id DESC" page="$page"}
                                 <tr class="thead last">
                                     <th scope="col" class="wStar" style="color: #ffffff; text-align: left; padding-left: 20px;">标题</th>
                                     <th scope="col" class="w90" style="color: #ffffff; width: 160px;">日期</th>
@@ -72,35 +71,11 @@
                                 </tbody>
                             </table>
                             <!-- paging -->
-                            <div id="pages" class="text-c">{$pages}</div>
-
-                            <div class="paging">
-                                <div class="left"></div>
-		<span class="wrap">
-            <a href="#" onclick="goPage(1);return false;" class="go prev"><img src="/images/common/btn_page_prev.gif" alt="이전"></a>
-            <strong>1</strong>
-            <a href="#" onclick="goPage(2);return false;">2</a>
-            <a href="#" onclick="goPage(3);return false;">3</a>
-            <a href="#" onclick="goPage(4);return false;">4</a>
-            <a href="#" onclick="goPage(5);return false;">5</a>
-            <a href="#" onclick="goPage(6);return false;">6</a>
-            <a href="#" onclick="goPage(7);return false;">7</a>
-            <a href="#" onclick="goPage(8);return false;">8</a>
-            <a href="#" onclick="goPage(9);return false;">9</a>
-            <a href="#" onclick="goPage(10);return false;">10</a>
-            <a href="#" onclick="goPage(11);return false;" class="go next"><img src="/images/common/btn_page_next.gif" alt="다음"></a>
-
-</span>
-                                <div class="right"></div>
-                            </div>
+                            <div class="paging">{$pages_dhmm}</div>
                             <!-- //paging -->
 
                     </div>
                 </div><!-- 임시 2013-07-11 -->
-
-                <div id="debug" style="width:0;height:0;">
-                    <iframe id="ifrmProc" name="ifrmProc" width="0" height="0" title="빈프레임"></iframe>
-                </div>
             </div><!-- //content -->
         </div><!-- //content and aside -->
     </div>

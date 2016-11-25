@@ -54,6 +54,8 @@ class index
                 $banner[] = $ad[1];
             }
         }
+
+//        var_dump($banner); exit();
         include template('content', 'index', $default_style);
     }
 

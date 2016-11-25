@@ -772,6 +772,79 @@ function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),
 	}
 	return $multipage;
 }
+
+
+/**
+ * 分页函数
+ *
+ * @param $num 信息总数
+ * @param $curr_page 当前分页
+ * @param $perpage 每页显示数
+ * @param $urlrule URL规则
+ * @param $array 需要传递的数组，用于增加额外的方法
+ * @return 分页
+ */
+function pages_dhmm($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 10) {
+	if(defined('URLRULE') && $urlrule == '') {
+		$urlrule = URLRULE;
+		$array = $GLOBALS['URL_ARRAY'];
+	} elseif($urlrule == '') {
+		$urlrule = url_par('page={$page}');
+	}
+	$multipage = '<div class="left"></div><span class="wrap">';
+	if($num > $perpage) {
+		$page = $setpages+1;
+		$offset = ceil($setpages/2-1);
+		$pages = ceil($num / $perpage);
+		if (defined('IN_ADMIN') && !defined('PAGES')) define('PAGES', $pages);
+		$from = $curr_page - $offset;
+		$to = $curr_page + $offset;
+		$more = 0;
+		if($page >= $pages) {
+			$from = 2;
+			$to = $pages-1;
+		} else {
+			if($from <= 1) {
+				$to = $page-1;
+				$from = 2;
+			}  elseif($to >= $pages) {
+				$from = $pages-($page-2);
+				$to = $pages-1;
+			}
+			$more = 1;
+		}
+//		$multipage .= '<a class="a1">'.$num.L('page_item').'</a>';
+		if($curr_page>0) {
+			$multipage .= ' <a href="'.pageurl($urlrule, $curr_page-1, $array).'" class="go prev">'.L('previous').'</a>';
+			if($curr_page==1) {
+				$multipage .= ' <strong>1</strong>';
+			} elseif($curr_page>6 && $more) {
+				$multipage .= ' <a href="'.pageurl($urlrule, 1, $array).'">1</a>..';
+			} else {
+				$multipage .= ' <a href="'.pageurl($urlrule, 1, $array).'">1</a>';
+			}
+		}
+		for($i = $from; $i <= $to; $i++) {
+			if($i != $curr_page) {
+				$multipage .= ' <a href="'.pageurl($urlrule, $i, $array).'">'.$i.'</a>';
+			} else {
+				$multipage .= ' <strong>'.$i.'</strong>';
+			}
+		}
+		if($curr_page<$pages) {
+			if($curr_page<$pages-5 && $more) {
+				$multipage .= ' ..<a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="go next">'.L('next').'</a>';
+			} else {
+				$multipage .= ' <a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="go next">'.L('next').'</a>';
+			}
+		} elseif($curr_page==$pages) {
+			$multipage .= ' <strong>'.$pages.'</strong> <a href="'.pageurl($urlrule, $curr_page, $array).'" class="go next">'.L('next').'</a>';
+		} else {
+			$multipage .= ' <a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="go next">'.L('next').'</a>';
+		}
+	}
+	return $multipage.'</span><div class="right"></div>';
+}
 /**
  * 返回分页路径
  *

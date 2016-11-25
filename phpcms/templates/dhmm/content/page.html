@@ -17,8 +17,8 @@
                 </div>
             </div>
             <div class="btnWrap o-navi-visual-button-area">
-                {if $previous_page['catname'] != ''}<a class="prevAc" href="{$previous_page['url']}" target="_self"> <strong>{$previous_page['catname']}</strong><span>上一篇</span></a>{/if}
-                {if $next_page['catname'] != ''}<a class="nextAc" href="{$next_page['url']}" target="_self"><strong>{$next_page['catname']}</strong> <span>下一篇</span></a>{/if}
+                {if $previous_page['catname'] != ''}<a class="prevAc" href="{$previous_page['url']}" target="_self"> <strong>{$previous_page['catname']}</strong><span>LAST</span></a>{/if}
+                {if $next_page['catname'] != ''}<a class="nextAc" href="{$next_page['url']}" target="_self"><strong>{$next_page['catname']}</strong> <span>NEXT</span></a>{/if}
             </div>
         </div>
         {if empty($CAT['image'])}

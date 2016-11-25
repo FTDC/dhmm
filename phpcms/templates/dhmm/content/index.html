@@ -3,12 +3,10 @@
 <!-- //containerWrap -->
 <div id="containerWrapAc">
     <div class="visWrap">
-        {pc:get sql="SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY
-        listorder ASC" num="4" return="ad_list"}
+        {pc:get sql="SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC" num="4" return="ad_list"}
         {loop $ad_list $r}
         {php $narray = json_decode($r['setting'],1);}
-        <p class="visBg" data-theme="bright" style="background-image:url({$narray[1]['imageurl']});">
-            {$narray[1]['alt']}</p>
+        <p class="visBg" data-theme="bright" style="background-image:url({$narray[1]['imageurl']});">{$narray[1]['alt']}</p>
         {/loop}
         <div class="visCon">
             {loop $data $r}
@@ -207,7 +205,6 @@
                                 showBanner(t);
                                 return false;
                             });
-
                             showBanner(0);
                         });
                     };
@@ -255,6 +252,7 @@
                             }
                         });
                     };
+
                     $(".popup").popupzone();
                 </script>
             </div><!-- //content -->

@@ -345,7 +345,7 @@ window[o] = {
 		$(this.all.visualBgs).each(function(i) {
 			var selected = (o.vars.visualIdx==i) ? true : false;
 			if (visualLength>1) {
-				$visualPagingArea.append('<a href="#" class="o-btn-paging '+(selected?'selected':'')+'"><span>'+(i+1)+'번째 이미지'+'</span></a>');
+				$visualPagingArea.append('<a href="#" class="o-btn-paging '+(selected?'selected':'')+'"><span>'+(i+1)+'点击'+'</span></a>');
 			}
 			$(this).css({display:selected?"block":"none",top:0});
 			if (selected) {
@@ -356,8 +356,8 @@ window[o] = {
 		if (visualLength>1) {
 			s = '';
 			s += '<div class="autoPlay">';
-			s += '<a class="stop" href="#"><span>정지</span></a>';
-			s += '<a class="play" href="#"><span>재생</span></a>';
+			s += '<a class="stop" href="#"><span>暂停</span></a>';
+			s += '<a class="play" href="#"><span>播放</span></a>';
 			s += '</div>';
 			$visualPagingArea.append(s);
 		}
@@ -370,13 +370,13 @@ window[o] = {
 		if (bannerLength>1) {
 			$(this.all.banners).each(function(i) {
 				var selected = (o.vars.bannerIdx==i) ? true : false;
-				$bannerPagingArea.append('<a href="#" class="o-btn-paging '+(selected?'selected':'')+'"><span>'+(i+1)+'번째 이미지'+'</span></a>');
+				$bannerPagingArea.append('<a href="#" class="o-btn-paging '+(selected?'selected':'')+'"><span>'+(i+1)+'点击'+'</span></a>');
 				$(this).css({display:selected?"block":"none"});
 			});
 			s = '';
 			s += '<div class="autoPlay">';
-			s += '<a class="stop" href="#"><span>정지</span></a>';
-			s += '<a class="play" href="#"><span>재생</span></a>';
+			s += '<a class="stop" href="#"><span>停止</span></a>';
+			s += '<a class="play" href="#"><span>播放</span></a>';
 			s += '</div>';
 			$bannerPagingArea.append(s);
 		}
