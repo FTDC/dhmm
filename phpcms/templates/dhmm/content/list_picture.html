@@ -23,8 +23,11 @@
                 <span>NEXT</span></a>{/if}
             </div>
         </div>
-        <div class="visBg o-navi-visual" style="background-image: url({IMG_PATH}banner/ph1980.png);"></div>
-
+        {if empty($CAT['image'])}
+        <div class="visBg o-navi-visual" style="background-image: url({IMG_PATH}banner/product.jpg);"></div>
+        {else}
+        <div class="visBg o-navi-visual" style="background-image: url({$CAT['image']});"></div>
+        {/if}
     </div>
 
     <div class="lnbWrap">
