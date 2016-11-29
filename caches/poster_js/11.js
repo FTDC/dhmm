@@ -1,35 +1,35 @@
 var links = new Array();
 var isIE=!!window.ActiveXObject;
-links[1] = "http://localhost/dhmm/index.php?m=poster&c=index&a=poster_click&siteid=1&id=12";
+links[1] = "http://www.dhmm.com/index.php?m=poster&c=index&a=poster_click&siteid=1&id=20";
 if (isIE){
 	if (document.readyState=="complete"){
-		statAD('1', '12', '11');
+		statAD('1', '20', '11');
 	} else {
 		document.onreadystatechange=function(){
-			if(document.readyState=="complete") statAD('1', '12', '11');
+			if(document.readyState=="complete") statAD('1', '20', '11');
 		}
 	}
 } else {
-	statAD('1', '12', '11');
+	statAD('1', '20', '11');
 }
 
-links[2] = "http://localhost/dhmm/index.php?m=poster&c=index&a=poster_click&siteid=1&id=11";
+links[2] = "http://www.dhmm.com/index.php?m=poster&c=index&a=poster_click&siteid=1&id=19";
 if (isIE){
 	if (document.readyState=="complete"){
-		statAD('1', '11', '11');
+		statAD('1', '19', '11');
 	} else {
 		document.onreadystatechange=function(){
-			if(document.readyState=="complete") statAD('1', '11', '11');
+			if(document.readyState=="complete") statAD('1', '19', '11');
 		}
 	}
 } else {
-	statAD('1', '11', '11');
+	statAD('1', '19', '11');
 }
 
 var imgs = new Array();
 for(var n = 1; n <= 5; n++) imgs[n] = new Image();
-imgs[1].src = "http://localhost/dhmm/uploadfile/2016/1014/20161014104743579.jpg";
-imgs[2].src = "http://localhost/dhmm/uploadfile/2016/1014/20161014104718807.jpg";
+imgs[1].src = "http://www.dhmm.com/uploadfile/2016/1129/20161129111629628.jpg";
+imgs[2].src = "http://www.dhmm.com/uploadfile/2016/1129/20161129111419953.jpg";
 var tits = new Array();
 tits[1] ="";
 tits[2] ="";
@@ -60,7 +60,7 @@ function SetAlpha(){
 
 function statAD(siteid, id, pid) {
 	var sp = document.createElement("SCRIPT");
-	sp.src = "http://localhost/dhmm/index.php?m=poster&c=index&a=show&siteid="+siteid+"&id="+id+"&spaceid="+pid;
+	sp.src = "http://www.dhmm.com/index.php?m=poster&c=index&a=show&siteid="+siteid+"&id="+id+"&spaceid="+pid;
 	document.body.appendChild(sp);
 }
 

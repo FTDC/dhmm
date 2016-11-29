@@ -289,17 +289,17 @@ class index
         $parentid = $CATEGORYS[$catid]['parentid'];
 
         // 同一个项目下的文章列表
-        $page_list = $this->db->select("`parentid` = '$parentid' ", '*', '', 'catid ASC');
+        $page_list = $this->db->select("`parentid` = '$parentid' ", '*', '', 'listorder ASC');
         //上一页
         $previous_page = array();
         //下一页
         $next_page = array();
 
         foreach ($page_list as $item) {
-            if ($item['catid'] > $catid) {
+            if ($item['listorder'] > $CAT['listorder']) {
                 $next_page = $item;
                 break;
-            } elseif ($item['catid'] < $catid) {
+            } elseif ($item['listorder'] < $CAT['listorder']) {
                 $previous_page = $item;
             }
         }

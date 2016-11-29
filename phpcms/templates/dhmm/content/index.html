@@ -9,7 +9,7 @@
         <p class="visBg" data-theme="bright" style="background-image:url({$narray[1]['imageurl']});">{$narray[1]['alt']}</p>
         {/loop}
         <div class="visCon">
-            {loop $data $r}
+            {loop $ad_list $r}
             <p class="titleAc">
                 <a href="{$r['url']}"><img src="{$r['thumb']}" alt="{str_cut($r['title'],30)}"/>{str_cut($r['title'],30)}</a>
             </p>
@@ -104,10 +104,9 @@
                         <!--<li>·<a href="{$v['url']}" target="_blank" title="{$v['title']}" {title_style($v[style])}>{str_cut($v['title'],40)}</a>  </li>-->
                         <tr>
                             <td class="fir">
-                                <a href="{$v['url']}" target="_blank" title="{$v['title']}">・
-                                    {str_cut($v['title'],70)}</a>
+                                <a href="{$v['url']}" target="_blank" title="{$v['title']}">・{str_cut($v['title'],70)}</a>
                             </td>
-                            <td>2016.10.11</td>
+                            <td>{date('Y-m-d',$v[inputtime])}</td>
                         </tr>
 
                         {/loop}
