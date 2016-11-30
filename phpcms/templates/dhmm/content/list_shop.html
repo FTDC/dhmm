@@ -76,23 +76,20 @@
                             <div id="divMenuView">
 
                                 <div class="inner">
-                                    <div class="cont" style="padding: 13px 40px; min-height: 328px;">
+                                    <div class="cont" style="padding: 13px 40px; min-height: 343px;">
                                         <div class="left">
                                             <div class="goods">
-                                                <img class="img_big" src="" alt="" width="412" height="326">
+                                                <img class="img_big" src="" alt="" width="341" height="302">
                                             </div>
-                                            <div class="icon">
-                                                <span class="new">NEW</span>
-                                            </div>
+                                            <!--<div class="icon">-->
+                                                <!--<span class="new">NEW</span>-->
+                                            <!--</div>-->
                                         </div>
                                         <div class="right">
                                             <!-- 제품명 및 설명 -->
-                                            <div class="h3">
-                                                <h3></h3>
-                                            </div>
                                             <p class="detail"></p>
                                         </div>
-                                        <a href="#" onclick="goClose();return false;" class="pop_close">팝업닫기</a>
+                                        <a href="#" onclick="goClose();return false;" class="pop_close">关闭</a>
                                     </div>
                                 </div>
 
@@ -112,7 +109,7 @@
     }
 
     function goView(obj) {
-        $("#popMenuVeiw h3").html($(obj).find('p').html());
+//        $("#popMenuVeiw h3").html($(obj).find('p').html());
         $("#popMenuVeiw .img_big").attr('src', $(obj).find('img').attr('src'));
         $("#popMenuVeiw .detail").html($(obj).find('input').val());
         $("#popMenuVeiw").show();

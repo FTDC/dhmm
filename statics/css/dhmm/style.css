@@ -234,17 +234,17 @@ body.pop .school_apply div.bx_agreement .inner {height:138px;}
 .pop_layer_menu .cont {position:relative;z-index:1;width:617px;min-height:300px;padding:0px 7px;background:url("../images/bg_menu_top.png") no-repeat left top;_behavior: url(/library/js/iepngfix.htc);}
 .pop_layer_menu .cont .left {position:relative;z-index:1;width:205px;}
 .pop_layer_menu .cont .left .icon {position:absolute;z-index:2;left:16px;top:10px;}
-.pop_layer_menu .cont .left .goods {position:absolute;z-index:1;left:3px;top:0;width:205px;}
+.pop_layer_menu .cont .left .goods {position:absolute;z-index:1;left:3px;top:0;width:205px; padding-top:20px;}
 .pop_layer_menu .cont .left .new, .pop_layer_menu .cont .left .best {float:left;position:relative;z-index:2;width:47px;height:49px;text-indent:-100%;*text-indent:0;white-space:nowrap;overflow:hidden;font-size:0;line-height:0;text-shadow:none;color:transparent;}
 .pop_layer_menu .cont .left .new {background:url("../images/label_new_detail.png") left top no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/label_new_detail.png', sizingMethod='crop');}
 .pop_layer_menu .cont .left .best {background:url("../images/label_best_detail.png") left top no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/label_best_detail.png', sizingMethod='crop');}
-.pop_layer_menu .cont .right {position:relative;z-index:1;right:0;top:0;width:210px;padding-left:430px; padding-top:10px;}
+.pop_layer_menu .cont .right {position:relative;z-index:1;right:0;top:0;width:210px;padding-left:400px; padding-top:10px;}
 .pop_layer_menu .cont .right .h3 {height:28px; margin-bottom:9px; background:url("../images/line_menu_detail.gif") left bottom no-repeat}
 .pop_layer_menu .cont .right .h3 {position:relative;z-index:1;height:35px;background:url("../images/bg_menu_h3.gif") no-repeat left bottom;}
 .pop_layer_menu .cont .right .h3 h3 {font-family:Nanum Gothic;font-size:22px;font-weight:600;color:#190c00;}
 .pop_layer_menu .cont .right .h3 .hotniced {position:absolute;z-index:1;right:0;bottom:12px;}
 .pop_layer_menu .cont .right .h3 .hotniced a {margin-left:3px}
-.pop_layer_menu .cont .right .detail {margin:11px 0 22px 0;font-family:Nanum Gothic;font-size:12px;font-weight:600;line-height:18px;}/*m4one*/
+.pop_layer_menu .cont .right .detail {margin:75px 0 22px 0;font-family:Nanum Gothic;font-size:14px;font-weight:600;line-height:18px; text-indent: 2em;}/*m4one*/
 .pop_layer_menu .cont .right h4 {width:176px;height:24px;padding-left:5px;margin-bottom:8px;background:url("../images/h4_insert_angel.gif") no-repeat;font-family:Nanum Gothic;font-size:14px;font-weight:600;color:#ffffff;line-height:24px;}
 .pop_layer_menu .cont .right .insert {*zoom:1;padding-bottom:15px}
 .pop_layer_menu .cont .right .insert:after {content:"";clear:both;display:block;height:0;font-size:0}
