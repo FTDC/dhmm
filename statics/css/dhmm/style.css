@@ -228,6 +228,16 @@ body.pop .school_apply div.bx_agreement .inner {height:138px;}
 .memu_list .list_line {position:relative;z-index:1;height:2px;font-size:0;line-height:0;margin-top:-2px;}
 .memu_list .comment {margin:30px 0 0 0}
 
+/*  daili_ list*/
+
+.daili_list .list {position:relative;width:690px;padding:2px 0 0 0;overflow-x:hidden;}
+.daili_list .list ul { *zoom:1}
+.daili_list .list ul:after {content:"";clear:both; display:block;height:0;font-size:0}
+.daili_list .list ul li {border-top: 2px solid #000000;float: left;height: 292px;margin-right: 10px;position: relative;width: 335px;}
+.daili_list .list .c_name {height:45px; line-height:45px; background:#eee;display:block; margin-bottom:5px; font-size:18px; font-weight:600px;}
+.daili_list .list ul li div {left:10px;top:15px;z-index:0; padding-left: 23px;}
+.daili_list .list ul li div a {display:block;width:130px;height:164px;}
+
 /* menu_ common_ popup*/
 .pop_layer_menu {position:absolute;z-index:100;left:-7px;top:0;width:697px;}
 .pop_layer_menu .inner {background:url("../images/bg_menu_bottom.png") no-repeat left bottom;_behavior: url("/library/js/iepngfix.htc");}

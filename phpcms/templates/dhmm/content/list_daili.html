@@ -1,0 +1,111 @@
+{template "content","header_min"}
+<!--main-->
+<div id="containerWrapAc" class="sub">
+    <div class="visWrap" style="display: ;">
+
+        <div class="visCon">
+            <div class="titleAc">
+                <h3 class="o-navi-visual-menu-name"><span>Taro Dumpling</span></h3>
+                <strong class="o-navi-visual-title"><span>{$CAT['catname']}</span></strong>
+                <p class="o-navi-visual-text"><span> The dessert tastes real good</span></p>
+            </div>
+            <div class="cirBtnWrap">
+                <div class="cirBtn o-navi-visual-paging-area">
+                    {loop $page_list $item}
+                    <a href="{$item[url]}" {if $item['catid']==$catid} class="selected" {/if} target="_self"><span>{$item[catname]}</span></a>
+                    {/loop}
+                </div>
+            </div>
+            <div class="btnWrap o-navi-visual-button-area">
+                {if $previous_page['catname'] != ''}<a class="prevAc" href="{$previous_page['url']}" target="_self">
+                <strong>{$previous_page['catname']}</strong><span>LAST</span></a>{/if}
+                {if $next_page['catname'] != ''}<a class="nextAc" href="{$next_page['url']}" target="_self"><strong>{$next_page['catname']}</strong>
+                <span>NEXT</span></a>{/if}
+            </div>
+        </div>
+        {if empty($CAT['image'])}
+        <div class="visBg o-navi-visual" style="background-image: url({IMG_PATH}banner/ph1980.png);"></div>
+        {else}
+        <div class="visBg o-navi-visual" style="background-image: url({$CAT['image']});"></div>
+        {/if}
+
+    </div>
+    <div class="lnbWrap">
+        <div class="lnbAc o-navi-tab o-navi-tab-fixed"></div>
+    </div>
+    <!-- content and aside -->
+    <div class="conWrap">
+        <div id="containerAc">
+            <!-- content area -->
+            <div id="content">
+                <!-- content area -->
+                <div id="hn" class="hn1 sn2">
+                    <div class="section daili_list">
+                        <!-- 2015-11-05 커피 탭 추가 -->
+                        <div class="list espresso"><!-- 에스프레소 -->
+                            {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+                            <ul id="ulMenuList">
+                                {loop $data $r}
+                                <li>
+                                    <span class="c_name">{$r[title]}</span>
+                                    <div>
+                                        <a href="javascript:void(0);" onclick="goView(this);return false;" style="cursor:pointer; _cursor:hand;">
+                                            <img src="{$r[thumb]}" alt="{$r[title]}" width="130" height="145">
+                                            <p>{$r[title]}</p>
+                                            <input type="hidden" value="{$r['description']}">
+                                        </a>
+                                    </div>
+                                </li>
+                                {/loop}
+                            </ul>
+                        </div>
+                        <!-- paging -->
+                        <div class="paging">{$pages_dhmm}</div>
+                        <!-- //paging -->
+                        <!--<div class="comment">-->
+                            <!--<img src="{IMG_PATH}banner/footbanner.jpg" alt="">-->
+                        <!--</div>-->
+                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none;">
+                            <div id="divMenuView">
+
+                                <div class="inner">
+                                    <div class="cont" style="padding: 13px 40px; min-height: 343px;">
+                                        <div class="left">
+                                            <div class="goods">
+                                                <img class="img_big" src="" alt="" width="341" height="302">
+                                            </div>
+                                            <!--<div class="icon">-->
+                                                <!--<span class="new">NEW</span>-->
+                                            <!--</div>-->
+                                        </div>
+                                        <div class="right">
+                                            <!-- 제품명 및 설명 -->
+                                            <p class="detail"></p>
+                                        </div>
+                                        <a href="#" onclick="goClose();return false;" class="pop_close">关闭</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 에스프레소 -->
+                    </div>
+                </div>
+
+            </div><!-- //content -->
+        </div><!-- //content and aside -->
+    </div>
+</div><!-- //containerWrap -->
+<script type="text/javascript">
+    function goClose() {
+        $("#popMenuVeiw").hide();
+    }
+
+    function goView(obj) {
+//        $("#popMenuVeiw h3").html($(obj).find('p').html());
+        $("#popMenuVeiw .img_big").attr('src', $(obj).find('img').attr('src'));
+        $("#popMenuVeiw .detail").html($(obj).find('input').val());
+        $("#popMenuVeiw").show();
+    }
+</script>
+{template "content","footer"}
