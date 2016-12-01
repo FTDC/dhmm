@@ -36,24 +36,25 @@
     <div class="conWrap">
         <div id="containerAc">
             <!-- content area -->
-            <div id="content">
+            <div id="content" style="width: 820px;">
                 <!-- content area -->
                 <div id="hn" class="hn1 sn2">
                     <div class="section daili_list">
                         <!-- 2015-11-05 커피 탭 추가 -->
                         <div class="list espresso"><!-- 에스프레소 -->
-                            {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+                            {pc:content action="lists" catid="$catid" num="4" order="id DESC" moreinfo="1" page="$page"}
                             <ul id="ulMenuList">
                                 {loop $data $r}
                                 <li>
                                     <span class="c_name">{$r[title]}</span>
                                     <div>
-                                        <a href="javascript:void(0);" onclick="goView(this);return false;" style="cursor:pointer; _cursor:hand;">
-                                            <img src="{IMG_PATH}banner/daili.jpg" alt="{$r[title]}" width="192" height="127" />
+                                        <a href="javascript:void(0);" style="cursor:pointer; _cursor:hand;">
+                                            <img src="{IMG_PATH}banner/daili.jpg" alt="{$r[title]}" width="192" height="127">
                                         </a>
-                                        <div>
-                                            <span>{$r[title]}</span>
-
+                                        <div class="right">
+                                            <span class="desc">{strip_tags($r['content'])}</span>
+                                            <span class="lxfs">联系方式:</span>
+                                            <p class="tell">{$r['description']}</p>
                                         </div>
                                     </div>
                                 </li>
@@ -66,30 +67,7 @@
                         <!--<div class="comment">-->
                             <!--<img src="{IMG_PATH}banner/footbanner.jpg" alt="">-->
                         <!--</div>-->
-                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none;">
-                            <div id="divMenuView">
-
-                                <div class="inner">
-                                    <div class="cont" style="padding: 13px 40px; min-height: 343px;">
-                                        <div class="left">
-                                            <div class="goods">
-                                                <img class="img_big" src="" alt="" width="341" height="302">
-                                            </div>
-                                            <!--<div class="icon">-->
-                                                <!--<span class="new">NEW</span>-->
-                                            <!--</div>-->
-                                        </div>
-                                        <div class="right">
-                                            <!-- 제품명 및 설명 -->
-                                            <p class="detail"></p>
-                                        </div>
-                                        <a href="#" onclick="goClose();return false;" class="pop_close">关闭</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- 에스프레소 -->
+                       
                     </div>
                 </div>
 
