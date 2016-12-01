@@ -274,7 +274,7 @@ body.pop .school_apply div.bx_agreement .inner {height:138px;}
 .pop_layer_menu .cont .right .with li *{display:inline-block; vertical-align:middle}
 .pop_layer_menu .cont .right .with li img {_behavior: url("/library/js/iepngfix.htc");}
 .pop_layer_menu .cont .right .with li span {color:#555555;font-family:Nanum Gothic;font-size:11px;font-weight:600;}
-.pop_layer_menu .cont a.pop_close {right:40px;bottom:30px;}
+.pop_layer_menu .cont a.pop_close {right:-40px;bottom:20px;}
 
 /* menu_ hot product */
 .menu_hot {background:url("../images/boardline1.gif") no-repeat;}
