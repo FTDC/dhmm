@@ -1,7 +1,7 @@
 {template "content","header_min"}
 <!--main-->
 <div id="containerWrapAc" class="sub">
-    <div class="visWrap" style="display: ;">
+    <div class="visWrap">
 
         <div class="visCon">
             <div class="titleAc">
@@ -28,7 +28,6 @@
         {else}
         <div class="visBg o-navi-visual" style="background-image: url({$CAT['image']});"></div>
         {/if}
-
     </div>
     <div class="lnbWrap">
         <div class="lnbAc o-navi-tab o-navi-tab-fixed"></div>
@@ -50,10 +49,12 @@
                                     <span class="c_name">{$r[title]}</span>
                                     <div>
                                         <a href="javascript:void(0);" onclick="goView(this);return false;" style="cursor:pointer; _cursor:hand;">
-                                            <img src="{$r[thumb]}" alt="{$r[title]}" width="130" height="145">
-                                            <p>{$r[title]}</p>
-                                            <input type="hidden" value="{$r['description']}">
+                                            <img src="{IMG_PATH}banner/daili.jpg" alt="{$r[title]}" width="192" height="127" />
                                         </a>
+                                        <div>
+                                            <span>{$r[title]}</span>
+
+                                        </div>
                                     </div>
                                 </li>
                                 {/loop}
