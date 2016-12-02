@@ -1091,7 +1091,7 @@ div#bannerZone  div.ckeck input {vertical-align: middle; width: 15px;height: 15p
 
 
 /* 2016-04-25 Specialty 메뉴 추가 */
-.specialty_top{width:100%;height:210px;background:#f0f;border-top:3px solid #fad15d;background:url(../images/bg_visual_top.png) no-repeat top center;}
+.specialty_top{width:100%;height:210px;background:#f0f;border-top:3px solid #fad15d;background:url(../images/bg_visual_top.jpg) no-repeat top center;}
 .section.specialty{width: 720px;height: auto;margin:0 auto;}
 
 .specialty_wrap02{background-color: #190e0c !important;}
