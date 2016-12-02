@@ -5,9 +5,9 @@
 
         <div class="visCon">
             <div class="titleAc">
-                <h3 class="o-navi-visual-menu-name"><span>Taro Dumpling</span></h3>
+                <h3 class="o-navi-visual-menu-name"><span></span></h3>
                 <strong class="o-navi-visual-title"><span>{$CAT['catname']}</span></strong>
-                <p class="o-navi-visual-text"><span> The dessert tastes real good</span></p>
+                <p class="o-navi-visual-text"><span></span></p>
             </div>
             <div class="cirBtnWrap">
                 <div class="cirBtn o-navi-visual-paging-area">
@@ -36,9 +36,12 @@
     <div class="conWrap">
         <div id="containerAc">
             <!-- content area -->
-            <div id="content" style="width: 820px;">
+            <div id="content">
                 <!-- content area -->
                 <div id="hn" class="hn1 sn2">
+                <div style="text-align: center; margin: 10px 0px;">
+            <h2 style=" font-size: 24px; font-weight: bold;">欢迎您加入豆花妈妈优秀的代理团队!</h2>
+        </div>
                     <div class="section daili_list">
                         <!-- 2015-11-05 커피 탭 추가 -->
                         <div class="list espresso"><!-- 에스프레소 -->
@@ -47,15 +50,14 @@
                                 {loop $data $r}
                                 <li>
                                     <span class="c_name">{$r[title]}</span>
-                                    <div>
-                                        <a href="javascript:void(0);" style="cursor:pointer; _cursor:hand;">
+                                    <div class="right">
+                                        <!-- <a href="javascript:void(0);" style="cursor:pointer; _cursor:hand;">
                                             <img src="{IMG_PATH}banner/daili.jpg" alt="{$r[title]}" width="192" height="127">
-                                        </a>
-                                        <div class="right">
-                                            <span class="desc">{strip_tags($r['content'])}</span>
+                                        </a> -->
+                                        
+                                            <span class="desc">{strip_tags($r['content'],"<br>")}</span>
                                             <span class="lxfs">联系方式:</span>
                                             <p class="tell">{$r['description']}</p>
-                                        </div>
                                     </div>
                                 </li>
                                 {/loop}

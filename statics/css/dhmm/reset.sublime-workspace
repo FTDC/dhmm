@@ -1,0 +1,306 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"co",
+				"counter\tint ν"
+			],
+			[
+				"coun",
+				"Count\t ƒ"
+			],
+			[
+				"m",
+				"Mutex\tstruct ʈ"
+			],
+			[
+				"pri",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"spr",
+				"Sprintf\tstring ƒ"
+			],
+			[
+				"Par",
+				"ParseBool\tvalue bool, err error ƒ"
+			],
+			[
+				"func",
+				"func\tFunction"
+			],
+			[
+				"fp",
+				"Fprintf\tn int, err error ƒ"
+			],
+			[
+				"ca",
+				"capital\tstring ν"
+			],
+			[
+				"main",
+				"main\tmain"
+			],
+			[
+				"in",
+				"Index\t ƒ"
+			],
+			[
+				"fo",
+				"for\tfor - Block"
+			],
+			[
+				"s",
+				"Second\t Ɩ"
+			],
+			[
+				"P",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"f",
+				"Fprintln\tn int, err error ƒ"
+			],
+			[
+				"fun",
+				"func\tFunction"
+			],
+			[
+				"man",
+				"main\tmain"
+			],
+			[
+				"max",
+				"MaxInt16\t Ɩ"
+			],
+			[
+				"mat",
+				"math\t package ρ"
+			],
+			[
+				"pr",
+				"Println\tn int, err error ƒ"
+			],
+			[
+				"imp",
+				"import\timport (...) ʂ"
+			],
+			[
+				"mai",
+				"main\tmain"
+			],
+			[
+				"ma",
+				"main\tmain"
+			],
+			[
+				"p",
+				"Println\tn int, err error ƒ"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"last_filter": "Package Control: in",
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/golang/src/sorter.go",
+		"/F/golang/src/test.go",
+		"/F/golang/src/routing.go",
+		"/F/golang/src/database/sql/sql.go",
+		"/F/golang/src/sync/waitgroup.go",
+		"/F/golang/src/gosupervene.go",
+		"/C/Go/src/database/sql/sql.go",
+		"/F/golang/src/fmt/doc.go",
+		"/F/golang/src/fmt/print.go",
+		"/F/golang/src/strconv/itoa.go",
+		"/F/golang/src/strconv/isprint.go",
+		"/F/golang/src/strconv/doc.go",
+		"/C/Users/Administrator/Desktop/test.go",
+		"/F/golang/src/html/escape.go",
+		"/F/golang/src/player.go",
+		"/F/golang/src/unsorted.dat",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/GoSublime/GoSublime.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/GoSublime.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/GoSublime/CHANGELOG.md",
+		"/F/golang/src/clac/test.go",
+		"/F/golang/src/clac/unsorted.dat",
+		"/F/golang/src/clac/src/clac/calc.go",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"\n",
+			")\n",
+			"gopath",
+			"outfile",
+			"\",",
+			"File",
+			"to",
+			"这个是",
+			"你好，",
+			"Println"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "reset.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 58.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"main"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
