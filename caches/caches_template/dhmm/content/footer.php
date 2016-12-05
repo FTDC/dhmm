@@ -25,7 +25,6 @@
             <div class="footAward">
 
             </div>
-
         </div>
     </div>
 </div>

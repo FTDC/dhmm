@@ -50,7 +50,7 @@
                         </div>
                         <!-- 2015-11-05 커피 탭 추가 -->
                         <div id="menuList" class="list espresso"><!-- 에스프레소 -->
-                            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5ab4b05e97fd14c3ed386604ee1a9399&action=lists&catid=%24catid&num=25&order=id+DESC&page=%24page\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$pagesize = 25;$page = intval($page) ? intval($page) : 1;if($page<=0){$page=1;}$offset = ($page - 1) * $pagesize;$content_total = $content_tag->count(array('catid'=>$catid,'order'=>'id DESC','limit'=>$offset.",".$pagesize,'action'=>'lists',));$pages = pages($content_total, $page, $pagesize, $urlrule);$data = $content_tag->lists(array('catid'=>$catid,'order'=>'id DESC','limit'=>$offset.",".$pagesize,'action'=>'lists',));}?>
+                            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5ab4b05e97fd14c3ed386604ee1a9399&action=lists&catid=%24catid&num=25&order=id+DESC&page=%24page\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$pagesize = 25;$page = intval($page) ? intval($page) : 1;if($page<=0){$page=1;}$offset = ($page - 1) * $pagesize;$content_total = $content_tag->count(array('catid'=>$catid,'order'=>'id DESC','limit'=>$offset.",".$pagesize,'action'=>'lists',));$pages_dhmm = pages_dhmm($content_total, $page, $pagesize, $urlrule);$data = $content_tag->lists(array('catid'=>$catid,'order'=>'id DESC','limit'=>$offset.",".$pagesize,'action'=>'lists',));}?>
                             <ul id="ulMenuList">
                                 <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
                                 <li>
@@ -66,30 +66,30 @@
                                 <?php $n++;}unset($n); ?>
                             </ul>
                         </div>
-                        <div class="comment">
-                            <img src="<?php echo IMG_PATH;?>banner/footbanner.jpg" alt="">
-                        </div>
+                        <!-- paging -->
+                        <div class="paging"><?php echo $pages_dhmm;?></div>
+                        <!-- //paging -->
+                        <!--<div class="comment">-->
+                            <!--<img src="<?php echo IMG_PATH;?>banner/footbanner.jpg" alt="">-->
+                        <!--</div>-->
                         <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none;">
                             <div id="divMenuView">
 
                                 <div class="inner">
-                                    <div class="cont" style="padding: 13px 40px; min-height: 328px;">
+                                    <div class="cont" style="padding: 13px 40px; min-height: 343px;">
                                         <div class="left">
                                             <div class="goods">
-                                                <img class="img_big" src="" alt="" width="412" height="326">
+                                                <img class="img_big" src="" alt="" width="341" height="302">
                                             </div>
-                                            <div class="icon">
-                                                <span class="new">NEW</span>
-                                            </div>
+                                            <!--<div class="icon">-->
+                                                <!--<span class="new">NEW</span>-->
+                                            <!--</div>-->
                                         </div>
                                         <div class="right">
                                             <!-- 제품명 및 설명 -->
-                                            <div class="h3">
-                                                <h3></h3>
-                                            </div>
                                             <p class="detail"></p>
                                         </div>
-                                        <a href="#" onclick="goClose();return false;" class="pop_close">팝업닫기</a>
+                                        <a href="#" onclick="goClose();return false;" class="pop_close">关闭</a>
                                     </div>
                                 </div>
 
@@ -109,7 +109,7 @@
     }
 
     function goView(obj) {
-        $("#popMenuVeiw h3").html($(obj).find('p').html());
+//        $("#popMenuVeiw h3").html($(obj).find('p').html());
         $("#popMenuVeiw .img_big").attr('src', $(obj).find('img').attr('src'));
         $("#popMenuVeiw .detail").html($(obj).find('input').val());
         $("#popMenuVeiw").show();

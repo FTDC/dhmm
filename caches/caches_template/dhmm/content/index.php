@@ -3,20 +3,17 @@
 <!-- //containerWrap -->
 <div id="containerWrapAc">
     <div class="visWrap">
-        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=72549e48ce3a84c82a2652fe70b66318&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY%0D%0A++++++++listorder+ASC&num=4&return=ad_list\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY
-        listorder ASC LIMIT 4");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$ad_list = $a;unset($a);?>
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=3aecaf95b72def0b303ae0d69fa8afe1&sql=SELECT+setting+FROM+dh_poster+WHERE+spaceid+%3D+11+AND+type%3D%27images%27+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=5&return=ad_list\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM dh_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder ASC LIMIT 5");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$ad_list = $a;unset($a);?>
         <?php $n=1;if(is_array($ad_list)) foreach($ad_list AS $r) { ?>
         <?php $narray = json_decode($r['setting'],1);?>
-        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo $narray['1']['imageurl'];?>);">
-            <?php echo $narray['1']['alt'];?></p>
+        <p class="visBg" data-theme="bright" style="background-image:url(<?php echo $narray['1']['imageurl'];?>);"><?php echo $narray['1']['alt'];?></p>
         <?php $n++;}unset($n); ?>
         <div class="visCon">
-            <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
+            <?php $n=1;if(is_array($ad_list)) foreach($ad_list AS $r) { ?>
             <p class="titleAc">
                 <a href="<?php echo $r['url'];?>"><img src="<?php echo $r['thumb'];?>" alt="<?php echo str_cut($r['title'],30);?>"/><?php echo str_cut($r['title'],30);?></a>
             </p>
             <?php $n++;}unset($n); ?>
-
             <div class="cirBtnWrap">
                 <div class="cirBtn o-visual-paging">
 
@@ -106,12 +103,10 @@
                         <!--<li>·<a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>" <?php echo title_style($v[style]);?>><?php echo str_cut($v['title'],40);?></a>  </li>-->
                         <tr>
                             <td class="fir">
-                                <a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>">・
-                                    <?php echo str_cut($v['title'],70);?></a>
+                                <a href="<?php echo $v['url'];?>" target="_blank" title="<?php echo $v['title'];?>">・<?php echo str_cut($v['title'],70);?></a>
                             </td>
-                            <td>2016.10.11</td>
+                            <td><?php echo date('Y-m-d',$v[inputtime]);?></td>
                         </tr>
-
                         <?php $n++;}unset($n); ?>
                         <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
 
@@ -199,34 +194,14 @@
                                 $item.removeClass("on");
                                 $item.eq(number).addClass("on");
                                 index = number;
-                                /*if(isAuto == true) {
-                                 timer = setTimeout(function() {
-                                 slide("right");
-                                 }, dur);
-                                 }*/
                             }
 
-                            /*function slide(dir) {
-                             if(dir =="left") {
-                             var i = index - 1;
-                             if(i < 0) {
-                             i = max - 1;
-                             }
-                             } else if(dir =="right") {
-                             var i = index + 1;
-                             if(i == max) {
-                             i = 0;
-                             }
-                             }
-                             showBanner(i);
-                             }*/
                             $btns.click(function () {
                                 clearTimeout(timer);
                                 var t = $btns.index($(this)[0]);
                                 showBanner(t);
                                 return false;
                             });
-
                             showBanner(0);
                         });
                     };
@@ -274,11 +249,48 @@
                             }
                         });
                     };
+
                     $(".popup").popupzone();
                 </script>
             </div><!-- //content -->
         </div><!-- //content and aside -->
     </div>
+</div>
+<style type="text/css">
+    .advice {
+        margin-top: -215px;
+        position: fixed;
+        right: 0;
+        text-align: center;
+        top: 50%;
+        width: 139px;
+        z-index: 100;
+    }
+    .advice img {
+        margin: 0 auto;
+    }
+    .advice .tel {
+        color: #69a936;
+    }
+    .advice .qq li {
+    }
+    .advice .qq li img {
+        display: block;
+        margin: 0px;
+    }
+    .advice .qq li a {
+        color: #747474;
+        font: 14px "微软雅黑";
+    }
+</style>
+<div class="advice">
+    <div class="tel">
+        <img src="<?php echo IMG_PATH;?>banner/tel.png" title="联系电话">
+    </div>
+    <ul class="qq">
+        <li><a href="" target="_blank" title="在线QQ"><img src="<?php echo IMG_PATH;?>banner/qq.png"></a></li>
+        <li class="qqzx"><a target="_blank" title="扫二维码" href="javascript:void(0);"><img src="<?php echo IMG_PATH;?>banner/qrcode.png"></a></li>
+    </ul>
 </div>
 <!-- //containerWrap -->
 <?php include template("content","footer"); ?>

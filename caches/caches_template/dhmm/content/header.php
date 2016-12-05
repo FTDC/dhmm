@@ -65,10 +65,10 @@
             <div class="logoAc"><h1><a href="<?php echo APP_PATH;?>">豆花妈妈</a></h1></div>
             <div class="gnbTop">
 				<span>
-                    <a target="_blank" href="http://www.angelinus.com/Member/Login.asp">官方微博</a> ㅣ
-                    <a href="https://member.lpoint.com/door/user/login_common.jsp?sid=ANGELINUS">联系我们</a>
-                     <i class="icon icon-wx active"></i>
-                    <a href="http://weibo.com/whdhmm" target="_blank"><i class="icon icon-wb active"></i></a>
+                    <a target="_blank" href="http://weibo.com">官方微博</a> ㅣ
+                    <a href="/index.php?m=content&c=index&a=lists&catid=45">新闻动态</a>
+                     <i class="icon icon-wx"></i>
+                    <a href="http://weibo.com" target="_blank"><i class="icon icon-wb"></i></a>
 				</span>
                 <div class="top-wx fn-hide" style="left: 960px; display: none;">
                     <span class="top-arrow"></span>

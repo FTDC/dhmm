@@ -17,8 +17,8 @@
                 </div>
             </div>
             <div class="btnWrap o-navi-visual-button-area">
-                <?php if($previous_page['catname'] != '') { ?><a class="prevAc" href="<?php echo $previous_page['url'];?>" target="_self"> <strong><?php echo $previous_page['catname'];?></strong><span>上一篇</span></a><?php } ?>
-                <?php if($next_page['catname'] != '') { ?><a class="nextAc" href="<?php echo $next_page['url'];?>" target="_self"><strong><?php echo $next_page['catname'];?></strong> <span>下一篇</span></a><?php } ?>
+                <?php if($previous_page['catname'] != '') { ?><a class="prevAc" href="<?php echo $previous_page['url'];?>" target="_self"> <strong><?php echo $previous_page['catname'];?></strong><span>LAST</span></a><?php } ?>
+                <?php if($next_page['catname'] != '') { ?><a class="nextAc" href="<?php echo $next_page['url'];?>" target="_self"><strong><?php echo $next_page['catname'];?></strong> <span>NEXT</span></a><?php } ?>
             </div>
         </div>
         <?php if(empty($CAT['image'])) { ?>
@@ -33,6 +33,9 @@
     </div>
     <!-- content and aside -->
     <div class="conWrap">
+        <?php if($catid==31) { ?>
+        <div class="specialty_top"></div>
+        <?php } ?>
         <div id="containerAc">
             <!-- content area -->
             <div id="content">
