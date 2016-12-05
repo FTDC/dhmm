@@ -41,12 +41,28 @@
                 <!-- content area -->
                 <div id="hn" class="hn1 sn2">
                     <div class="section memu_list">
-                        <div class="tab_basic">
-                            <ul class="clfix">
-                                <li><h4>
-                                    店铺列表
-                                </h4></li>
-                            </ul>
+                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="position: relative;">
+                            <div id="divMenuView">
+
+                                <div class="inner">
+                                    <div class="cont" style="padding: 13px 40px; min-height: 343px;">
+                                        <div class="left">
+                                            <div class="goods">
+                                                <img class="img_big" src="" alt="" width="341" height="302">
+                                            </div>
+                                            <!--<div class="icon">-->
+                                            <!--<span class="new">NEW</span>-->
+                                            <!--</div>-->
+                                        </div>
+                                        <div class="right">
+                                            <!-- 제품명 및 설명 -->
+                                            <p class="detail"></p>
+                                        </div>
+                                        <a href="#" onclick="goClose();return false;" class="pop_close">关闭</a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                         <!-- 2015-11-05 커피 탭 추가 -->
                         <div id="menuList" class="list espresso"><!-- 에스프레소 -->
@@ -69,30 +85,6 @@
                         <!-- paging -->
                         <div class="paging">{$pages_dhmm}</div>
                         <!-- //paging -->
-                        <!--<div class="comment">-->
-                            <!--<img src="{IMG_PATH}banner/footbanner.jpg" alt="">-->
-                        <!--</div>-->
-                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none;">
-                            <div id="divMenuView">
-
-                                <div class="inner">
-                                    <div class="cont" style="padding: 13px 40px; min-height: 343px;">
-                                        <div class="left">
-                                            <div class="goods">
-                                                <img class="img_big" src="" alt="" width="341" height="302">
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <!-- 제품명 및 설명 -->
-                                            <p class="detail"></p>
-                                        </div>
-                                        <a href="#" onclick="goClose();return false;" class="pop_close" style="right:22px;;">关闭</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- 에스프레소 -->
                     </div>
                 </div>
 

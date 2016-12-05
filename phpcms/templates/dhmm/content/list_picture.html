@@ -36,23 +36,24 @@
     <!-- content and aside -->
     <div class="conWrap">
         <div id="containerAc">
-
-            <!-- content area -->
             <div id="content">
                 <!-- content area -->
+                {pc:content action="lists" catid="$catid" num="4" order="id DESC" page="$page"}
                 <div id="hn" class="hn1 sn2">
-
                     <div class="section memu_list">
-                        <div class="tab_basic">
-                            <ul class="clfix">
-                                <li><h4>
-                                    产品列表
-                                </h4></li>
-                            </ul>
+                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="position: relative;">
+                            <div id="divMenuView">
+
+                                <div class="inner">
+                                    <div class="cont">
+                                        <img class="img_big" src="{$data[0]['image']}" alt="{$data[0]['title']}" width="688" height="299">
+                                        <a href="javascript:void(0);" onclick="goClose();return false;" class="pop_close">关闭</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- 2015-11-05 커피 탭 추가 -->
                         <div id="menuList" class="list espresso"><!-- 에스프레소 -->
-                            {pc:content action="lists" catid="$catid" num="4" order="id DESC" page="$page"}
                             <ul id="ulMenuList">
                                 {loop $data $r}
                                 <li>
@@ -76,18 +77,6 @@
                         <!-- 리스트 하단 텍스트 영역 -->
                         <div class="comment">
                             <img src="{IMG_PATH}banner/footbanner.jpg" alt="">
-                        </div>
-
-                        <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="display:none;">
-                            <div id="divMenuView">
-
-                                <div class="inner">
-                                    <div class="cont">
-                                        <img class="img_big" src="{IMG_PATH}banner/detail.jpg" alt="产品详情" width="688" height="299">
-                                        <a href="javascript:void(0);" onclick="goClose();return false;" class="pop_close">关闭</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <!-- 에스프레소 -->
                     </div>
