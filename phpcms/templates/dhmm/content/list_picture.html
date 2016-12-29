@@ -41,17 +41,19 @@
                 {pc:content action="lists" catid="$catid" num="4" order="id DESC" page="$page"}
                 <div id="hn" class="hn1 sn2">
                     <div class="section memu_list">
+                        {php  $list = $data; $frist_project = array_shift($list);}
+                        {if isset($frist_project)}
                         <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="position: relative;">
                             <div id="divMenuView">
-
                                 <div class="inner">
                                     <div class="cont">
-                                        <img class="img_big" src="{$data[0]['image']}" alt="{$data[0]['title']}" width="688" height="299">
+                                        <img class="img_big" src="{$frist_project['image']}" alt="{$frist_project['title']}" width="688" height="299">
                                         <a href="javascript:void(0);" onclick="goClose();return false;" class="pop_close">关闭</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        {/if}
                         <!-- 2015-11-05 커피 탭 추가 -->
                         <div id="menuList" class="list espresso"><!-- 에스프레소 -->
                             <ul id="ulMenuList">

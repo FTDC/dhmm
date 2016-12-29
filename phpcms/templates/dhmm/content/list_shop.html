@@ -40,15 +40,17 @@
             <div id="content">
                 <!-- content area -->
                 <div id="hn" class="hn1 sn2">
+                    {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
                     <div class="section memu_list">
+                        {php  $list = $data; $frist_project = array_shift($list);}
+                        {if isset($frist_project)}
                         <div id="popMenuVeiw" class="pop_layer_menu pop_espresso" style="position: relative;">
                             <div id="divMenuView">
-
                                 <div class="inner">
                                     <div class="cont" style="padding: 13px 40px; min-height: 343px;">
                                         <div class="left">
                                             <div class="goods">
-                                                <img class="img_big" src="" alt="" width="341" height="302">
+                                                <img class="img_big" src="{$frist_project['thumb']}" title="{$frist_project['title']}" alt="{$frist_project['title']}" width="341" height="302">
                                             </div>
                                             <!--<div class="icon">-->
                                             <!--<span class="new">NEW</span>-->
@@ -56,17 +58,17 @@
                                         </div>
                                         <div class="right">
                                             <!-- 제품명 및 설명 -->
-                                            <p class="detail"></p>
+                                            <p class="detail">{$frist_project['description']}</p>
                                         </div>
-                                        <a href="#" onclick="goClose();return false;" class="pop_close">关闭</a>
+                                        <a href="javascript:void(0);" onclick="goClose();return false;" class="pop_close"  style="right:20px;">关闭</a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
+                        {/if}
                         <!-- 2015-11-05 커피 탭 추가 -->
                         <div id="menuList" class="list espresso"><!-- 에스프레소 -->
-                            {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
                             <ul id="ulMenuList">
                                 {loop $data $r}
                                 <li>
